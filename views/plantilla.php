@@ -38,7 +38,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="nav nav-justified py-1 nav-pills">pages
+            <ul class="nav nav-justified py-1 nav-pills">
                <?php if(isset($_GET["pages"])):?>
 
                     <?php if($_GET["pages"] == "inicio"):?>
@@ -87,14 +87,14 @@
                     <!--FIN REGISTRO-->
 
 
-                    <?php if($_GET["pages"] == "inventario"):?>
+                    <?php if($_GET["pages"] == "registrocaridad"):?>
                          <li class="nav-item">
-                              <a class="nav-link active" href="index.php?pages=rol">Registro Rol</a>
+                              <a class="nav-link active" href="index.php?pages/caridad=registrocaridad">Registro Caridad</a>
                          </li>
 
                     <?php else: ?>
                          <li class="nav-item">
-                              <a class="nav-link" href="index.php?pages=rol">Registro Rol</a>
+                              <a class="nav-link" href="index.php?pages/caridad=registrocaridad">Registro Caridad</a>
                          </li>
 
                     <?php endif ?>
@@ -143,7 +143,7 @@
                   <a class="nav-link" href="index.php?pages=">Registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?pages=">Registro Rol</a>
+                    <a class="nav-link" href="index.php?pages/caridad=registrocaridad">Registro Caridad</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="index.php?pages=">Registro Area</a>
@@ -174,7 +174,7 @@
           if(isset($_GET["pages"])){
 
                if($_GET["pages"] == "registro" ||
-               $_GET["pages"] == "/caridad/registrocaridad.php" ||
+               $_GET["pages"] == "registrocaridad" ||
                $_GET["pages"] == "" ||
                $_GET["pages"] == ""|| 
                $_GET["pages"] == ""|| 
@@ -190,7 +190,7 @@
                     
           }else{
 
-               include "pages/registro.php";
+               include "pages/inicio.php";
 
           }
 
