@@ -36,13 +36,33 @@ class ModeloEstadoRegistro {
     // funcion mostrar
 
     static public function mdlSeleccionarEstadoRegistro($tabla){
+        $item1 = null;
+		$valor1 = null;
 
-        $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+		if($item1 == null && $valor1 == null){
 
-        $stmt->execute();
-        return $stmt -> fetchAll();
-        $stmt->close();
-        $stmt = null;
+		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+
+		  $stmt->execute();
+
+		  return $stmt -> fetchAll();
+
+	  }else{
+
+		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+
+		  $stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
+
+		  $stmt->execute();
+
+		  return $stmt -> fetch();
+
+
+	  }
+
+	  $stmt->close();
+
+	  $stmt = null;	
     }
 
 
