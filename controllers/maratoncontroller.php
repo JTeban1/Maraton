@@ -80,10 +80,10 @@ class ControladorMaraton{
 	=============================================*/
 	public function ctrEliminarRegistroMaraton(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroMaraton"])){
 
 			$tabla = "TBL_Maraton";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroMaraton"];
 
 			$respuesta = ModeloMaraton::mdlEliminarMaraton($tabla, $valor);
 

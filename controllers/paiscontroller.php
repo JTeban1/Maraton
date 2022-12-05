@@ -77,10 +77,10 @@ class ControladorPais{
 	=============================================*/
 	public function ctrEliminarRegistroPais(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroPais"])){
 
 			$tabla = "TBL_Pais";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroPais"];
 
 			$respuesta = ModeloPais::mdlEliminarPais($tabla, $valor);
 

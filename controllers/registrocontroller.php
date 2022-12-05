@@ -85,10 +85,10 @@ class ControladorRegis{
 	=============================================*/
 	public function ctrEliminarRegistroRegis(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroRegis"])){
 
 			$tabla = "TBL_Registro";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroRegis"];
 
 			$respuesta = ModeloRegistro::mdlEliminarRegistro($tabla, $valor);
 

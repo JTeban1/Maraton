@@ -73,10 +73,10 @@ class ControladorGenero{
 	=============================================*/
 	public function ctrEliminarRegistroGenero(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroGenero"])){
 
 			$tabla = "TBL_Genero";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroGenero"];
 
 			$respuesta = ModelosGenero::mdlEliminarGenero($tabla, $valor);
 

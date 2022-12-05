@@ -84,10 +84,10 @@ class ControladorEvento{
 	=============================================*/
 	public function ctrEliminarRegistroEvento(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroEvento"])){
 
 			$tabla = "TBL_Evento";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroEvento"];
 
 			$respuesta = ModeloEvento::mdlEliminarEvento($tabla, $valor);
 

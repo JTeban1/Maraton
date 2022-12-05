@@ -78,10 +78,10 @@ class ControladorPosicion{
 	=============================================*/
 	public function ctrEliminarRegistroPosi(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroPosicion"])){
 
 			$tabla = "TBL_Posicion";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroPosicion"];
 
 			$respuesta = ModeloPosicion::mdlEliminarPosicion($tabla, $valor);
 

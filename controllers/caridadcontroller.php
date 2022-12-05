@@ -78,10 +78,10 @@ class ControladorCaridad{
 	=============================================*/
 	public function ctrEliminarRegistroCaridad(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroCaridad"])){
 
 			$tabla = "TBL_Caridad";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroCaridad"];
 
 			$respuesta = ModeloCaridad::mdlEliminarCaridad($tabla, $valor);
 

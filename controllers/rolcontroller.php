@@ -74,10 +74,10 @@ class ControladorRol{
 	=============================================*/
 	public function ctrEliminarRegistroRol(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroRol"])){
 
 			$tabla = "TBL_Rol";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroRol"];
 
 			$respuesta = ModeloRol::mdlEliminarRol($tabla, $valor);
 

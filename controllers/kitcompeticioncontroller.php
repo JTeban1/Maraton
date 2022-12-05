@@ -77,10 +77,10 @@ class ControladorKitCompetencia{
 	=============================================*/
 	public function ctrEliminarRegistroKitCompe(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroKitCompetencia"])){
 
 			$tabla = "TBL_KitCompeticion";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroKitCompetencia"];
 
 			$respuesta = ModelosKitCompeticion::mdlEliminarKitCompeticion($tabla, $valor);
 

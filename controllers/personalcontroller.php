@@ -86,10 +86,10 @@ class ControladorPersonal{
 	=============================================*/
 	public function ctrEliminarRegistroPersonal(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroPersonal"])){
 
 			$tabla = "TBL_Personal";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroPersonal"];
 
 			$respuesta = ModeloPersonal::mdlEliminarPersonal($tabla, $valor);
 

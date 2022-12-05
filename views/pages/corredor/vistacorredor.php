@@ -10,14 +10,15 @@
     return;
  }
  }*/
-  $registro = ControladorRegistroEvento::ctrSeleccionarRegistroRegistroEven(null,null);
+  $corredor = ControladorCorredor::ctrSeleccionarRegistroCorredor(null,null);
 
   //echo'<pre>'; print_r($usuario); echo '</pre>'
 
 ?>
 
 
-<h1>Registro</h1>
+
+<h1>Corredores</h1>
 
 <div class="container-fluid">
           <div class="container py-5">
@@ -26,13 +27,10 @@
                     <thead>
                       <tr>
                         <th scope="col">#</th>
-                        <th scope="col">NumDorsal</th>
-                        <th scope="col">TiempoCarrera</th>
-                        <th scope="col">FK_RegistroID</th>
-                        <th scope="col">FK_EventoID</th>
-                      
-                    
-                        
+                        <th scope="col">Fecha De Nacimiento</th>
+                        <th scope="col">FK_Genero</th>
+                        <th scope="col">FK_Email</th>
+                        <th scope="col">FK_PaisID</th>
                         <th>Acciones</th>
                         
                       </tr>
@@ -40,21 +38,16 @@
                     <tbody>
 
 
-                    <?php foreach ($registro as $key => $value): ?>
+                    <?php foreach ($corredor as $key => $value): ?>
 
 
                       <tr>
                         
                         <td scope="row"><?php echo ($key+1) ; ?></td>
-                        <td><?php echo $value["NumDorsal"]; ?></td>
-                        <td><?php echo $value["TiempoCarrera"]; ?></td>
-                        <td><?php echo $value["FK_RegistroID"]; ?></td>
-                        <td><?php echo $value["FK_EventoID"]; ?></td>
-                        
-                
-                       
-                        
-                        
+                        <td><?php echo $value["FechaNacimiento"]; ?></td>
+                        <td><?php echo $value["FK_Genero"]; ?></td>
+                        <td><?php echo $value["FK_Email"]; ?></td>
+                        <td><?php echo $value["FK_PaisID"]; ?></td>
 
                         <td>
                             <div class="btn-agroup">
@@ -70,14 +63,14 @@
 
                               <form method="post">
 
-                                  <input type="hidden" value="<?php echo $value["id"]; ?>" name="eliminarRegistroEvento">
+                                  <input type="hidden" value="<?php echo $value["id"]; ?>" name="eliminarRegistroCorredor">
                                   
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Eliminar</button>
 
                                   <?php
 
-                                    $eliminar = new ControladorRegistroEvento();
-                                    $eliminar -> ctrSeleccionarRegistroRegistroEven();
+                                    $eliminar = new ControladorCorredor();
+                                    $eliminar -> ctrEliminarRegistroCorredor();
 
                                   ?>
 

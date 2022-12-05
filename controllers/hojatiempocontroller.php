@@ -80,10 +80,10 @@ class ControladorHojaTiempo{
 	=============================================*/
 	public function ctrEliminarRegistroHojaTiem(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroHojaTiempo"])){
 
 			$tabla = "TBL_HojaTiempo";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroHojaTiempo"];
 
 			$respuesta = ModeloHojatiempo::mdlEliminarHojaTiempo($tabla, $valor);
 

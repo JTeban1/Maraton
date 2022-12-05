@@ -83,10 +83,10 @@ class ControladorUsuario{
 	=============================================*/
 	public function ctrEliminarRegistroUsuario(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroUsuario"])){
 
 			$tabla = "TBL_Usuario";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroUsuario"];
 
 			$respuesta = ModelosUsuario::mdlEliminarUsuario($tabla, $valor);
 

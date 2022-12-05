@@ -78,10 +78,10 @@ class ControladorPatrocinio{
 	=============================================*/
 	public function ctrEliminarRegistroPatrocinio(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroPatrocinio"])){
 
 			$tabla = "TBL_Patrocinio";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroPatrocinio"];
 
 			$respuesta = ModeloPatrocinio::mdlEliminarPatrocinio($tabla, $valor);
 

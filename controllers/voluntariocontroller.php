@@ -80,10 +80,10 @@ class ControladorVoluntario{
 	=============================================*/
 	public function ctrEliminarRegistroVoluntario(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroVoluntario"])){
 
 			$tabla = "TBL_Voluntario";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroVoluntario"];
 
 			$respuesta = ModeloVoluntario::mdlEliminarVoluntario($tabla, $valor);
 

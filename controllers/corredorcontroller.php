@@ -80,10 +80,10 @@ class ControladorCorredor{
 	=============================================*/
 	public function ctrEliminarRegistroCorredor(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["eliminarRegistroCorredor"])){
 
 			$tabla = "TBL_Corredor";
-			$valor = $_POST[""];
+			$valor = $_POST["eliminarRegistroCorredor"];
 
 			$respuesta = ModeloCorredor::mdlEliminarCorredor($tabla, $valor);
 
