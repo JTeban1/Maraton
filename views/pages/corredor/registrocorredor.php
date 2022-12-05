@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="FechaNacimiento" class="form-control" type="text" name="registroNombreCaridad">
+               <input id="FechaNacimiento" class="form-control" type="text" name="registroFechaNacimiento">
           </div>
 
           <div class="form-group">
-          <label for="DescripcionCaridad">Descripcion Caridad</label>
+          <label for="fk_GeneroId">FK_GeneroID</label>
           
                <div class="input-group">
           
@@ -33,13 +33,26 @@
                          </span>
                     </div>
                            
-               <input id="DescripcionCaridad" class="form-control" type="text" name="registroDescripcionCaridad">
+               <input id="fk_GeneroID" class="form-control" type="text" name="registrofk_GeneroID">
+          </div>
+          <div class="form-group">
+            <label for="fk_UsuarioID">Fk_UsuarioID</label>
+            
+                <div class="input-group">
+            
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-evelope"></i>
+                            </span>
+                        </div>
+                            
+                <input id="Fk_UsuarioID" class="form-control" type="text" name="fk_UsuarioID">
           </div>
 
 
 
                <div class="form-group">
-                    <label for="text">Logo Caridad</label>
+                    <label for="text">fk_PaisID</label>
      
                  <div class="input-group">
      
@@ -49,7 +62,7 @@
                            </span>
                       </div>
                       
-                      <input id="img" class="form-control" type="file" name="registroLogoCaridad" accept=".jpg , .png , .gif">
+                      <input id="fk_PaisID" class="form-control" type="file" name="fk_paisID">
                  </div>
 
                </div>
@@ -57,11 +70,11 @@
 
           <?php
 
-               $registroCaridad = ControladorCaridad::ctrRegistroCaridad();
+               $registroCorredor = ControladorCorredor::ctrRegistroCorredor();
  
  
  
-               if($registroCaridad == "ok")
+               if($registroCorredor == "ok")
                {
                     echo '<script>
 
@@ -74,7 +87,7 @@
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido registado</div>';
+                    echo '<div class="alert alert-success">registro corredor </div>';
 
                }
 
