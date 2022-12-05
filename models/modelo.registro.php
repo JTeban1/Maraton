@@ -47,7 +47,9 @@ class ModeloRegistro{
 
 		if($item1 == null && $valor1 == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+		  $stmt = Conexion::conectar()->prepare("SELECT RegistroID, DATE_FORMAT(fecha, '%d/%m/%Y') AS FechaRegistro, Costo, ObjetivoPatrocinio,  roles.nombreRol AS nombreRol, fk_rol, areas.nombreArea,fk_area  
+          FROM $tabla, roles, areas 
+          WHERE  $tabla.fk_rol = roles.id_rol AND $tabla.fk_area = areas.id_area;");
 
 		  $stmt->execute();
 
