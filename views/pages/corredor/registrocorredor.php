@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="FechaNacimiento" class="form-control" type="text" name="registroFechaNacimiento">
+               <input id="FechaNacimiento" class="form-control" type="date" name="registroFechaNacimiento">
           </div>
 
           <div class="form-group">

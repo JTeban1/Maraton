@@ -14,9 +14,9 @@ class ControladorEvento{
 
 			$tabla = "TBL_Evento";
 
-			$datos = array("NombreEvento" => $_POST[""],
-							"FechaInicio" => $_POST[""],
-							"Valor" => $_POST[""],
+			$datos = array("NombreEvento" => $_POST["registroNombreEvento"],
+							"FechaInicio" => $_POST["registroFechaInicio"],
+							"Valor" => $_POST["registroValor"],
 							"ParticipantesMax" => $_POST[""],
 							"FK_MaratonID" => $_POST[""],
 							"FK_TipoEventoID" => $_POST[""]);

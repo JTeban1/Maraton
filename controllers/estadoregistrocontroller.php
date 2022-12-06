@@ -13,7 +13,7 @@ class ControladorEstadoRegistro{
 
 			$tabla = "TBL_EstadoRegistro";
 
-			$datos = array("EstadoRegistro" => $_POST[""]);
+			$datos = array("EstadoRegistro" => $_POST["registroEstadoRegistro"]);
 
 			$respuesta = ModeloEstadoRegistro::mdlEstadoRegistro($tabla, $datos);
 

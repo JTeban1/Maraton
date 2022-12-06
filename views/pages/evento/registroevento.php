@@ -7,9 +7,10 @@
 <div class="d-flex justify-content-center text-center py-5">
 
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Registro Corredor</h1>
-          <div class="form-group">
-          <label for="FechaNacimiento">Fecha Nacimiento</label>
+               <h1>Registro Evento</h1>
+
+               <div class="form-group">
+          <label for="FechaNacimiento">Nombre Evento</label>
           
                <div class="input-group">
           
@@ -19,11 +20,12 @@
                          </span>
                     </div>
                            
-               <input id="FechaNacimiento" class="form-control" type="text" name="registroFechaNacimiento">
+               <input id="FechaNacimiento" class="form-control" type="text" name="registroNombreEvento">
           </div>
 
+
           <div class="form-group">
-          <label for="fk_GeneroId">FK_GeneroID</label>
+          <label for="FechaNacimiento">Fecha Inicio</label>
           
                <div class="input-group">
           
@@ -33,10 +35,12 @@
                          </span>
                     </div>
                            
-               <input id="fk_GeneroID" class="form-control" type="text" name="registrofk_GeneroID">
+               <input id="FechaNacimiento" class="form-control" type="date" name="registroFechaInicio">
           </div>
+
+          
           <div class="form-group">
-            <label for="fk_UsuarioID">Fk_UsuarioID</label>
+            <label for="fk_UsuarioID">Valor</label>
             
                 <div class="input-group">
             
@@ -46,7 +50,7 @@
                             </span>
                         </div>
                             
-                <input id="Fk_UsuarioID" class="form-control" type="text" name="fk_UsuarioID">
+                <input id="Fk_UsuarioID" class="form-control" type="text" name="registroValor">
           </div>
 
 
