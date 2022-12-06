@@ -10,7 +10,7 @@
                <h1>Registro Evento</h1>
 
                <div class="form-group">
-          <label for="FechaNacimiento">Nombre Evento</label>
+          <label for="registroNombreEvento">Nombre Evento</label>
           
                <div class="input-group">
           
@@ -20,12 +20,12 @@
                          </span>
                     </div>
                            
-               <input id="FechaNacimiento" class="form-control" type="text" name="registroNombreEvento">
+               <input id="registroNombreEvento" class="form-control" type="text" name="registroNombreEvento">
           </div>
 
 
           <div class="form-group">
-          <label for="FechaNacimiento">Fecha Inicio</label>
+          <label for="registroFechaInicio">Fecha Inicio</label>
           
                <div class="input-group">
           
@@ -35,12 +35,12 @@
                          </span>
                     </div>
                            
-               <input id="FechaNacimiento" class="form-control" type="date" name="registroFechaInicio">
+               <input id="registroFechaInicio" class="form-control" type="date" name="registroFechaInicio">
           </div>
 
           
           <div class="form-group">
-            <label for="fk_UsuarioID">Valor</label>
+            <label for="registroValor">Valor</label>
             
                 <div class="input-group">
             
@@ -50,13 +50,13 @@
                             </span>
                         </div>
                             
-                <input id="Fk_UsuarioID" class="form-control" type="text" name="registroValor">
+                <input id="registroValor" class="form-control" type="text" name="registroValor">
           </div>
 
 
 
                <div class="form-group">
-                    <label for="text">fk_PaisID</label>
+                    <label for="text">Participantes Max</label>
      
                  <div class="input-group">
      
@@ -66,8 +66,54 @@
                            </span>
                       </div>
                       
-                      <input id="fk_PaisID" class="form-control" type="file" name="fk_paisID">
+                      <input id="RegistroParticipantesMax" class="form-control" type="int" name="RegistroParticipantesMax">
                  </div>
+
+               </div>
+
+
+
+               <div class="form-group">
+                    <label for="text">Nombre Maraton</label>
+                    <div class="input-group">
+                    <select class="form-select" aria-label="Disabled select example"  name="RegistroFK_MaratonID">
+               
+                    <?php
+                     foreach ($maraton  as $maratones) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $maratones["maratonID"];?>'><?php echo $maratones["NombreMaraton"];?></option>
+                    <?php
+
+                     }
+                    ?>
+                    </select>
+               </div>
+
+               </div>
+
+
+
+               <div class="form-group">
+                    <label for="text">Tipo Evento</label>
+                    <div class="input-group">
+                    <select class="form-select" aria-label="Disabled select example"  name="RegistroFK_TipoEventoID">
+               
+                    <?php
+                     foreach ($evento  as $eventos) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $eventos["TipoEventoID"];?>'><?php echo $eventos["NombreTipoEvento"];?></option>
+                    <?php
+
+                     }
+                    ?>
+                    </select>
+               </div>
 
                </div>
 

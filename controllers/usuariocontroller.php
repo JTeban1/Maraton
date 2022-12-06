@@ -10,15 +10,15 @@ class ControladorUsuario{
 
 	static public function ctrRegistroUsuario(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroEmailusuario"])){
 
 			$tabla = "TBL_Usuario";
 
-			$datos = array("Email" => $_POST[""],
-				           "Contrasena" => $_POST[""],
-				           "Nombres" => $_POST[""],
-						   "Apellido" => $_POST[""],
-						   "FK_RolID" => $_POST[""]
+			$datos = array("Email" => $_POST["registroEmailusuario"],
+				           "Contrasena" => $_POST["registroContrasenausuario"],
+				           "Nombres" => $_POST["registroNombreusuario"],
+						   "Apellido" => $_POST["registroApellidousuario"],
+						   "FK_RolID" => $_POST["registroFK_RolIDusuario"]
 						);
 
 			$respuesta = ModelosUsuario::mdlUsuario($tabla, $datos);

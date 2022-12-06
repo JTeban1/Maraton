@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="DescripcionPosicion" class="form-control" type="textarea" name="registroDescripcionPosicion">
+               <input id="DescripcionPosicion" class="form-control" type="text" name="registroDescripcionPosicion">
           </div>
 
           <div class="form-group">

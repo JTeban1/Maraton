@@ -11,12 +11,12 @@ class ControladorKitCompetencia{
 
 	static public function ctrRegistroKitCompe(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroOpcionKit"])){
 
 			$tabla = "TBL_KitCompeticion";
 
-			$datos = array("OpcionKit " => $_POST[""],
-				           "ValorKit" => $_POST[""]);
+			$datos = array("OpcionKit " => $_POST["registroOpcionKit"],
+				           "ValorKit" => $_POST["registroValorKit"]);
 
 			$respuesta = ModelosKitCompeticion::mdlKitcompeticion($tabla, $datos);
 

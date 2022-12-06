@@ -17,9 +17,9 @@ class ControladorEvento{
 			$datos = array("NombreEvento" => $_POST["registroNombreEvento"],
 							"FechaInicio" => $_POST["registroFechaInicio"],
 							"Valor" => $_POST["registroValor"],
-							"ParticipantesMax" => $_POST[""],
-							"FK_MaratonID" => $_POST[""],
-							"FK_TipoEventoID" => $_POST[""]);
+							"ParticipantesMax" => $_POST["RegistroParticipantesMax"],
+							"FK_MaratonID" => $_POST["RegistroFK_MaratonID"],
+							"FK_TipoEventoID" => $_POST["RegistroFK_TipoEventoID"]);
 
 			$respuesta = ModeloEvento::mdlEvento($tabla, $datos);
 

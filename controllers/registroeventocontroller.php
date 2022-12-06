@@ -15,10 +15,10 @@ class ControladorRegistroEvento{
 
 			$tabla = "TBL_RegistroEvento";
 
-			$datos = array("NumDorsal" => $_POST[""],
-							"TiempoCarrera" => $_POST[""],
-							"FK_RegistroID" => $_POST[""],
-							"FK_EventoID" => $_POST[""]);
+			$datos = array("NumDorsal" => $_POST["registroNumDorsalevento"],
+							"TiempoCarrera" => $_POST["registroTiempoCarreraevento"],
+							"fK_RegistroID" => $_POST["registroFK_RegistroIDevento"],
+							"fK_EventoID" => $_POST["registroFK_EventoIDevento"]);
 
 			$respuesta = ModeloRegistroEvento::mdlRegistroEvento($tabla, $datos);
 

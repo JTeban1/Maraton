@@ -10,14 +10,14 @@ class ControladorMaraton{
 
 	static public function ctrRegistroMaraton(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombreMaraton"])){
 
 			$tabla = "TBL_Maraton";
 
-			$datos = array("NombreMaraton" => $_POST[""],
-							"NombreCiudad" => $_POST[""],
-							"NombreCelebracion" => $_POST[""],
-							"FK_CodigoPaisID" => $_POST[""]);
+			$datos = array("NombreMaraton" => $_POST["registroNombreMaraton"],
+							"NombreCiudad" => $_POST["registroNombreCiudad"],
+							"NombreCelebracion" => $_POST["registroNombreCelebracion"],
+							"fk_PaisID" => $_POST["registrosfk_PaisID"]);
 
 			$respuesta = ModeloMaraton::mdlMaraton($tabla, $datos);
 

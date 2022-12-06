@@ -14,10 +14,10 @@ class ControladorHojaTiempo{
 
 			$tabla = "TBL_HojaTiempo";
 
-			$datos = array("FechaInicio" => $_POST[""],
-				           "FechaFinal" => $_POST[""],
-						   "ValorPagar" => $_POST[""],
-						   "FK_PersonalID" => $_POST[""]);
+			$datos = array("FechaInicio" => $_POST["registroFechaInicio"],
+				           "FechaFinal" => $_POST["registroFechaFinal"],
+						   "ValorPagar" => $_POST["registroValorPagar"],
+						   "fk_PersonalID" => $_POST["registrosfk_PersonalID"]);
 
 			$respuesta = ModeloHojatiempo::mdlHojatiempo($tabla, $datos);
 

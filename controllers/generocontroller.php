@@ -13,7 +13,7 @@ class ControladorGenero{
 
 			$tabla = "TBL_Genero";
 
-			$datos = array("Genero" => $_POST[""]);
+			$datos = array("Genero" => $_POST["registrogenero"]);
 
 			$respuesta = ModelosGenero::mdlGenero($tabla, $datos);
 

@@ -10,14 +10,14 @@ class ControladorVoluntario{
 
 	static public function ctrRegistroVoluntario(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombrevoluntario"])){
 
 			$tabla = "TBL_Voluntario";
 
-			$datos = array("Nombres" => $_POST[""],
-				           "Apellidos" => $_POST[""],
-				           "FK_CodigoPais" => $_POST[""],
-						   "FK_Genero" => $_POST[""]);
+			$datos = array("Nombres" => $_POST["registroNombrevoluntario"],
+				           "Apellidos" => $_POST["registroApellidovoluntario"],
+				           "fk_PaisID" => $_POST["registroFK_Paisvoluntario"],
+						   "fk_GeneroID" => $_POST["registroFK_Generovoluntario"]);
 
 			$respuesta = ModeloVoluntario::mdlVoluntario($tabla, $datos);
 

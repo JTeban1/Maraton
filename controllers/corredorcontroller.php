@@ -15,9 +15,9 @@ class ControladorCorredor{
 			$tabla = "TBL_Corredor";
 
 			$datos = array("FechaNacimiento" => $_POST["registroFechaNacimiento"],
-				           "FK_Genero" => $_POST["registrofk_GeneroID"],
-				           "FK_Email" => $_POST["fk_UsuarioID"],
-						   "FK_PaisID" => $_POST["fk_paisID"]);
+				           "fk_Genero" => $_POST["registrofk_GeneroID"],
+				           "fk_UsuarioID" => $_POST["registrofk_UsuarioID"],
+						   "fk_PaisID" => $_POST["registrosfk_paisID"]);
 
 			$respuesta = ModeloCorredor::mdlCorredor($tabla, $datos);
 

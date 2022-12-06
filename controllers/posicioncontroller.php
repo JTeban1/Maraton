@@ -10,13 +10,13 @@ class ControladorPosicion{
 
 	static public function ctrRegistroPosi(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombrePosicionposicion"])){
 
 			$tabla = "TBL_Posicion";
 
-			$datos = array("NombrePosicion" => $_POST[""],
-				           "DescripcionPosicion" => $_POST[""],
-				           "TarifaPago" => $_POST[""]);
+			$datos = array("NombrePosicion" => $_POST["registroNombrePosicionposicion"],
+				           "DescripcionPosicion" => $_POST["registroDescripcionPosicion"],
+				           "TarifaPago" => $_POST["registroTarifaPagoposicion"]);
 
 			$respuesta = ModeloPosicion::mdlPosicion($tabla, $datos);
 

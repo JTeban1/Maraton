@@ -10,12 +10,12 @@ class ControladorPais{
 
 	static public function ctrRegistroPais(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombrePais"])){
 
 			$tabla = "TBL_Pais";
 
-			$datos = array("NombrePais" => $_POST[""],
-				           "BanderaPais" => $_POST[""]);//ES IMG
+			$datos = array("NombrePais" => $_POST["registroNombrePais"],
+				           "BanderaPais"=> addslashes(file_get_contents ($_FILES["registroBanderaPais"]["tmp_name"])));//ES IMG
 
 			$respuesta = ModeloPais::mdlPais($tabla, $datos);
 

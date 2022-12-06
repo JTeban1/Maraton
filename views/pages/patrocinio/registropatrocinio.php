@@ -36,18 +36,28 @@
                <input id="Montopatrocinador" class="form-control" type="number" name="registroMontopatrocinador">
           </div>
 
+          
+
+
+
+
           <div class="form-group">
-          <label for="FK_RegistroIDpatrocinador">FK_RegistroID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_RegistroIDpatrocinador" class="form-control" type="Select" name="registroFK_RegistroIDpatrocinador">
+                    <label for="text">Registro</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registroFK_RegistroID">
+               
+                    <?php
+                     foreach ($registro  as $registros) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $registros["RegistroID"];?>'><?php echo $registros["Costo"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
          
           <?php

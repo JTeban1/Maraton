@@ -10,11 +10,11 @@ class ControladorTipoEvento{
 
 	static public function ctrRegistroTipoEven(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombreTipoEvento"])){
 
 			$tabla = "TBL_TipoEvento";
 
-			$datos = array("NombreTipoEvento" => $_POST[""]);
+			$datos = array("NombreTipoEvento" => $_POST["registroNombreTipoEvento"]);
 
 			$respuesta = ModeloTipoEvento::mdlTipoEvento($tabla, $datos);
 

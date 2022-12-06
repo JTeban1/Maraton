@@ -10,11 +10,11 @@ class ControladorRol{
 
 	static public function ctrRegistroRol(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroRol"])){
 
 			$tabla = "TBL_Rol";
 
-			$datos = array("Rol" => $_POST[""]);
+			$datos = array("Rol" => $_POST["registroRol"]);
 
 			$respuesta = ModeloRol::mdlRol($tabla, $datos);
 

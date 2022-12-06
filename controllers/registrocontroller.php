@@ -9,17 +9,17 @@ class ControladorRegis{
 
 	static public function ctrRegistroRegis(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroFechaRegistroregistro"])){
 
 			$tabla = "TBL_Registro";
 
-			$datos = array("FechaRegistro" => $_POST[""],
-							"Costo" => $_POST[""],
-							"ObjetivoPatrocinio" => $_POST[""],
-							"FK_CorredorID" => $_POST[""],
-							"FK_KitID" => $_POST[""],
-							"FK_EstadoRegistroID" => $_POST[""],
-							"FK_CaridadID"=> $_POST[""]);
+			$datos = array("FechaRegistro" => $_POST["registroFechaRegistroregistro"],
+							"Costo" => $_POST["registroCostoregistro"],
+							"ObjetivoPatrocinio" => $_POST["registroObjetivoPatrocinioregistro"],
+							"fK_CorredorID" => $_POST["registroFK_CorredorIDregistro"],
+							"fK_KitID" => $_POST["registroFK_KitIDregistro"],
+							"fK_EstadoRegistroID" => $_POST["registroFK_EstadoRegistroIDregistro"],
+							"fK_CaridadID"=> $_POST["registroFK_CaridadIDregistros"]);
 
 			$respuesta = ModeloRegistro::mdlRegistro($tabla, $datos);
 

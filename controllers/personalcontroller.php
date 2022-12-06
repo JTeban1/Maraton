@@ -10,17 +10,17 @@ class ControladorPersonal{
 
 	static public function ctrRegistroPersonal(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombrepersonal"])){
 
 			$tabla = "TBL_Personal";
 
-			$datos = array("Nombres" => $_POST[""],
-				           "Apellidos" => $_POST[""],
-						   "FechaNacimiento" => $_POST[""],
-						   "Genero" => $_POST[""],
-						   "Comentarios" => $_POST[""],
-				           "FK_RolID" => $_POST[""],
-						   "FK_PosicionID" => $_POST[""]);
+			$datos = array("Nombres" => $_POST["registroNombrepersonal"],
+				           "Apellidos" => $_POST["registroApellidopesonal"],
+						   "FechaNacimiento" => $_POST["registroFechaNacimientopersonal"],
+						   "Genero" => $_POST["registroGeneropersonal"],
+						   "Comentarios" => $_POST["registroComentariopersonal"],
+				           "fk_RolID" => $_POST["registrofk_RolID"],
+						   "fk_PosicionID" => $_POST["registrofk_PosicionID"]);
 
 			$respuesta = ModeloPersonal::mdlPersonal($tabla, $datos);
 

@@ -9,7 +9,7 @@ class ControladorEstadoRegistro{
 
 	static public function ctrRegistroEstaRegis(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroEstadoRegistro"])){
 
 			$tabla = "TBL_EstadoRegistro";
 

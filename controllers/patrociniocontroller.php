@@ -10,13 +10,13 @@ class ControladorPatrocinio{
 
 	static public function ctrRegistroPatrocinio(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombrePatrocinador"])){
 
 			$tabla = "TBL_Patrocinio";
 
-			$datos = array("NombrePatrocinador" => $_POST[""],
-							"Monto" => $_POST[""],
-							"FK_RegistroID" => $_POST[""]);
+			$datos = array("NombrePatrocinador" => $_POST["registroNombrePatrocinador"],
+							"Monto" => $_POST["registroMontopatrocinador"],
+							"fk_RegistroID" => $_POST["registroFK_RegistroID"]);
 
 			$respuesta = ModeloPatrocinio::mdlPatrocinio($tabla, $datos);
 
