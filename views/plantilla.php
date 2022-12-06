@@ -93,17 +93,34 @@
 
                     <?php if($_GET["pages"] == "registrocaridad"):?>
                          <li class="nav-item">
-                              <a class="nav-link active" href="index.php?pages=registrocaridad">Registro Caridad</a>
+                              <a class="nav-link active" href="index.php?pages=/caridad/registrocaridad">Registro Caridad</a>
                          </li>
 
                     <?php else: ?>
                          <li class="nav-item">
-                              <a class="nav-link" href="index.php?pages=registrocaridad">Registro Caridad</a>
+                              <a class="nav-link" href="index.php?pages=/caridad/registrocaridad">Registro Caridad</a>
                          </li>
 
                     <?php endif ?>
 
                     <!--FIN INVENTARIO-->
+
+
+
+                    
+                    <?php if($_GET["pages"] == "vistacaridad"):?>
+                         <li class="nav-item">
+                              <a class="nav-link active" href="index.php?pages=/caridad/vistacaridad">vista Caridad</a>
+                         </li>
+
+                    <?php else: ?>
+                         <li class="nav-item">
+                              <a class="nav-link" href="index.php?pages=/caridad/vistacaridad">vista Caridad</a>
+                         </li>
+
+                    <?php endif ?>
+
+                    <!--FIN VISTA CARIDAD-->
 
 
 
@@ -149,7 +166,10 @@
                   <a class="nav-link" href="index.php?pages=">Registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?pages=registrocaridad">Registro Caridad</a>
+                    <a class="nav-link" href="index.php?pages=/caridad/registrocaridad">Registro Caridad</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.php?pages=/caridad/vistacaridad">Vista Caridad</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="index.php?pages=">Registro Area</a>
@@ -180,8 +200,8 @@
           if(isset($_GET["pages"])){
 
                if($_GET["pages"] == "registro" ||
-               $_GET["pages"] == "registrocaridad" ||
-               $_GET["pages"] == "" ||
+               $_GET["pages"] == "/caridad/registrocaridad" ||
+               $_GET["pages"] == "/caridad/vistacaridad" ||
                $_GET["pages"] == ""|| 
                $_GET["pages"] == ""|| 
                $_GET["pages"] == ""||
