@@ -58,7 +58,7 @@ class ControladorTipoEvento{
 			$tabla = "TBL_TipoEvento";
 
 			$datos = array("TipoEventoID" => $_POST[""],
-							"NombreTipoEvento" => $_POST[""]);
+							"NombreTipoEvento" => $_POST["actualizarNombreTipoEvento"]);
 
 			$respuesta = ModeloTipoEvento::mdlActualizarTipoEvento($tabla, $datos);
 

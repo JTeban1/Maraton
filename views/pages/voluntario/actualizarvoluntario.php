@@ -7,9 +7,9 @@
 <div class="d-flex justify-content-center text-center py-5">
 
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Actualizar patrocinio</h1>
+               <h1>Actualizar voluntario</h1>
           <div class="form-group">
-          <label for="NombrePatrocinador">NombrePatrocinador</label>
+          <label for="Nombrevoluntario">Nombres</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="NombrePatrocinador" class="form-control" type="text" name="registroNombrePatrocinador">
+               <input id="Nombrevoluntario" class="form-control" type="text" name="actualizarNombrevoluntario">
           </div>
 
           <div class="form-group">
-          <label for="Montopatrocinador">Monto</label>
+          <label for="Apellidosvoluntario">Apellidos</label>
           
                <div class="input-group">
           
@@ -33,11 +33,11 @@
                          </span>
                     </div>
                            
-               <input id="Montopatrocinador" class="form-control" type="number" name="registroMontopatrocinador">
+               <input id="Apellidosvoluntario" class="form-control" type="number" name="actualizarApellidosvoluntario">
           </div>
 
           <div class="form-group">
-          <label for="FK_RegistroIDpatrocinador">FK_RegistroID</label>
+          <label for="fk_PaisIDvoluntario">fk_PaisID</label>
           
                <div class="input-group">
           
@@ -47,7 +47,21 @@
                          </span>
                     </div>
                            
-               <input id="FK_RegistroIDpatrocinador" class="form-control" type="Select" name="registroFK_RegistroIDpatrocinador">
+               <input id="fk_PaisIDvoluntario" class="form-control" type="Select" name="actualizarfk_PaisIDvoluntario">
+          </div>
+
+          <div class="form-group">
+          <label for="fk_GeneroIDvoluntario">fk_GeneroID</label>
+          
+               <div class="input-group">
+          
+                    <div class="input-group-prepend">
+                         <span class="input-group-text">
+                              <i class="fas fa-evelope"></i>
+                         </span>
+                    </div>
+                           
+               <input id="fk_GeneroIDvoluntario" class="form-control" type="Select" name="actualizarfk_GeneroIDvoluntario">
           </div>
          
           <?php

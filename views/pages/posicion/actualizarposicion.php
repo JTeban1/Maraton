@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="NombrePosicionposicion" class="form-control" type="text" name="registroNombrePosicionposicion">
+               <input id="NombrePosicionposicion" class="form-control" type="text" name="actualizarNombrePosicionposicion">
           </div>
 
           <div class="form-group">
@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="DescripcionPosicion" class="form-control" type="textarea" name="registroDescripcionPosicion">
+               <input id="DescripcionPosicion" class="form-control" type="textarea" name="actualizarDescripcionPosicion">
           </div>
 
           <div class="form-group">
@@ -47,7 +47,7 @@
                          </span>
                     </div>
                            
-               <input id="TarifaPagoposicion" class="form-control" type="number" name="registroTarifaPagoposicion">
+               <input id="TarifaPagoposicion" class="form-control" type="number" name="actualizarTarifaPagoposicion">
           </div>
 
          

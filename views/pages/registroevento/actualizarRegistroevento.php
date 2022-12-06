@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="NumDorsalevento" class="form-control" type="number" name="registroNumDorsalevento">
+               <input id="NumDorsalevento" class="form-control" type="number" name="actualizarNumDorsalevento">
           </div>
 
           <div class="form-group">
@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="TiempoCarreraevento" class="form-control" type="text" name="registroTiempoCarreraevento">
+               <input id="TiempoCarreraevento" class="form-control" type="text" name="actualizarTiempoCarreraevento">
           </div>
 
           <div class="form-group">
@@ -47,7 +47,7 @@
                          </span>
                     </div>
                            
-               <input id="FK_RegistroIDevento" class="form-control" type="Select" name="registroFK_RegistroIDevento">
+               <input id="FK_RegistroIDevento" class="form-control" type="Select" name="actualizarFK_RegistroIDevento">
           </div>
 
           <div class="form-group">
@@ -61,7 +61,7 @@
                          </span>
                     </div>
                            
-               <input id="FK_EventoIDevento" class="form-control" type="Select" name="registroFK_EventoIDevento">
+               <input id="FK_EventoIDevento" class="form-control" type="Select" name="actualizarFK_EventoIDevento">
           </div>
 
           

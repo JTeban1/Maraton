@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="FechaRegistroregistro" class="form-control" type="Data" name="registroFechaRegistroregistro">
+               <input id="FechaRegistroregistro" class="form-control" type="Data" name="actualizarFechaRegistroregistro">
           </div>
 
           <div class="form-group">
@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="Costoregistro" class="form-control" type="number" name="registroCostoregistro">
+               <input id="Costoregistro" class="form-control" type="number" name="actualizarCostoregistro">
           </div>
 
           <div class="form-group">
@@ -47,7 +47,7 @@
                          </span>
                     </div>
                            
-               <input id="ObjetivoPatrocinioregistro" class="form-control" type="textarea" name="registroObjetivoPatrocinioregistro">
+               <input id="ObjetivoPatrocinioregistro" class="form-control" type="textarea" name="actualizarObjetivoPatrocinioregistro">
           </div>
 
           <div class="form-group">
@@ -61,7 +61,7 @@
                          </span>
                     </div>
                            
-               <input id="FK_CorredorIDregistro" class="form-control" type="Select" name="registroFK_CorredorIDregistro">
+               <input id="FK_CorredorIDregistro" class="form-control" type="Select" name="actualizarFK_CorredorIDregistro">
           </div>
           <div class="form-group">
           <label for="FK_KitIDregistro">FK_KitID</label>
@@ -74,7 +74,7 @@
                          </span>
                     </div>
                            
-               <input id="FK_KitIDregistro" class="form-control" type="Select" name="registroFK_KitIDregistro">
+               <input id="FK_KitIDregistro" class="form-control" type="Select" name="actualizarFK_KitIDregistro">
           </div>
           <div class="form-group">
           <label for="FK_EstadoRegistroIDregistro">FK_EstadoRegistroID</label>
@@ -87,7 +87,7 @@
                          </span>
                     </div>
                            
-               <input id="FK_EstadoRegistroIDregistro" class="form-control" type="Select" name="registroFK_EstadoRegistroIDregistro">
+               <input id="FK_EstadoRegistroIDregistro" class="form-control" type="Select" name="actualizarFK_EstadoRegistroIDregistro">
           </div>
           <div class="form-group">
           <label for="FK_CaridadIDregistro">FK_CaridadID</label>
@@ -100,7 +100,7 @@
                          </span>
                     </div>
                            
-               <input id="FK_CaridadIDregistro" class="form-control" type="Select" name="registroFK_CaridadIDregistro">
+               <input id="FK_CaridadIDregistro" class="form-control" type="Select" name="actualizarFK_CaridadIDregistro">
           </div>
 
           

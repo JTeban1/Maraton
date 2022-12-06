@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="NombrePatrocinador" class="form-control" type="text" name="registroNombrePatrocinador">
+               <input id="NombrePatrocinador" class="form-control" type="text" name="actualizarNombrePatrocinador">
           </div>
 
           <div class="form-group">
@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="Montopatrocinador" class="form-control" type="number" name="registroMontopatrocinador">
+               <input id="Montopatrocinador" class="form-control" type="number" name="actualizarMontopatrocinador">
           </div>
 
           <div class="form-group">
@@ -47,7 +47,7 @@
                          </span>
                     </div>
                            
-               <input id="FK_RegistroIDpatrocinador" class="form-control" type="Select" name="registroFK_RegistroIDpatrocinador">
+               <input id="FK_RegistroIDpatrocinador" class="form-control" type="Select" name="actualizarFK_RegistroIDpatrocinador">
           </div>
          
           <?php

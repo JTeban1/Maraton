@@ -63,13 +63,13 @@ class ControladorRegis{
 			$tabla = "TBL_Registro";
 
 			$datos = array("RegistroID" => $_POST[""],
-							"FechaRegistro" => $_POST[""],
-				           "Costo" => $_POST[""],
-						   "ObjetivoPatrocinio" => $_POST[""],
-						   "FK_CorredorID" => $_POST[""],
-						   "FK_KitID" => $_POST[""],
-						   "FK_EstadoRegistroID" => $_POST[""],
-				           "FK_CaridadID"=> $_POST[""]);
+							"FechaRegistro" => $_POST["actualizarFechaRegistroregistro"],
+				           "Costo" => $_POST["actualizarCostoregistro"],
+						   "ObjetivoPatrocinio" => $_POST["actualizarObjetivoPatrocinioregistro"],
+						   "FK_CorredorID" => $_POST["actualizarFK_CorredorIDregistro"],
+						   "FK_KitID" => $_POST["actualizarFK_KitIDregistro"],
+						   "FK_EstadoRegistroID" => $_POST["actualizarFK_EstadoRegistroIDregistro"],
+				           "FK_CaridadID"=> $_POST["actualizarFK_CaridadIDregistro"]);
 
 			$respuesta = ModeloRegistro::mdlActualizarRegistro($tabla, $datos);
 

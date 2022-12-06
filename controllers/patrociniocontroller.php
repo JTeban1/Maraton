@@ -60,9 +60,9 @@ class ControladorPatrocinio{
 			$tabla = "TBL_Patrocinio";
 
 			$datos = array("PatrocinioID" => $_POST[""],
-							"NombrePatrocinador" => $_POST[""],
-				           "Monto" => $_POST[""],
-				           "FK_RegistroID" => $_POST[""]);
+							"NombrePatrocinador" => $_POST["actualizarNombrePatrocinador"],
+				           "Monto" => $_POST["actualizarMontopatrocinador"],
+				           "FK_RegistroID" => $_POST["actualizarFK_RegistroIDpatrocinador"]);
 
 			$respuesta = ModeloPatrocinio::mdlActualizarPatrocinio($tabla, $datos);
 

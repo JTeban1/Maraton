@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="Nombrepersonal" class="form-control" type="text" name="registroNombrepersonal">
+               <input id="Nombrepersonal" class="form-control" type="text" name="actualizarNombrepersonal">
           </div>
 
           <div class="form-group">
@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="Apellidopesonal" class="form-control" type="text" name="registroApellidopesonal">
+               <input id="Apellidopesonal" class="form-control" type="text" name="actualizarApellidopesonal">
           </div>
 
           <div class="form-group">
@@ -47,7 +47,7 @@
                          </span>
                     </div>
                            
-               <input id="FechaNacimientopersonal" class="form-control" type="Data" name="registroFechaNacimientopersonal">
+               <input id="FechaNacimientopersonal" class="form-control" type="Data" name="actualizarFechaNacimientopersonal">
           </div>
           <div class="form-group">
           <label for="Generopersonal">Genero</label>
@@ -60,7 +60,7 @@
                          </span>
                     </div>
                            
-               <input id="Generopersonal" class="form-control" type="text" name="registroGeneropersonal">
+               <input id="Generopersonal" class="form-control" type="text" name="actualizarGeneropersonal">
           </div>
           <div class="form-group">
           <label for="Comentariopersonal">Comentarios</label>
@@ -73,7 +73,7 @@
                          </span>
                     </div>
                            
-               <input id="GeneroperComentariopersonalsonal" class="form-control" type="textarea" name="registroComentariopersonal">
+               <input id="GeneroperComentariopersonalsonal" class="form-control" type="textarea" name="actualizarComentariopersonal">
           </div>
           <div class="form-group">
           <label for="FK_RolIDpersonal">FK_RolID</label>
@@ -86,7 +86,7 @@
                          </span>
                     </div>
                            
-               <input id="FK_RolIDpersonal" class="form-control" type="Select" name="registroFK_RolIDpersonal">
+               <input id="FK_RolIDpersonal" class="form-control" type="Select" name="actualizarFK_RolIDpersonal">
           </div>
           <div class="form-group">
           <label for="FK_PosicionIDpersonal">FK_PosicionID</label>
@@ -99,7 +99,7 @@
                          </span>
                     </div>
                            
-               <input id="FK_PosicionIDpersonal" class="form-control" type="Select" name="registroFK_PosicionIDpersonal">
+               <input id="FK_PosicionIDpersonal" class="form-control" type="Select" name="actualizarFK_PosicionIDpersonal">
           </div>
 
 

@@ -63,11 +63,11 @@ class ControladorUsuario{
 			$tabla = "TBL_Usuario";
 
 			$datos = array("id" => $_POST[""],
-							"Email" => $_POST[""],
-				           "Contrasena" => $_POST[""],
-				           "Nombres" => $_POST[""],
-						   "Apellido" => $_POST[""],
-						   "FK_RolID" => $_POST[""],);
+							"Email" => $_POST["actualizarEmailusuario"],
+				           "Contrasena" => $_POST["actualizarContrasenausuario"],
+				           "Nombres" => $_POST["actualizarNombreusuario"],
+						   "Apellido" => $_POST["actualizarApellidousuario"],
+						   "FK_RolID" => $_POST["actualizarFK_RolIDusuario"],);
 
 			$respuesta = ModelosUsuario::mdlActualizarUsuario($tabla, $datos);
 

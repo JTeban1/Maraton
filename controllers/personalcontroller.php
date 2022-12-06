@@ -64,13 +64,13 @@ class ControladorPersonal{
 			$tabla = "TBL_Personal";
 
 			$datos = array("PersonalID" => $_POST[""],
-							"Nombres" => $_POST[""],
-				           "Apellidos" => $_POST[""],
-				           "FechaNacimiento" => $_POST[""],
-						   "Genero" => $_POST[""],
-						   "Comentarios" => $_POST[""],
-						   "FK_RolID" => $_POST[""],
-						   "FK_PosicionID" => $_POST[""],);
+							"Nombres" => $_POST["actualizarNombrepersonal"],
+				           "Apellidos" => $_POST["actualizarApellidopesonal"],
+				           "FechaNacimiento" => $_POST["actualizarFechaNacimientopersonal"],
+						   "Genero" => $_POST["actualizarGeneropersonal"],
+						   "Comentarios" => $_POST["actualizarComentariopersonal"],
+						   "FK_RolID" => $_POST["actualizarFK_RolIDpersonal"],
+						   "FK_PosicionID" => $_POST["actualizarFK_PosicionIDpersonal"],);
 
 			$respuesta = ModeloPersonal::mdlActualizarPersonal($tabla, $datos);
 

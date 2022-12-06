@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="Rol" class="form-control" type="text" name="registroRol">
+               <input id="Rol" class="form-control" type="text" name="actualizarRol">
           </div>
 
           

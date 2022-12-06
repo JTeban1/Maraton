@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="Emailusuario" class="form-control" type="email" name="registroEmailusuario">
+               <input id="Emailusuario" class="form-control" type="email" name="actualizarEmailusuario">
           </div>
 
           <div class="form-group">
@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="Contrasenausuario" class="form-control" type="password" name="registroContrasenausuario">
+               <input id="Contrasenausuario" class="form-control" type="password" name="actualizarContrasenausuario">
           </div>
 
           <div class="form-group">
@@ -47,7 +47,7 @@
                          </span>
                     </div>
                            
-               <input id="Nombreusuario" class="form-control" type="Select" name="registroNombreusuario">
+               <input id="Nombreusuario" class="form-control" type="Select" name="actualizarNombreusuario">
           </div>
 
           <div class="form-group">
@@ -61,7 +61,7 @@
                          </span>
                     </div>
                            
-               <input id="Apellidousuario" class="form-control" type="text" name="registroApellidousuario">
+               <input id="Apellidousuario" class="form-control" type="text" name="actualizarApellidousuario">
           </div>
 
           <div class="form-group">
@@ -75,7 +75,7 @@
                          </span>
                     </div>
                            
-               <input id="FK_RolIDusuario" class="form-control" type="Select" name="registroFK_RolIDusuario">
+               <input id="FK_RolIDusuario" class="form-control" type="Select" name="actualizarFK_RolIDusuario">
           </div>
 
 

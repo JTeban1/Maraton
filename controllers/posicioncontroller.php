@@ -60,9 +60,9 @@ class ControladorPosicion{
 			$tabla = "TBL_Posicion";
 
 			$datos = array("PosicionID" => $_POST[""],
-							"NombrePosicion" => $_POST[""],
-				           "DescripcionPosicion" => $_POST[""],
-						   "TarifaPago" => $_POST[""]);
+							"NombrePosicion" => $_POST["actualizarNombrePosicionposicion"],
+				           "DescripcionPosicion" => $_POST["actualizarDescripcionPosicion"],
+						   "TarifaPago" => $_POST["actualizarTarifaPagoposicion"]);
 
 			$respuesta = ModeloPosicion::mdlActualizarPosicion($tabla, $datos);
 

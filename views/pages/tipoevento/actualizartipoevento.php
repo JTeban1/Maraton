@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="NombreTipoEvento" class="form-control" type="text" name="registroNombreTipoEvento">
+               <input id="NombreTipoEvento" class="form-control" type="text" name="actualizarNombreTipoEvento">
           </div>
 
 
