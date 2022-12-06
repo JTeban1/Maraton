@@ -1335,21 +1335,69 @@
                $_GET["pages"] == "/kitcompetencia/registrocompetencia"||
                $_GET["pages"] == "/kitcompetencia/actualizarcompetencia"||
 
-               //
+               //VISTA MARATON
                $_GET["pages"] == "/maraton/vistamaraton"||
                $_GET["pages"] == "/maraton/registrarmaraton"||
                $_GET["pages"] == "/maraton/actualizarmaraton"||
 
 
-               //
+               //VISTA PAIS
                $_GET["pages"] == "/pais/vistapais"||
                $_GET["pages"] == "/pais/registropais"||
                $_GET["pages"] == "/pais/actualizarpais"||
                
-               
-               //
-               $_GET["pages"] == ""||
-               $_GET["pages"] == ""){
+                 //VISTA PATROCINIO
+               $_GET["pages"] == "/patrocinio/vistapatrocinio"||
+               $_GET["pages"] == "/patrocinio/registropatrocinio"||
+               $_GET["pages"] == "/patrocinio/actualizarpatrocinio"||
+
+               //VISTA PERSONAL
+               $_GET["pages"] == "/personal/vistapersonal"||
+               $_GET["pages"] == "/personal/registropersonal"||
+               $_GET["pages"] == "/personal/actualizarpersonal"||
+
+
+               //VISTA POSICION
+               $_GET["pages"] == "/posicion/vistaposicion"||
+               $_GET["pages"] == "/posicion/registroposicion"||
+               $_GET["pages"] == "/posicion/actualizarposicion"||
+
+
+                 //VISTA REGISTRO
+               $_GET["pages"] == "/registro/vistaregistro"||
+               $_GET["pages"] == "/registro/registroregistro"||
+               $_GET["pages"] == "/registro/actualizarRegistro"||
+
+
+
+                //VISTA REGISTRO EVENTO
+                $_GET["pages"] == "/registroevento/vistaregistroevento"||
+                $_GET["pages"] == "/registroevento/registroregistroevento"||
+                $_GET["pages"] == "/registroevento/actualizarRegistroevento"||
+
+
+                //VISTA ROL
+                $_GET["pages"] == "/rol/vistarol"||
+                $_GET["pages"] == "/rol/registrorol"||
+                $_GET["pages"] == "/rol/actualizarRol"||
+
+
+                //VISTA TIPO EVENTO
+                $_GET["pages"] == "/tipoevento/vistatipoevento"||
+                $_GET["pages"] == "/tipoevento/registrotipoevento"||
+                $_GET["pages"] == "/tipoevento/actualizartipoevento"||
+
+
+                //VISTA USUARIOS
+                $_GET["pages"] == "/usuario/vistausuario"||
+                $_GET["pages"] == "/usuario/registrousuario"||
+                $_GET["pages"] == "/usuario/actualizarusuario"||
+
+
+                //VISTA VOLUNTARIO
+                $_GET["pages"] == "/voluntario/vistavoluntario"||
+                $_GET["pages"] == "/voluntario/registrovoluntario"||
+                $_GET["pages"] == "/voluntario/actualizarvoluntario"||){
 
                     include "pages/".$_GET["pages"].".php";
 
