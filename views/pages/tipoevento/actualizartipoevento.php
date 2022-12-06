@@ -7,7 +7,7 @@
 <div class="d-flex justify-content-center text-center py-5">
 
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Registro tipoenvento</h1>
+               <h1>Actualizar Tipo Envento</h1>
           <div class="form-group">
           <label for="NombreTipoEvento">NombreTipoEvento</label>
           

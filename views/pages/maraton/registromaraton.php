@@ -83,7 +83,7 @@
  
  
  
-               if($registroGenero == "ok")
+               if($registroMaraton == "ok")
                {
                     echo '<script>
 

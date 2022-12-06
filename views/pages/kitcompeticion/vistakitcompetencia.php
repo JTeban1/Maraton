@@ -17,7 +17,7 @@
 ?>
 
 
-<h1>genero</h1>
+<h1>Kit Competencia</h1>
 
 <div class="container-fluid">
           <div class="container py-5">

@@ -53,7 +53,7 @@
  
  
  
-               if($registroGenero == "ok")
+               if($registroPais == "ok")
                {
                     echo '<script>
 

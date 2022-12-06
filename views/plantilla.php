@@ -957,12 +957,12 @@
                               <li>
                                    <?php if($_GET["pages"] == "actualizarRegistro"):?>
                                         <li class="nav-item">
-                                             <a class="nav-link active" href="index.php?pages=/registroevento/actualizarRegistro">Actualizar Registro Evento</a>
+                                             <a class="nav-link active" href="index.php?pages=/registroevento/actualizarRegistroevento">Actualizar Registro Evento</a>
                                         </li>
 
                                    <?php else: ?>
                                         <li class="nav-item">
-                                             <a class="nav-link" href="index.php?pages=/registroevento/actualizarRegistro">Actualizar Registro Evento</a>
+                                             <a class="nav-link" href="index.php?pages=/registroevento/actualizarRegistroevento">Actualizar Registro Evento</a>
                                         </li>
 
                                    <?php endif ?>
@@ -1327,17 +1327,17 @@
                //VISTA hoja tiempo
                $_GET["pages"] == "/hojatiempo/vistahojatiempo"||
                $_GET["pages"] == "/hojatiempo/registrohojatiempo"||
-               $_GET["pages"] == "/hojatiempo/registrohojatiempo"||
+               $_GET["pages"] == "/hojatiempo/actualizarhojatiempo"||
 
 
                // VISTAS kit Competencia
                $_GET["pages"] == "/kitcompeticion/vistakitcompetencia"||
-               $_GET["pages"] == "/kitcompeticion/registrocompetencia"||
-               $_GET["pages"] == "/kitcompeticion/actualizarcompetencia"||
+               $_GET["pages"] == "/kitcompeticion/registrokitcompetencia"||
+               $_GET["pages"] == "/kitcompeticion/actualizarkitcompetencia"||
 
                //VISTA MARATON
                $_GET["pages"] == "/maraton/vistamaraton"||
-               $_GET["pages"] == "/maraton/registrarmaraton"||
+               $_GET["pages"] == "/maraton/registromaraton"||
                $_GET["pages"] == "/maraton/actualizarmaraton"||
 
 
