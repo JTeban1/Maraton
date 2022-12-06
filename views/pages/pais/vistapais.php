@@ -36,7 +36,7 @@
                     <tbody>
 
 
-                    <?php foreach ($maraton as $key => $value): ?>
+                    <?php foreach ($pais as $key => $value): ?>
 
 
                       <tr>

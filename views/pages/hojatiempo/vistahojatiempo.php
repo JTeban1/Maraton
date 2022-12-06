@@ -10,7 +10,7 @@
     return;
  }
  }*/
-  $hojaTiempo = ctrRegistroHojaTiem::ctrSeleccionarRegistroHojaTiem(null,null);
+  $hojaTiempo = ControladorHojaTiempo::ctrSeleccionarRegistroHojaTiem(null,null);
 
   //echo'<pre>'; print_r($usuario); echo '</pre>'
 

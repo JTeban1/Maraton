@@ -437,14 +437,14 @@
 
 
                               <li>
-                                   <?php if($_GET["pages"] == "registrarhojatiempo"):?>
+                                   <?php if($_GET["pages"] == "registrohojatiempo"):?>
                                         <li class="nav-item">
-                                             <a class="nav-link active" href="index.php?pages=/hojatiempo/registrarhojatiempo">Registrar Hoja Tiempo</a>
+                                             <a class="nav-link active" href="index.php?pages=/hojatiempo/registrohojatiempo">Registrar Hoja Tiempo</a>
                                         </li>
 
                                    <?php else: ?>
                                         <li class="nav-item">
-                                             <a class="nav-link" href="index.php?pages=/hojatiempo/registrarhojatiempo">Registrar Hoja Tiempo</a>
+                                             <a class="nav-link" href="index.php?pages=/hojatiempo/registrohojatiempo">Registrar Hoja Tiempo</a>
                                         </li>
 
                                    <?php endif ?>
@@ -939,14 +939,14 @@
 
 
                               <li>
-                                   <?php if($_GET["pages"] == "registroregistroevento"):?>
+                                   <?php if($_GET["pages"] == "registroRegistroevento"):?>
                                         <li class="nav-item">
-                                             <a class="nav-link active" href="index.php?pages=/registroevento/registroregistroevento"> Registro Evento</a>
+                                             <a class="nav-link active" href="index.php?pages=/registroevento/registroRegistroevento"> Registro Evento</a>
                                         </li>
 
                                    <?php else: ?>
                                         <li class="nav-item">
-                                             <a class="nav-link" href="index.php?pages=/registroevento/registroregistroevento">Registro Evento</a>
+                                             <a class="nav-link" href="index.php?pages=/registroevento/registroRegistroevento">Registro Evento</a>
                                         </li>
 
                                    <?php endif ?>
@@ -1331,9 +1331,9 @@
 
 
                // VISTAS kit Competencia
-               $_GET["pages"] == "/kitcompetencia/vistakitcompetencia"||
-               $_GET["pages"] == "/kitcompetencia/registrocompetencia"||
-               $_GET["pages"] == "/kitcompetencia/actualizarcompetencia"||
+               $_GET["pages"] == "/kitcompeticion/vistakitcompetencia"||
+               $_GET["pages"] == "/kitcompeticion/registrocompetencia"||
+               $_GET["pages"] == "/kitcompeticion/actualizarcompetencia"||
 
                //VISTA MARATON
                $_GET["pages"] == "/maraton/vistamaraton"||
@@ -1372,7 +1372,7 @@
 
                 //VISTA REGISTRO EVENTO
                 $_GET["pages"] == "/registroevento/vistaregistroevento"||
-                $_GET["pages"] == "/registroevento/registroregistroevento"||
+                $_GET["pages"] == "/registroevento/registroRegistroevento"||
                 $_GET["pages"] == "/registroevento/actualizarRegistroevento"||
 
 
@@ -1397,7 +1397,12 @@
                 //VISTA VOLUNTARIO
                 $_GET["pages"] == "/voluntario/vistavoluntario"||
                 $_GET["pages"] == "/voluntario/registrovoluntario"||
-                $_GET["pages"] == "/voluntario/actualizarvoluntario"||){
+                $_GET["pages"] == "/voluntario/actualizarvoluntario"||
+               
+               
+               //
+               $_GET["pages"] == ""||
+               $_GET["pages"] == ""){
 
                     include "pages/".$_GET["pages"].".php";
 
