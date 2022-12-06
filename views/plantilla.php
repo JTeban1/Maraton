@@ -1314,8 +1314,14 @@
 
                //VISTAS EVENTO
                $_GET["pages"] == "/evento/vistaevento"||
-               $_GET["pages"] == "/evento/registrarevento"||
+               $_GET["pages"] == "/evento/registroevento"||
                $_GET["pages"] == "/evento/actualizarevento"||
+
+
+               //VISTAS GENERO
+               $_GET["pages"] == "/genero/vistagenero"||
+               $_GET["pages"] == "/genero/registrogenero"||
+               $_GET["pages"] == "/genero/actualizargenero"||
 
 
                //VISTA hoja tiempo
@@ -1330,15 +1336,15 @@
                $_GET["pages"] == "/kitcompetencia/actualizarcompetencia"||
 
                //
-               $_GET["pages"] == ""||
-               $_GET["pages"] == ""||
-               $_GET["pages"] == ""||
+               $_GET["pages"] == "/maraton/vistamaraton"||
+               $_GET["pages"] == "/maraton/registrarmaraton"||
+               $_GET["pages"] == "/maraton/actualizarmaraton"||
 
 
                //
-               $_GET["pages"] == ""||
-               $_GET["pages"] == ""||
-               $_GET["pages"] == ""||
+               $_GET["pages"] == "/pais/vistapais"||
+               $_GET["pages"] == "/pais/registropais"||
+               $_GET["pages"] == "/pais/actualizarpais"||
                
                
                //
