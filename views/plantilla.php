@@ -914,19 +914,19 @@
                      <!-- 14 TABLA --> 
                     <div class="btn-group">
                          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                         Registro
+                         Registro Evento
                          </button>
                          <ul class="dropdown-menu">
 
                               <li>
                                    <?php if($_GET["pages"] == "vistaregistro"):?>
                                         <li class="nav-item">
-                                             <a class="nav-link active" href="index.php?pages=/registro/vistaregistro">vista Registro</a>
+                                             <a class="nav-link active" href="index.php?pages=/registroevento/vistaregistroevento">vista Registro Evento</a>
                                         </li>
 
                                    <?php else: ?>
                                         <li class="nav-item">
-                                             <a class="nav-link" href="index.php?pages=/registro/vistaregistro">vista Registro</a>
+                                             <a class="nav-link" href="index.php?pages=/registroevento/vistaregistroevento">vista Registro Evento</a>
                                         </li>
 
                                    <?php endif ?>
@@ -939,39 +939,297 @@
 
 
                               <li>
-                                   <?php if($_GET["pages"] == "registroregistro"):?>
+                                   <?php if($_GET["pages"] == "registroregistroevento"):?>
                                         <li class="nav-item">
-                                             <a class="nav-link active" href="index.php?pages=/registro/vistaregistro">Registro Registro</a>
+                                             <a class="nav-link active" href="index.php?pages=/registroevento/registroregistroevento"> Registro Evento</a>
                                         </li>
 
                                    <?php else: ?>
                                         <li class="nav-item">
-                                             <a class="nav-link" href="index.php?pages=/registro/vistaregistro">Registro Registro</a>
+                                             <a class="nav-link" href="index.php?pages=/registroevento/registroregistroevento">Registro Evento</a>
                                         </li>
 
                                    <?php endif ?>
 
-                                   <!--FIN Registro Registro-->
+                                   <!--FIN vista Registro-->
                               </li>
 
                               <li>
                                    <?php if($_GET["pages"] == "actualizarRegistro"):?>
                                         <li class="nav-item">
-                                             <a class="nav-link active" href="index.php?pages=/registro/actualizarRegistro">Actualizar Registro</a>
+                                             <a class="nav-link active" href="index.php?pages=/registroevento/actualizarRegistro">Actualizar Registro Evento</a>
                                         </li>
 
                                    <?php else: ?>
                                         <li class="nav-item">
-                                             <a class="nav-link" href="index.php?pages=/registro/actualizarRegistro">Actualizar Registro</a>
+                                             <a class="nav-link" href="index.php?pages=/registroevento/actualizarRegistro">Actualizar Registro Evento</a>
                                         </li>
 
                                    <?php endif ?>
 
-                                   <!--FIN Actualizar Registro-->
+                                   <!--FIN vista Registro-->
                               </li>
                               
                          </ul>
                     </div>
+
+
+                    <!-- 15 TABLA --> 
+                    <div class="btn-group">
+                         <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                         Rol 
+                         </button>
+                         <ul class="dropdown-menu">
+
+
+                              <li>
+                                   <?php if($_GET["pages"] == "vistaregistro"):?>
+                                        <li class="nav-item">
+                                             <a class="nav-link active" href="index.php?pages=/rol/vistarol">vista Rol</a>
+                                        </li>
+
+                                   <?php else: ?>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="index.php?pages=/rol/vistarol">vista Rol</a>
+                                        </li>
+
+                                   <?php endif ?>
+
+                                   <!--FIN vista Rol-->
+                              </li>
+
+
+                              <li><hr class="dropdown-divider"></li>
+
+                              <li>
+                                   <?php if($_GET["pages"] == "registrorol"):?>
+                                        <li class="nav-item">
+                                             <a class="nav-link active" href="index.php?pages=/rol/registrorol">Registro Rol</a>
+                                        </li>
+
+                                   <?php else: ?>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="index.php?pages=/rol/registrorol">Registro Rol</a>
+                                        </li>
+
+                                   <?php endif ?>
+
+                                   <!--FIN Registro Rol-->
+                              </li>
+
+
+                              <li>
+                                   <?php if($_GET["pages"] == "actualizarRol"):?>
+                                        <li class="nav-item">
+                                             <a class="nav-link active" href="index.php?pages=/rol/actualizarRol">Actualizar Rol</a>
+                                        </li>
+
+                                   <?php else: ?>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="index.php?pages=/rol/actualizarRol"> Actualizar Rol</a>
+                                        </li>
+
+                                   <?php endif ?>
+
+                                   <!--FIN Actualizar Rol-->
+                              </li>
+
+                         </ul>
+                    </div>
+
+
+                    <!-- 16 TABLA --> 
+                    <div class="btn-group">
+                         <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                         Tipo Evento 
+                         </button>
+                         <ul class="dropdown-menu">
+
+
+                              <li>
+                                   <?php if($_GET["pages"] == "vistatipoevento"):?>
+                                        <li class="nav-item">
+                                             <a class="nav-link active" href="index.php?pages=/tipoevento/vistatipoevento">vista Tipo evento</a>
+                                        </li>
+
+                                   <?php else: ?>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="index.php?pages=/tipoevento/vistatipoevento">vista Tipo evento</a>
+                                        </li>
+
+                                   <?php endif ?>
+
+                                   <!--FIN vista Tipo evento-->
+                              </li>
+
+
+                              <li><hr class="dropdown-divider"></li>
+
+                              <li>
+                                   <?php if($_GET["pages"] == "registrotipoevento"):?>
+                                        <li class="nav-item">
+                                             <a class="nav-link active" href="index.php?pages=/tipoevento/registrotipoevento">Registro Tipo evento</a>
+                                        </li>
+
+                                   <?php else: ?>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="index.php?pages=/tipoevento/registrotipoevento">Registro Tipo evento</a>
+                                        </li>
+
+                                   <?php endif ?>
+
+                                   <!--FIN Registro Tipo evento-->
+                              </li>
+
+
+                              <li>
+                                   <?php if($_GET["pages"] == "actualizartipoevento"):?>
+                                        <li class="nav-item">
+                                             <a class="nav-link active" href="index.php?pages=/tipoevento/actualizartipoevento">Actualizar Tipo evento</a>
+                                        </li>
+
+                                   <?php else: ?>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="index.php?pages=/tipoevento/actualizartipoevento">Actualizar Tipo evento</a>
+                                        </li>
+
+                                   <?php endif ?>
+
+                                   <!--FIN actualizar Tipo evento-->
+                              </li>
+
+                         </ul>
+                    </div>
+
+
+
+                    <!-- 17 TABLA --> 
+                    <div class="btn-group">
+                         <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                         usuario 
+                         </button>
+                         <ul class="dropdown-menu">
+
+
+                              <li>
+                                   <?php if($_GET["pages"] == "vistausuario"):?>
+                                        <li class="nav-item">
+                                             <a class="nav-link active" href="index.php?pages=/usuario/vistausuario">vista usuario</a>
+                                        </li>
+
+                                   <?php else: ?>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="index.php?pages=/usuario/vistausuario">vista usuario</a>
+                                        </li>
+
+                                   <?php endif ?>
+
+                                   <!--FIN vista usuario-->
+                              </li>
+
+
+                              <li><hr class="dropdown-divider"></li>
+
+                              <li>
+                                   <?php if($_GET["pages"] == "registrousuario"):?>
+                                        <li class="nav-item">
+                                             <a class="nav-link active" href="index.php?pages=/usuario/registrousuario">Registro usuario</a>
+                                        </li>
+
+                                   <?php else: ?>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="index.php?pages=/usuario/registrousuario">Registro usuario</a>
+                                        </li>
+
+                                   <?php endif ?>
+
+                                   <!--FIN REGISTRO usuario-->
+                              </li>
+
+
+                              <li>
+                                   <?php if($_GET["pages"] == "actualizarusuario"):?>
+                                        <li class="nav-item">
+                                             <a class="nav-link active" href="index.php?pages=/usuario/actualizarusuario">actualizar usuario</a>
+                                        </li>
+
+                                   <?php else: ?>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="index.php?pages=/usuario/actualizarusuario">actualizar usuario</a>
+                                        </li>
+
+                                   <?php endif ?>
+
+                                   <!--FIN ACTUALIZAR usuario-->
+                              </li>
+
+                         </ul>
+                    </div>
+
+
+                    <!-- 18 TABLA --> 
+                    <div class="btn-group">
+                         <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                         Voluntario 
+                         </button>
+                         <ul class="dropdown-menu">
+
+
+                              <li>
+                                   <?php if($_GET["pages"] == "vistavoluntario"):?>
+                                        <li class="nav-item">
+                                             <a class="nav-link active" href="index.php?pages=/voluntario/vistavoluntario">vista Voluntario</a>
+                                        </li>
+
+                                   <?php else: ?>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="index.php?pages=/voluntario/vistavoluntario">vista Voluntario</a>
+                                        </li>
+
+                                   <?php endif ?>
+
+                                   <!--FIN vista usuario-->
+                              </li>
+
+
+                              <li><hr class="dropdown-divider"></li>
+
+                              <li>
+                                   <?php if($_GET["pages"] == "registrovoluntario"):?>
+                                        <li class="nav-item">
+                                             <a class="nav-link active" href="index.php?pages=/voluntario/registrovoluntario">Registro Voluntario</a>
+                                        </li>
+
+                                   <?php else: ?>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="index.php?pages=/voluntario/registrovoluntario">Registro Voluntario</a>
+                                        </li>
+
+                                   <?php endif ?>
+
+                                   <!--FIN Registro usuario-->
+                              </li>
+
+
+                              <li>
+                                   <?php if($_GET["pages"] == "actualizarvoluntario"):?>
+                                        <li class="nav-item">
+                                             <a class="nav-link active" href="index.php?pages=/voluntario/actualizarvoluntario">Actualizar Voluntario</a>
+                                        </li>
+
+                                   <?php else: ?>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="index.php?pages=/voluntario/actualizarvoluntario">Actualizar Voluntario</a>
+                                        </li>
+
+                                   <?php endif ?>
+
+                                   <!--FIN Actualizr usuario-->
+                              </li>
+
+                         </ul>
+                    </div>
+
 
 
 
