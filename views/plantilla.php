@@ -1234,63 +1234,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                 
-
-                    
-
-
-                   
-
-
-
-                    
-                    <?php if($_GET["pages"] == "vistacaridad"):?>
-                         <li class="nav-item">
-                              <a class="nav-link active" href="index.php?pages=/caridad/vistacaridad">vista Caridad</a>
-                         </li>
-
-                    <?php else: ?>
-                         <li class="nav-item">
-                              <a class="nav-link" href="index.php?pages=/caridad/vistacaridad">vista Caridad</a>
-                         </li>
-
-                    <?php endif ?>
-
-                    <!--FIN VISTA CARIDAD-->
-
-
-
-
-                    <?php if($_GET["pages"] == "inventario"):?>
-                         <li class="nav-item">
-                              <a class="nav-link active" href="index.php?pages=area">Registro Area</a>
-                         </li>
-
-                    <?php else: ?>
-                         <li class="nav-item">
-                              <a class="nav-link" href="index.php?pages=area">Registro Area</a>
-                         </li>
-
-                    <?php endif ?>
-
-
-
-
-
                     <?php if($_GET["pages"] == "salida"):?>
                          <li class="nav-item">
                               <a class="nav-link active" href="index.php?pages=salida">Salir</a>
