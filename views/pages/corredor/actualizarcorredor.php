@@ -44,7 +44,6 @@
                </select>
           </div>
 
-<<<<<<< HEAD
 
           <div class="form-group">
                     <label for="text">Usuario</label>
@@ -64,8 +63,7 @@
                     ?>
                </select>
           </div>
-=======
->>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
+
 
 
 
