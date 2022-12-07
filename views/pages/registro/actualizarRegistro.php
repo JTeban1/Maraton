@@ -55,7 +55,11 @@
           <div class="form-group">
                     <label for="text">Corredor</label>
                     <div class="input-group">
+<<<<<<< HEAD
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_CorredorIDregistro">
+=======
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_CorredorIDregistro">
+>>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
                
                     <?php
                      foreach ($corredor  as $corredores) {
@@ -69,6 +73,7 @@
                      }
                     ?>
                </select>
+<<<<<<< HEAD
           </div>
 
 
@@ -136,6 +141,78 @@
                </select>
           </div>
 
+=======
+          </div>
+
+
+
+
+
+
+          <div class="form-group">
+                    <label for="text">Kit</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_KitIDregistro">
+               
+                    <?php
+                     foreach ($kit  as $kits) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $kits["kitID"];?>'><?php echo $kits["opcionkit"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
+          </div>
+
+
+
+          <div class="form-group">
+                    <label for="text">Estado Registro</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_EstadoRegistroIDregistro">
+               
+                    <?php
+                     foreach ($estado  as $estados) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $estados["estadoID"];?>'><?php echo $estados["estadoRegitro"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
+          </div>
+
+
+          <div class="form-group">
+                    <label for="text">Caridad</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_CaridadIDregistro">
+               
+                    <?php
+                     foreach ($caridad  as $caridades) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $caridades["CaridadID"];?>'><?php echo $caridades["NombreCaridad"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
+          </div>
+
+
+              
+
+>>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
 
           <?php
 

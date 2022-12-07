@@ -21,11 +21,14 @@
                            
                <input id="actualizarFechaNacimiento" class="form-control" type="date" name="actualizarFechaNacimiento">
           </div>
-
           <div class="form-group">
                     <label for="text">Genero</label>
                     <div class="input-group">
+<<<<<<< HEAD
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_GeneroID">
+=======
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_Genero">
+>>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
                
                     <?php
                      foreach ($genero  as $generos) {
@@ -41,6 +44,7 @@
                </select>
           </div>
 
+<<<<<<< HEAD
 
           <div class="form-group">
                     <label for="text">Usuario</label>
@@ -60,13 +64,54 @@
                     ?>
                </select>
           </div>
+=======
+>>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
 
+
+
+          <div class="form-group">
+<<<<<<< HEAD
+                    <label for="text">Pais</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_paisID">
+               
+                    <?php
+                     foreach ($pais  as $paises) {
+=======
+                    <label for="text">Usuario</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_UsuarioID">
+               
+                    <?php
+                     foreach ($usuario  as $usuarios) {
+>>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
+                        ?>
+                    
+                    
+
+<<<<<<< HEAD
+                     <option value='<?php echo $paises["PaisID"];?>'><?php echo $paises["NombrePais"];?></option>
+=======
+                     <option value='<?php echo $usuarios["UsuarioID"];?>'><?php echo $usuarios["Nombre"];?></option>
+>>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
+                    <?php
+
+                     }
+                    ?>
+               </select>
+          </div>
+
+<<<<<<< HEAD
+          </div>
+
+
+=======
 
 
           <div class="form-group">
                     <label for="text">Pais</label>
                     <div class="input-group">
-               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_paisID">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PaisID">
                
                     <?php
                      foreach ($pais  as $paises) {
@@ -85,6 +130,11 @@
           </div>
 
 
+
+          
+
+         
+>>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
           <?php
 
                $actualizarCorredor = ControladorCorredor::ctrActualizarRegistroCorredor();

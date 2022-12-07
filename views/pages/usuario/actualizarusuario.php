@@ -64,10 +64,14 @@
                <input id="actualizarApellidousuario" class="form-control" type="text" name="actualizarApellidousuario">
           </div>
 
+<<<<<<< HEAD
 
 
 
 
+=======
+        
+>>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
 
           <div class="form-group">
                     <label for="text">Rol</label>

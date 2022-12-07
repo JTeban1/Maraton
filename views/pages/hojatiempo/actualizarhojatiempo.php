@@ -37,6 +37,7 @@
                            
                <input id="actualizarFechaFinal" class="form-control" type="date" name="actualizarFechaFinal">
           </div>
+<<<<<<< HEAD
 
 
 
@@ -78,6 +79,29 @@
           
 
 
+=======
+          <div class="form-group">
+                    <label for="text">Personal</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PersonalID">
+               
+                    <?php
+                     foreach ($personal  as $personales) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $personales["PersonalID"];?>'><?php echo $personales["Nombres"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
+          </div>
+
+          
+         
+>>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
           <?php
 
                $actualizarHojaTiempo = ControladorHojaTiempo::ctrActualizarRegistroHojaTiem();
