@@ -49,20 +49,26 @@
                            
                <input id="NombreCelebracion" class="form-control" type="text" name="actualizarNombreCelebracion">
           </div>
-
           <div class="form-group">
-          <label for="fk_PaisID">fk_PaisID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="fk_PaisID" class="form-control" type="number" name="actualizarfk_PaisID">
+                    <label for="text">Pais</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PaisID">
+               
+                    <?php
+                     foreach ($pais  as $paises) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $paises["PaisID"];?>'><?php echo $paises["NombrePais"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+
+         
          
           <?php
 

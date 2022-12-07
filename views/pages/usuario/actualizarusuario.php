@@ -64,18 +64,25 @@
                <input id="Apellidousuario" class="form-control" type="text" name="actualizarApellidousuario">
           </div>
 
+        
+
           <div class="form-group">
-          <label for="FK_RolIDusuario">FK_RolID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_RolIDusuario" class="form-control" type="Select" name="actualizarFK_RolIDusuario">
+                    <label for="text">Rol</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_RolIDusuario">
+               
+                    <?php
+                     foreach ($rol  as $roles) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $roles["EventoID"];?>'><?php echo $roles["NombreEvento"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
 
 

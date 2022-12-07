@@ -49,20 +49,26 @@
                            
                <input id="ValorPagar" class="form-control" type="number" name="actualizarValorPagar">
           </div>
-
           <div class="form-group">
-          <label for="fk_PersonalID">fk_PersonalID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="fk_PersonalID" class="form-control" type="number" name="actualizarfk_PersonalID">
+                    <label for="text">Personal</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PersonalID">
+               
+                    <?php
+                     foreach ($personal  as $personales) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $personales["PersonalID"];?>'><?php echo $personales["Nombres"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+
+          
          
           <?php
 

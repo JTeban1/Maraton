@@ -36,32 +36,47 @@
                <input id="TiempoCarreraevento" class="form-control" type="text" name="actualizarTiempoCarreraevento">
           </div>
 
+
+   
           <div class="form-group">
-          <label for="FK_RegistroIDevento">FK_RegistroID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_RegistroIDevento" class="form-control" type="Select" name="actualizarFK_RegistroIDevento">
+                    <label for="text">Registro</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_RegistroIDevento">
+               
+                    <?php
+                     foreach ($registro  as $registros) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $registros["RegistroID"];?>'><?php echo $registros["ObjetivoPatrocinio"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
 
+
+
+
           <div class="form-group">
-          <label for="FK_EventoIDevento">FK_EventoID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_EventoIDevento" class="form-control" type="Select" name="actualizarFK_EventoIDevento">
+                    <label for="text">Eventos</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_EventoIDevento">
+               
+                    <?php
+                     foreach ($evento  as $eventos) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $eventos["EventoID"];?>'><?php echo $eventos["NombreEvento"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
 
           

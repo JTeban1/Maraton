@@ -76,31 +76,51 @@
                <input id="GeneroperComentariopersonalsonal" class="form-control" type="textarea" name="actualizarComentariopersonal">
           </div>
           <div class="form-group">
-          <label for="FK_RolIDpersonal">FK_RolID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
+                    <label for="text">Rol</label>
+                    <div class="input-group">
+                    <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_RolID">
+               
+                    <?php
+                     foreach ($rol  as $roles) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $roles["rolID"];?>'><?php echo $roles["rol"];?></option>
+                    <?php
+
+                     }
+                    ?>
+                    </select>
                     </div>
-                           
-               <input id="FK_RolIDpersonal" class="form-control" type="Select" name="actualizarFK_RolIDpersonal">
-          </div>
-          <div class="form-group">
-          <label for="FK_PosicionIDpersonal">FK_PosicionID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
+
+               </div>
+
+
+
+
+
+               <div class="form-group">
+                    <label for="text">Posicion</label>
+                    <div class="input-group">
+                    <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PosicionID">
+               
+                    <?php
+                     foreach ($posicion  as $posiciones) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $posiciones["PosicionID"];?>'><?php echo $posiciones["NombrePosicion"];?></option>
+                    <?php
+
+                     }
+                    ?>
+                    </select>
                     </div>
-                           
-               <input id="FK_PosicionIDpersonal" class="form-control" type="Select" name="actualizarFK_PosicionIDpersonal">
-          </div>
+
+               </div>
+
 
 
          

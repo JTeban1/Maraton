@@ -36,33 +36,47 @@
                <input id="Apellidosvoluntario" class="form-control" type="number" name="actualizarApellidosvoluntario">
           </div>
 
-          <div class="form-group">
-          <label for="fk_PaisIDvoluntario">fk_PaisID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="fk_PaisIDvoluntario" class="form-control" type="Select" name="actualizarfk_PaisIDvoluntario">
-          </div>
 
           <div class="form-group">
-          <label for="fk_GeneroIDvoluntario">fk_GeneroID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="fk_GeneroIDvoluntario" class="form-control" type="Select" name="actualizarfk_GeneroIDvoluntario">
+                    <label for="text">fk_PaisID</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PaisIDvoluntario">
+               
+                    <?php
+                     foreach ($pais  as $paises) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $paises["PaisID"];?>'><?php echo $paises["NombrePais"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+          <div class="form-group">
+                    <label for="text">Genero</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_Generovoluntario">
+               
+                    <?php
+                     foreach ($genero  as $generos) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $generos["generoID"];?>'><?php echo $generos["genero"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
+          </div>
+
+
+          
+         
          
           <?php
 
