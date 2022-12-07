@@ -37,7 +37,6 @@
                            
                <input id="actualizarNombreCiudad" class="form-control" type="text" name="actualizarNombreCiudad">
           </div>
-<<<<<<< HEAD
 
 
           <div class="form-group">
@@ -78,29 +77,6 @@
           
 
 
-=======
-          <div class="form-group">
-                    <label for="text">Pais</label>
-                    <div class="input-group">
-               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PaisID">
-               
-                    <?php
-                     foreach ($pais  as $paises) {
-                        ?>
-                    
-                    
-
-                     <option value='<?php echo $paises["PaisID"];?>'><?php echo $paises["NombrePais"];?></option>
-                    <?php
-
-                     }
-                    ?>
-               </select>
-          </div>
-
-         
-         
->>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
           <?php
 
                $actualizarMaraton = ControladorMaraton::ctrActualizarRegistroMaraton();

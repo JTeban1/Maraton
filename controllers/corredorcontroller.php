@@ -10,7 +10,7 @@ class ControladorCorredor{
 
 	static public function ctrRegistroCorredor(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroFechaNacimiento"])){
 
 			$tabla = "TBL_Corredor";
 

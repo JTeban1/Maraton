@@ -37,12 +37,8 @@
           </div>
 
 
-<<<<<<< HEAD
 
 
-=======
-   
->>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
           <div class="form-group">
                     <label for="text">Registro</label>
                     <div class="input-group">

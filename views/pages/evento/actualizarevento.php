@@ -51,12 +51,9 @@
                         </div>
                             
                 <input id="actualizarValor" class="form-control" type="text" name="actualizarValor">
-          </div>
-<<<<<<< HEAD
+</div>
 
-
-
-               <div class="form-group">
+          <div class="form-group">
                     <label for="actualizarParticipantesMax">Participantes Max</label>
      
                  <div class="input-group">
@@ -74,38 +71,26 @@
 
 
 
-               <div class="form-group">
-                    <label for="text">Nombre Maraton</label>
-                    <div class="input-group">
-                    <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_MaratonID">
-               
-                    <?php
-                     foreach ($maraton  as $maratones) {
-                        ?>
+                    <div class="form-group">
+                         <label for="text">Nombre Maraton</label>
+                         <div class="input-group">
+                         <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_MaratonID">
                     
+                         <?php
+                         foreach ($maraton  as $maratones) {
+                         ?>
+                         
+                         
+
+                         <option value='<?php echo $maratones["maratonID"];?>'><?php echo $maratones["NombreMaraton"];?></option>
+                         <?php
+
+                         }
+                         ?>
+                         </select>
+                    </div>
+
                     
-
-=======
-          <div class="form-group">
-                    <label for="text">Nombre Maraton</label>
-                    <div class="input-group">
-                    <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_MaratonID">
-               
-                    <?php
-                     foreach ($maraton  as $maratones) {
-                        ?>
-                    
-                    
-
->>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
-                     <option value='<?php echo $maratones["maratonID"];?>'><?php echo $maratones["NombreMaraton"];?></option>
-                    <?php
-
-                     }
-                    ?>
-                    </select>
-               </div>
-
                </div>
 
 
@@ -132,11 +117,6 @@
                </div>
 
 
-<<<<<<< HEAD
-=======
-      
-         
->>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
           <?php
 
                $actualizarEvento = ControladorEvento::ctrActualizarRegistroEvento();

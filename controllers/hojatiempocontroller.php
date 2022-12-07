@@ -10,7 +10,7 @@ class ControladorHojaTiempo{
 
 	static public function ctrRegistroHojaTiem(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroFechaInicio"])){
 
 			$tabla = "TBL_HojaTiempo";
 

@@ -9,7 +9,7 @@ class ControladorGenero{
 
 	static public function ctrRegistroGenero(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registrogenero"])){
 
 			$tabla = "TBL_Genero";
 

@@ -36,7 +36,6 @@
                <input id="actualizarApellidovoluntario" class="form-control" type="text" name="actualizarApellidovoluntario">
           </div>
 
-<<<<<<< HEAD
 
 
 
@@ -45,13 +44,6 @@
                     <label for="text">Pais</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_Paisvoluntario">
-=======
-
-          <div class="form-group">
-                    <label for="text">fk_PaisID</label>
-                    <div class="input-group">
-               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PaisIDvoluntario">
->>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
                
                     <?php
                      foreach ($pais  as $paises) {
@@ -66,11 +58,8 @@
                     ?>
                </select>
           </div>
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
           <div class="form-group">
                     <label for="text">Genero</label>
                     <div class="input-group">
@@ -91,12 +80,6 @@
           </div>
 
 
-<<<<<<< HEAD
-=======
-          
-         
-         
->>>>>>> 7a4944b27b010e09a90a123070f68d25f15a7363
           <?php
 
                $actualizarVoluntario = ControladorVoluntario::ctrActualizarRegistroVoluntario();

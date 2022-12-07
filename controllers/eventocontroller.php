@@ -10,7 +10,7 @@ class ControladorEvento{
 
 	static public function ctrRegistroEvento(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombreEvento"])){
 
 			$tabla = "TBL_Evento";
 
