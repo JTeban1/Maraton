@@ -58,10 +58,9 @@ class ControladorPais{
 
 			$tabla = "TBL_Pais";
 
-			$datos = array("CodigoPais" => $_POST[""],
-							"" => $_POST[""],
-				           "" => $_POST[""],
-				           "" => $password);
+			$datos = array("PaisID" => $_POST[""],
+							"NombrePais" => $_POST["actualizarNombrePais"],
+							"BanderaPais"=> addslashes(file_get_contents ($_FILES["actualizarBanderaPais"]["tmp_name"])));//ES IMG;
 
 			$respuesta = ModeloPais::mdlActualizarPais($tabla, $datos);
 

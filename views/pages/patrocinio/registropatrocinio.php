@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro patrocinio</h1>
           <div class="form-group">
-          <label for="NombrePatrocinador">NombrePatrocinador</label>
+          <label for="registroNombrePatrocinador">NombrePatrocinador</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="NombrePatrocinador" class="form-control" type="text" name="registroNombrePatrocinador">
+               <input id="registroNombrePatrocinador" class="form-control" type="text" name="registroNombrePatrocinador">
           </div>
 
           <div class="form-group">
-          <label for="Montopatrocinador">Monto</label>
+          <label for="registroMontopatrocinador">Monto</label>
           
                <div class="input-group">
           
@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="Montopatrocinador" class="form-control" type="number" name="registroMontopatrocinador">
+               <input id="registroMontopatrocinador" class="form-control" type="number" name="registroMontopatrocinador">
           </div>
 
           
@@ -44,7 +44,7 @@
           <div class="form-group">
                     <label for="text">Registro</label>
                     <div class="input-group">
-               <select class="form-select" aria-label="Disabled select example"  name="registroFK_RegistroID">
+               <select class="form-select" aria-label="Disabled select example"  name="registrofk_RegistroID">
                
                     <?php
                      foreach ($registro  as $registros) {

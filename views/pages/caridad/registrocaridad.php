@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="NombreCaridad" class="form-control" type="text" name="registroNombreCaridad">
+               <input id="registroNombreCaridad" class="form-control" type="text" name="registroNombreCaridad">
           </div>
 
           <div class="form-group">
-          <label for="DescripcionCaridad">Descripcion Caridad</label>
+          <label for="registroDescripcionCaridad">Descripcion Caridad</label>
           
                <div class="input-group">
           
@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="DescripcionCaridad" class="form-control" type="text" name="registroDescripcionCaridad">
+               <input id="registroDescripcionCaridad" class="form-control" type="text" name="registroDescripcionCaridad">
           </div>
 
 

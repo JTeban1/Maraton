@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Actualizar estado registro</h1>
           <div class="form-group">
-          <label for="EstadoRegistro">EstadoRegistro</label>
+          <label for="actualizarEstadoRegistro">EstadoRegistro</label>
           
                <div class="input-group">
           
@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="EstadoRegistro" class="form-control" type="text" name="actualizarEstadoRegistro">
+               <input id="actualizarEstadoRegistro" class="form-control" type="text" name="actualizarEstadoRegistro">
           </div>
 
          

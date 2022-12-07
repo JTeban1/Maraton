@@ -66,7 +66,7 @@
                            </span>
                       </div>
                       
-                      <input id="RegistroParticipantesMax" class="form-control" type="int" name="RegistroParticipantesMax">
+                      <input id="RegistroParticipantesMax" class="form-control" type="number" name="RegistroParticipantesMax">
                  </div>
 
                </div>
@@ -120,11 +120,11 @@
 
           <?php
 
-               $registroCorredor = ControladorCorredor::ctrRegistroCorredor();
+               $registroEvento = ControladorEvento::ctrRegistroEvento();
  
  
  
-               if($registroCorredor == "ok")
+               if($registroEvento == "ok")
                {
                     echo '<script>
 

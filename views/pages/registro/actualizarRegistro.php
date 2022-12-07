@@ -7,9 +7,9 @@
 <div class="d-flex justify-content-center text-center py-5">
 
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Actualizar Registro</h1>
+               <h1>Actualizar registro</h1>
           <div class="form-group">
-          <label for="FechaRegistroregistro">FechaRegistro</label>
+          <label for="actualizarFechaRegistroregistro">FechaRegistro</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="FechaRegistroregistro" class="form-control" type="Data" name="actualizarFechaRegistroregistro">
+               <input id="actualizarFechaRegistroregistro" class="form-control" type="date" name="actualizarFechaRegistroregistro">
           </div>
 
           <div class="form-group">
-          <label for="Costoregistro">Costo</label>
+          <label for="actualizarCostoregistro">Costo</label>
           
                <div class="input-group">
           
@@ -33,11 +33,11 @@
                          </span>
                     </div>
                            
-               <input id="Costoregistro" class="form-control" type="number" name="actualizarCostoregistro">
+               <input id="actualizarCostoregistro" class="form-control" type="number" name="actualizarCostoregistro">
           </div>
 
           <div class="form-group">
-          <label for="ObjetivoPatrocinioregistro">ObjetivoPatrocinio</label>
+          <label for="actualizarObjetivoPatrocinioregistro">ObjetivoPatrocinio</label>
           
                <div class="input-group">
           
@@ -47,68 +47,94 @@
                          </span>
                     </div>
                            
-               <input id="ObjetivoPatrocinioregistro" class="form-control" type="textarea" name="actualizarObjetivoPatrocinioregistro">
+               <input id="actualizarObjetivoPatrocinioregistro" class="form-control" type="text" name="actualizarObjetivoPatrocinioregistro">
           </div>
+
+
 
           <div class="form-group">
-          <label for="FK_CorredorIDregistro">FK_CorredorID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_CorredorIDregistro" class="form-control" type="Select" name="actualizarFK_CorredorIDregistro">
+                    <label for="text">Corredor</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_CorredorIDregistro">
+               
+                    <?php
+                     foreach ($corredor  as $corredores) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $corredores["CorredorID"];?>'><?php echo $corredores["FechaNacimiento"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+
+
+
+
+
+
           <div class="form-group">
-          <label for="FK_KitIDregistro">FK_KitID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_KitIDregistro" class="form-control" type="Select" name="actualizarFK_KitIDregistro">
+                    <label for="text">Kit</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_kitIDregistro">
+               
+                    <?php
+                     foreach ($kit  as $kits) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $kits["kitID"];?>'><?php echo $kits["opcionkit"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+
+
+
           <div class="form-group">
-          <label for="FK_EstadoRegistroIDregistro">FK_EstadoRegistroID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_EstadoRegistroIDregistro" class="form-control" type="Select" name="actualizarFK_EstadoRegistroIDregistro">
+                    <label for="text">Estado Registro</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_EstadoRegistroIDregistro">
+               
+                    <?php
+                     foreach ($estado  as $estados) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $estados["estadoID"];?>'><?php echo $estados["estadoRegitro"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+
+
           <div class="form-group">
-          <label for="FK_CaridadIDregistro">FK_CaridadID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_CaridadIDregistro" class="form-control" type="Select" name="actualizarFK_CaridadIDregistro">
+                    <label for="text">Caridad</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_CaridadIDregistro">
+               
+                    <?php
+                     foreach ($caridad  as $caridades) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $caridades["CaridadID"];?>'><?php echo $caridades["NombreCaridad"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
-
-          
-
-
-
-
-              
 
 
           <?php
@@ -130,7 +156,7 @@
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido Actualizar</div>';
+                    echo '<div class="alert alert-success">El Usuario ha sido registado</div>';
 
                }
 
@@ -138,16 +164,10 @@
                ?>
 
 
-
-         
-
                <button type="submit" class="btn btn-primary">Guardar</button>
           </div>
 
 
           </form>
-
-
-
 
  </div>

@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Actualizar pais</h1>
           <div class="form-group">
-          <label for="NombrePais">NombrePais</label>
+          <label for="actualizarNombrePais">NombrePais</label>
           
                <div class="input-group">
           
@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="NombrePais" class="form-control" type="text" name="actualizarNombrePais">
+               <input id="actualizarNombrePais" class="form-control" type="text" name="actualizarNombrePais">
           </div>
 
           <div class="form-group">
@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="BanderaPais" class="form-control" type="text" name="actualizarBanderaPais">
+               <input id="BanderaPais" class="form-control" type="file" name="actualizarBanderaPais">
           </div>
 
          

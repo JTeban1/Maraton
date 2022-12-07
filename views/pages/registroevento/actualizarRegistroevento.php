@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Actualizar Evento</h1>
           <div class="form-group">
-          <label for="NumDorsalevento">NumDorsal</label>
+          <label for="actualizarNumDorsalevento">NumDorsal</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="NumDorsalevento" class="form-control" type="number" name="actualizarNumDorsalevento">
+               <input id="actualizarNumDorsalevento" class="form-control" type="number" name="actualizarNumDorsalevento">
           </div>
 
           <div class="form-group">
-          <label for="TiempoCarreraevento">TiempoCarrera</label>
+          <label for="actualizarTiempoCarreraevento">Tiempo Carrera</label>
           
                <div class="input-group">
           
@@ -33,44 +33,52 @@
                          </span>
                     </div>
                            
-               <input id="TiempoCarreraevento" class="form-control" type="text" name="actualizarTiempoCarreraevento">
+               <input id="actualizarTiempoCarreraevento" class="form-control" type="time" name="actualizarTiempoCarreraevento">
           </div>
+
+
+
 
           <div class="form-group">
-          <label for="FK_RegistroIDevento">FK_RegistroID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_RegistroIDevento" class="form-control" type="Select" name="actualizarFK_RegistroIDevento">
+                    <label for="text">Registro</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_RegistroIDevento">
+               
+                    <?php
+                     foreach ($registro  as $registros) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $registros["RegistroID"];?>'><?php echo $registros["ObjetivoPatrocinio"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+
+
+
 
           <div class="form-group">
-          <label for="FK_EventoIDevento">FK_EventoID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_EventoIDevento" class="form-control" type="Select" name="actualizarFK_EventoIDevento">
+                    <label for="text">Eventos</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_EventoIDevento">
+               
+                    <?php
+                     foreach ($evento  as $eventos) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $eventos["EventoID"];?>'><?php echo $eventos["NombreEvento"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
-
-          
-
-
-
-
-              
-
 
           <?php
 
@@ -91,7 +99,7 @@
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido actualizar</div>';
+                    echo '<div class="alert alert-success">El Usuario ha sido registado</div>';
 
                }
 

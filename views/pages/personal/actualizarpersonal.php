@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Actualizar personal</h1>
           <div class="form-group">
-          <label for="Nombrepersonal">Nombres</label>
+          <label for="actualizarNombrepersonal">Nombres</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="Nombrepersonal" class="form-control" type="text" name="actualizarNombrepersonal">
+               <input id="actualizarNombrepersonal" class="form-control" type="text" name="actualizarNombrepersonal">
           </div>
 
           <div class="form-group">
-          <label for="Apellidopesonal">Apellidos</label>
+          <label for="actualizarApellidopesonal">Apellidos</label>
           
                <div class="input-group">
           
@@ -33,11 +33,11 @@
                          </span>
                     </div>
                            
-               <input id="Apellidopesonal" class="form-control" type="text" name="actualizarApellidopesonal">
+               <input id="actualizarApellidopesonal" class="form-control" type="text" name="actualizarApellidopesonal">
           </div>
 
           <div class="form-group">
-          <label for="FechaNacimientopersonal">FechaNacimiento</label>
+          <label for="actualizarFechaNacimientopersonal">FechaNacimiento</label>
           
                <div class="input-group">
           
@@ -47,10 +47,10 @@
                          </span>
                     </div>
                            
-               <input id="FechaNacimientopersonal" class="form-control" type="Data" name="actualizarFechaNacimientopersonal">
+               <input id="actualizarFechaNacimientopersonal" class="form-control" type="date" name="actualizarFechaNacimientopersonal">
           </div>
           <div class="form-group">
-          <label for="Generopersonal">Genero</label>
+          <label for="actualizarGeneropersonal">Genero</label>
           
                <div class="input-group">
           
@@ -60,10 +60,10 @@
                          </span>
                     </div>
                            
-               <input id="Generopersonal" class="form-control" type="text" name="actualizarGeneropersonal">
+               <input id="actualizarGeneropersonal" class="form-control" type="text" name="actualizarGeneropersonal">
           </div>
           <div class="form-group">
-          <label for="Comentariopersonal">Comentarios</label>
+          <label for="actualizarComentariopersonal">Comentarios</label>
           
                <div class="input-group">
           
@@ -73,34 +73,58 @@
                          </span>
                     </div>
                            
-               <input id="GeneroperComentariopersonalsonal" class="form-control" type="textarea" name="actualizarComentariopersonal">
+               <input id="actualizarComentariopersonal" class="form-control" type="text" name="actualizarComentariopersonal">
           </div>
+
+
+
+
           <div class="form-group">
-          <label for="FK_RolIDpersonal">FK_RolID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
+                    <label for="text">Rol</label>
+                    <div class="input-group">
+                    <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_RolID">
+               
+                    <?php
+                     foreach ($rol  as $roles) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $roles["rolID"];?>'><?php echo $roles["rol"];?></option>
+                    <?php
+
+                     }
+                    ?>
+                    </select>
                     </div>
-                           
-               <input id="FK_RolIDpersonal" class="form-control" type="Select" name="actualizarFK_RolIDpersonal">
-          </div>
-          <div class="form-group">
-          <label for="FK_PosicionIDpersonal">FK_PosicionID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
+
+               </div>
+
+
+
+
+
+               <div class="form-group">
+                    <label for="text">Posicion</label>
+                    <div class="input-group">
+                    <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PosicionID">
+               
+                    <?php
+                     foreach ($posicion  as $posiciones) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $posiciones["PosicionID"];?>'><?php echo $posiciones["NombrePosicion"];?></option>
+                    <?php
+
+                     }
+                    ?>
+                    </select>
                     </div>
-                           
-               <input id="FK_PosicionIDpersonal" class="form-control" type="Select" name="actualizarFK_PosicionIDpersonal">
-          </div>
+
+               </div>
+
 
 
          
@@ -124,7 +148,7 @@
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido Actualizar</div>';
+                    echo '<div class="alert alert-success">El Usuario ha sido registado</div>';
 
                }
 

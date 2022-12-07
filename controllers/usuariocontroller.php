@@ -16,9 +16,9 @@ class ControladorUsuario{
 
 			$datos = array("Email" => $_POST["registroEmailusuario"],
 				           "Contrasena" => $_POST["registroContrasenausuario"],
-				           "Nombres" => $_POST["registroNombreusuario"],
+				           "Nombre" => $_POST["registroNombreusuario"],
 						   "Apellido" => $_POST["registroApellidousuario"],
-						   "FK_RolID" => $_POST["registroFK_RolIDusuario"]
+						   "fk_RolID" => $_POST["registroFK_RolIDusuario"]
 						);
 
 			$respuesta = ModelosUsuario::mdlUsuario($tabla, $datos);
@@ -62,12 +62,12 @@ class ControladorUsuario{
 
 			$tabla = "TBL_Usuario";
 
-			$datos = array("id" => $_POST[""],
+			$datos = array("UsuarioID" => $_POST[""],
 							"Email" => $_POST["actualizarEmailusuario"],
 				           "Contrasena" => $_POST["actualizarContrasenausuario"],
-				           "Nombres" => $_POST["actualizarNombreusuario"],
+				           "Nombre" => $_POST["actualizarNombreusuario"],
 						   "Apellido" => $_POST["actualizarApellidousuario"],
-						   "FK_RolID" => $_POST["actualizarFK_RolIDusuario"],);
+						   "fk_RolID" => $_POST["actualizarFK_RolIDusuario"],);
 
 			$respuesta = ModelosUsuario::mdlActualizarUsuario($tabla, $datos);
 

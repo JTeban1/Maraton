@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Actualizar kit competencia</h1>
           <div class="form-group">
-          <label for="OpcionKit">OpcionKit</label>
+          <label for="actualizarOpcionKit">OpcionKit</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="OpcionKit" class="form-control" type="text" name="actualizarOpcionKit">
+               <input id="actualizarOpcionKit" class="form-control" type="text" name="actualizarOpcionKit">
           </div>
 
           <div class="form-group">
-          <label for="ValorKit">ValorKit</label>
+          <label for="actualizarValorKit">ValorKit</label>
           
                <div class="input-group">
           
@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="ValorKit" class="form-control" type="number" name="actualizarValorKit">
+               <input id="actualizarValorKit" class="form-control" type="number" name="actualizarValorKit">
           </div>
 
          

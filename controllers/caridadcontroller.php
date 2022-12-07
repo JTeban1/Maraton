@@ -16,8 +16,8 @@ class ControladorCaridad{
 			$tabla = "TBL_Caridad";
 
 			$datos = array("NombreCaridad " => $_POST["registroNombreCaridad"],
-				           "DescripcionCaridad" => $_POST["registroDescripcionCaridad"],
-				           "LogoCaridad" => addslashes(file_get_contents ($_FILES["registroLogoCaridad"]["tmp_name"])));//es IMG
+				           "Descripcion" => $_POST["registroDescripcionCaridad"],
+				           "logoCaridad" => addslashes(file_get_contents ($_FILES["registroLogoCaridad"]["tmp_name"])));//es IMG
 
 			$respuesta = ModeloCaridad::mdlCaridad($tabla, $datos);
 
@@ -61,8 +61,9 @@ class ControladorCaridad{
 			$tabla = "TBL_Caridad";
 
 			$datos = array("CaridadID" => $_POST[""],
-							"NombreCaridad" => $_POST[""],
-				           "DescripcionCaridad" => $_POST[""]);
+							"NombreCaridad" => $_POST["actualizarNombreCaridad"],
+				           "Descripcion" => $_POST["actualizarDescripcionCaridad"],
+						   "logoCaridad" => addslashes(file_get_contents ($_FILES["actualizarLogoCaridad"]["tmp_name"])));//es IMG);
 
 			$respuesta = ModeloCaridad::mdlActualizarCaridad($tabla, $datos);
 

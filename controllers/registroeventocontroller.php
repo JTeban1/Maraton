@@ -64,8 +64,8 @@ class ControladorRegistroEvento{
 			$datos = array("RegistroID" => $_POST[""],
 							"NumDorsal" => $_POST["actualizarNumDorsalevento"],
 				           "TiempoCarrera" => $_POST["actualizarTiempoCarreraevento"],
-				           "FK_RegistroID" => $_POST["actualizarFK_RegistroIDevento"],
-				           "FK_EventoID" => $_POST["actualizarFK_EventoIDevento"]);
+				           "fk_RegistroID" => $_POST["actualizarFK_RegistroIDevento"],
+				           "fk_EventoID" => $_POST["actualizarFK_EventoIDevento"]);
 
 			$respuesta = ModeloRegistroEvento::mdlActualizarRegistroEvento($tabla, $datos);
 

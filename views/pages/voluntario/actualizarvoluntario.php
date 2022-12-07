@@ -7,9 +7,9 @@
 <div class="d-flex justify-content-center text-center py-5">
 
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Actualizar voluntario</h1>
+               <h1>Actualizar Voluntario</h1>
           <div class="form-group">
-          <label for="Nombrevoluntario">Nombres</label>
+          <label for="actualizarNombrevoluntario">Nombres</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="Nombrevoluntario" class="form-control" type="text" name="actualizarNombrevoluntario">
+               <input id="actualizarNombrevoluntario" class="form-control" type="text" name="actualizarNombrevoluntario">
           </div>
 
           <div class="form-group">
-          <label for="Apellidosvoluntario">Apellidos</label>
+          <label for="actualizarApellidovoluntario">Apellidos</label>
           
                <div class="input-group">
           
@@ -33,44 +33,60 @@
                          </span>
                     </div>
                            
-               <input id="Apellidosvoluntario" class="form-control" type="number" name="actualizarApellidosvoluntario">
+               <input id="actualizarApellidovoluntario" class="form-control" type="text" name="actualizarApellidovoluntario">
           </div>
 
-          <div class="form-group">
-          <label for="fk_PaisIDvoluntario">fk_PaisID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="fk_PaisIDvoluntario" class="form-control" type="Select" name="actualizarfk_PaisIDvoluntario">
-          </div>
+
+
+
 
           <div class="form-group">
-          <label for="fk_GeneroIDvoluntario">fk_GeneroID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="fk_GeneroIDvoluntario" class="form-control" type="Select" name="actualizarfk_GeneroIDvoluntario">
+                    <label for="text">Pais</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_Paisvoluntario">
+               
+                    <?php
+                     foreach ($pais  as $paises) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $paises["PaisID"];?>'><?php echo $paises["NombrePais"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
-         
+
+
+          <div class="form-group">
+                    <label for="text">Genero</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_Generovoluntario">
+               
+                    <?php
+                     foreach ($genero  as $generos) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $generos["generoID"];?>'><?php echo $generos["genero"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
+          </div>
+
+
           <?php
 
-               $ActualizarPatrocinio = ControladorVoluntario::ctrActualizarRegistroVoluntario();
+               $actualizarVoluntario = ControladorVoluntario::ctrActualizarRegistroVoluntario();
  
  
  
-               if($ActualizarPatrocinio == "ok")
+               if($actualizarVoluntario == "ok")
                {
                     echo '<script>
 
@@ -83,7 +99,7 @@
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido Actualizado</div>';
+                    echo '<div class="alert alert-success">El Usuario ha sido registado</div>';
 
                }
 

@@ -7,7 +7,7 @@
 <div class="d-flex justify-content-center text-center py-5">
 
         <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Genero</h1>
+               <h1>Registro maraton</h1>
 
             <div class="form-group">
                 <label for="registroNombreMaraton">Nombre Maraton</label>

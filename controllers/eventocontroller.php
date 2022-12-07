@@ -18,8 +18,8 @@ class ControladorEvento{
 							"FechaInicio" => $_POST["registroFechaInicio"],
 							"Valor" => $_POST["registroValor"],
 							"ParticipantesMax" => $_POST["RegistroParticipantesMax"],
-							"FK_MaratonID" => $_POST["RegistroFK_MaratonID"],
-							"FK_TipoEventoID" => $_POST["RegistroFK_TipoEventoID"]);
+							"fk_MaratonID" => $_POST["RegistroFK_MaratonID"],
+							"fk_TipoEventoID" => $_POST["RegistroFK_TipoEventoID"]);
 
 			$respuesta = ModeloEvento::mdlEvento($tabla, $datos);
 
@@ -63,12 +63,12 @@ class ControladorEvento{
 			$tabla = "TBL_Evento";
 
 			$datos = array("EventoID" => $_POST[""],
-							"NombreEvento" => $_POST[""],
-				           "FechaInicio" => $_POST[""],
-				           "Valor" => $_POST[""],
-						   "ParticipantesMax" => $_POST[""],
-						   "FK_MaratonID" => $_POST[""],
-						   "FK_TipoEventoID" => $_POST[""]);
+							"NombreEvento" => $_POST["actualizarNombreEvento"],
+				           "FechaInicio" => $_POST["actualizarFechaInicio"],
+				           "Valor" => $_POST["actualizarValor"],
+						   "ParticipantesMax" => $_POST["actualizarParticipantesMax"],
+						   "fk_MaratonID" => $_POST["actualizarFK_MaratonID"],
+						   "fk_TipoEventoID" => $_POST["actualizarFK_TipoEventoID"]);
 
 			$respuesta = ModeloEvento::mdlActualizarEvento($tabla, $datos);
 

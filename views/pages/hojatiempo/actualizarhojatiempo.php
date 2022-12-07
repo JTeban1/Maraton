@@ -6,71 +6,85 @@
 
 <div class="d-flex justify-content-center text-center py-5">
 
-          <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
+        <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Actualizar hoja tiempo</h1>
-          <div class="form-group">
-          <label for="FechaInicio">FechaInicio</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
+
+            <div class="form-group">
+                <label for="actualizarFechaInicio">Fecha Inicio</label>
+                
+                    <div class="input-group">
+                
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-evelope"></i>
+                            </span>
+                </div>
                            
-               <input id="FechaInicio" class="form-control" type="text" name="actualizarFechaInicio">
+               <input id="actualizarFechaInicio" class="form-control" type="date" name="actualizarFechaInicio">
           </div>
 
-          <div class="form-group">
-          <label for="FechaFinal">FechaFinal</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FechaFinal" class="form-control" type="text" name="actualizarFechaFinal">
-          </div>
 
           <div class="form-group">
-          <label for="ValorPagar">ValorPagar</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
+                <label for="actualizarFechaFinal">Fecha Final</label>
+                
+                    <div class="input-group">
+                
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-evelope"></i>
+                            </span>
+                </div>
                            
-               <input id="ValorPagar" class="form-control" type="number" name="actualizarValorPagar">
+               <input id="actualizarFechaFinal" class="form-control" type="date" name="actualizarFechaFinal">
           </div>
 
+
+
           <div class="form-group">
-          <label for="fk_PersonalID">fk_PersonalID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
+                <label for="actualizarValorPagar">Valor a Pagar</label>
+                
+                    <div class="input-group">
+                
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-evelope"></i>
+                            </span>
+                </div>
                            
-               <input id="fk_PersonalID" class="form-control" type="number" name="actualizarfk_PersonalID">
+               <input id="actualizarValorPagar" class="form-control" type="number" name="actualizarValorPagar">
           </div>
-         
+
+
+          <div class="form-group">
+                    <label for="text">Personal</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PersonalID">
+               
+                    <?php
+                     foreach ($personal  as $personales) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $personales["PersonalID"];?>'><?php echo $personales["Nombres"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
+          </div>
+
+
+          
+
+
           <?php
 
-               $actualizarHojaTiem = ControladorHojaTiempo::ctrActualizarRegistroHojaTiem();
+               $actualizarHojaTiempo = ControladorHojaTiempo::ctrActualizarRegistroHojaTiem();
  
  
  
-               if($actualizarHojaTiem == "ok")
+               if($actualizarHojaTiempo == "ok")
                {
                     echo '<script>
 
@@ -83,7 +97,7 @@
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido Actualizar</div>';
+                    echo '<div class="alert alert-success">registro corredor </div>';
 
                }
 

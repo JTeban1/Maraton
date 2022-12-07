@@ -15,8 +15,8 @@ class ControladorKitCompetencia{
 
 			$tabla = "TBL_KitCompeticion";
 
-			$datos = array("OpcionKit " => $_POST["registroOpcionKit"],
-				           "ValorKit" => $_POST["registroValorKit"]);
+			$datos = array("opcionkit " => $_POST["registroOpcionKit"],
+				           "valorkit" => $_POST["registroValorKit"]);
 
 			$respuesta = ModelosKitCompeticion::mdlKitcompeticion($tabla, $datos);
 
@@ -59,9 +59,9 @@ class ControladorKitCompetencia{
 
 			$tabla = "TBL_KitCompeticion";
 
-			$datos = array("KitID" => $_POST[""],
-							"OpcionKit" => $_POST[""],
-				           "ValorKit" => $_POST[""]);
+			$datos = array("kitID" => $_POST[""],
+							"opcionkit" => $_POST["actualizarOpcionKit"],
+				           "valorkit" => $_POST["actualizarValorKit"]);
 
 			$respuesta = ModelosKitCompeticion::mdlActualizarKitcompeticion($tabla, $datos);
 

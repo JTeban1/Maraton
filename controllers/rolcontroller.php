@@ -14,7 +14,7 @@ class ControladorRol{
 
 			$tabla = "TBL_Rol";
 
-			$datos = array("Rol" => $_POST["registroRol"]);
+			$datos = array("rol" => $_POST["registroRol"]);
 
 			$respuesta = ModeloRol::mdlRol($tabla, $datos);
 
@@ -57,8 +57,8 @@ class ControladorRol{
 
 			$tabla = "TBL_Rol";
 
-			$datos = array("RolID" => $_POST[""],
-							"Rol" => $_POST["actualizarRol"]);
+			$datos = array("rolID" => $_POST[""],
+							"rol" => $_POST["actualizarRol"]);
 
 			$respuesta = ModeloRol::mdlActualizarRol($tabla, $datos);
 

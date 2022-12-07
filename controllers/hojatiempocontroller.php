@@ -17,7 +17,7 @@ class ControladorHojaTiempo{
 			$datos = array("FechaInicio" => $_POST["registroFechaInicio"],
 				           "FechaFinal" => $_POST["registroFechaFinal"],
 						   "ValorPagar" => $_POST["registroValorPagar"],
-						   "fk_PersonalID" => $_POST["registrosfk_PersonalID"]);
+						   "fk_PersonalID" => $_POST["registrofk_PersonalID"]);
 
 			$respuesta = ModeloHojatiempo::mdlHojatiempo($tabla, $datos);
 
@@ -61,10 +61,10 @@ class ControladorHojaTiempo{
 			$tabla = "TBL_HojaTiempo";
 
 			$datos = array("HojaID" => $_POST[""],
-							"FechaInicio" => $_POST[""],
-							"FechaFinal" => $_POST[""],
-							"ValorPagar" => $_POST[""],
-							"FK_PersonalID" => $_POST[""]);
+							"FechaInicio" => $_POST["actualizarFechaInicio"],
+							"FechaFinal" => $_POST["actualizarFechaFinal"],
+							"ValorPagar" => $_POST["actualizarValorPagar"],
+							"fk_PersonalID" => $_POST["actualizarfk_PersonalID"]);
 
 			$respuesta = ModeloHojatiempo::mdlActualizarHojaTiempo($tabla, $datos);
 

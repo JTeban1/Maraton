@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro posicion</h1>
           <div class="form-group">
-          <label for="NombrePosicionposicion">NombrePosicion</label>
+          <label for="registroNombrePosicionposicion">NombrePosicion</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="NombrePosicionposicion" class="form-control" type="text" name="registroNombrePosicionposicion">
+               <input id="registroNombrePosicionposicion" class="form-control" type="text" name="registroNombrePosicionposicion">
           </div>
 
           <div class="form-group">
-          <label for="DescripcionPosicion">DescripcionPosicion</label>
+          <label for="registroDescripcionPosicion">DescripcionPosicion</label>
           
                <div class="input-group">
           
@@ -33,11 +33,11 @@
                          </span>
                     </div>
                            
-               <input id="DescripcionPosicion" class="form-control" type="text" name="registroDescripcionPosicion">
+               <input id="registroDescripcionPosicion" class="form-control" type="text" name="registroDescripcionPosicion">
           </div>
 
           <div class="form-group">
-          <label for="TarifaPagoposicion">TarifaPago</label>
+          <label for="registroTarifaPagoposicion">TarifaPago</label>
           
                <div class="input-group">
           
@@ -47,7 +47,7 @@
                          </span>
                     </div>
                            
-               <input id="TarifaPagoposicion" class="form-control" type="number" name="registroTarifaPagoposicion">
+               <input id="registroTarifaPagoposicion" class="form-control" type="number" name="registroTarifaPagoposicion">
           </div>
 
          

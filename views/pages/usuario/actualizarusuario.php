@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Actualizar Usuario</h1>
           <div class="form-group">
-          <label for="Emailusuario">Email</label>
+          <label for="actualizarEmailusuario">Email</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="Emailusuario" class="form-control" type="email" name="actualizarEmailusuario">
+               <input id="actualizarEmailusuario" class="form-control" type="email" name="actualizarEmailusuario">
           </div>
 
           <div class="form-group">
-          <label for="Contrasenausuario">Contrasenas</label>
+          <label for="actualizarContrasenausuario">Contrasenas</label>
           
                <div class="input-group">
           
@@ -33,11 +33,11 @@
                          </span>
                     </div>
                            
-               <input id="Contrasenausuario" class="form-control" type="password" name="actualizarContrasenausuario">
+               <input id="actualizarContrasenausuario" class="form-control" type="password" name="actualizarContrasenausuario">
           </div>
 
           <div class="form-group">
-          <label for="Nombreusuario">Nombres</label>
+          <label for="actualizarNombreusuario">Nombres</label>
           
                <div class="input-group">
           
@@ -47,11 +47,11 @@
                          </span>
                     </div>
                            
-               <input id="Nombreusuario" class="form-control" type="Select" name="actualizarNombreusuario">
+               <input id="actualizarNombreusuario" class="form-control" type="text" name="actualizarNombreusuario">
           </div>
 
           <div class="form-group">
-          <label for="Apellidousuario">Apellido</label>
+          <label for="actualizarApellidousuario">Apellido</label>
           
                <div class="input-group">
           
@@ -61,23 +61,34 @@
                          </span>
                     </div>
                            
-               <input id="Apellidousuario" class="form-control" type="text" name="actualizarApellidousuario">
+               <input id="actualizarApellidousuario" class="form-control" type="text" name="actualizarApellidousuario">
           </div>
+
+
+
+
+
 
           <div class="form-group">
-          <label for="FK_RolIDusuario">FK_RolID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_RolIDusuario" class="form-control" type="Select" name="actualizarFK_RolIDusuario">
+                    <label for="text">Rol</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_RolIDusuario">
+               
+                    <?php
+                     foreach ($rol  as $roles) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $roles["EventoID"];?>'><?php echo $roles["NombreEvento"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
 
+          
 
 
 
@@ -103,7 +114,7 @@
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido Actualizar</div>';
+                    echo '<div class="alert alert-success">El Usuario ha sido registado</div>';
 
                }
 

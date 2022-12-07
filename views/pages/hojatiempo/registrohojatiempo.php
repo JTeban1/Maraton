@@ -7,10 +7,10 @@
 <div class="d-flex justify-content-center text-center py-5">
 
         <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Genero</h1>
+               <h1>Registro hoja tiempo</h1>
 
             <div class="form-group">
-                <label for="FechaInicio">Fecha Inicio</label>
+                <label for="registroFechaInicio">Fecha Inicio</label>
                 
                     <div class="input-group">
                 
@@ -20,7 +20,7 @@
                             </span>
                 </div>
                            
-               <input id="FechaInicio" class="form-control" type="date" name="registroFechaInicio">
+               <input id="registroFechaInicio" class="form-control" type="date" name="registroFechaInicio">
           </div>
 
 
@@ -58,7 +58,7 @@
           <div class="form-group">
                     <label for="text">Personal</label>
                     <div class="input-group">
-               <select class="form-select" aria-label="Disabled select example"  name="registrosfk_PersonalID">
+               <select class="form-select" aria-label="Disabled select example"  name="registrofk_PersonalID">
                
                     <?php
                      foreach ($personal  as $personales) {
@@ -80,11 +80,11 @@
 
           <?php
 
-               $registroGenero = ControladorGenero::ctrRegistroGenero();
+               $registroHojaTiempo = ControladorHojaTiempo::ctrRegistroHojaTiem();
  
  
  
-               if($registroGenero == "ok")
+               if($registroHojaTiempo == "ok")
                {
                     echo '<script>
 

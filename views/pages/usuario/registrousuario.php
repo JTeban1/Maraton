@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro Usuario</h1>
           <div class="form-group">
-          <label for="Emailusuario">Email</label>
+          <label for="registroEmailusuario">Email</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="Emailusuario" class="form-control" type="email" name="registroEmailusuario">
+               <input id="registroEmailusuario" class="form-control" type="email" name="registroEmailusuario">
           </div>
 
           <div class="form-group">
-          <label for="Contrasenausuario">Contrasenas</label>
+          <label for="registroContrasenausuario">Contrasenas</label>
           
                <div class="input-group">
           
@@ -33,11 +33,11 @@
                          </span>
                     </div>
                            
-               <input id="Contrasenausuario" class="form-control" type="password" name="registroContrasenausuario">
+               <input id="registroContrasenausuario" class="form-control" type="password" name="registroContrasenausuario">
           </div>
 
           <div class="form-group">
-          <label for="Nombreusuario">Nombres</label>
+          <label for="registroNombreusuario">Nombres</label>
           
                <div class="input-group">
           
@@ -47,11 +47,11 @@
                          </span>
                     </div>
                            
-               <input id="Nombreusuario" class="form-control" type="text" name="registroNombreusuario">
+               <input id="registroNombreusuario" class="form-control" type="text" name="registroNombreusuario">
           </div>
 
           <div class="form-group">
-          <label for="Apellidousuario">Apellido</label>
+          <label for="registroApellidousuario">Apellido</label>
           
                <div class="input-group">
           
@@ -61,7 +61,7 @@
                          </span>
                     </div>
                            
-               <input id="Apellidousuario" class="form-control" type="text" name="registroApellidousuario">
+               <input id="registroApellidousuario" class="form-control" type="text" name="registroApellidousuario">
           </div>
 
 

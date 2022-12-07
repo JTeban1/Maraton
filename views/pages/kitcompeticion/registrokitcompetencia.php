@@ -7,7 +7,7 @@
 <div class="d-flex justify-content-center text-center py-5">
 
         <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Genero</h1>
+               <h1>Registro kit competencia</h1>
 
             <div class="form-group">
                 <label for="registroOpcionKit">OpcionKit</label>
@@ -35,7 +35,7 @@
                             </span>
                 </div>
                            
-               <input id="registroValorKit" class="form-control" type="int" name="registroValorKit">
+               <input id="registroValorKit" class="form-control" type="number" name="registroValorKit">
           </div>
 
 
@@ -44,11 +44,11 @@
 
           <?php
 
-               $registroGenero = ControladorGenero::ctrRegistroGenero();
+               $registroKitCompe = ControladorKitCompetencia::ctrRegistroKitCompe();
  
  
  
-               if($registroGenero == "ok")
+               if($registroKitCompe == "ok")
                {
                     echo '<script>
 

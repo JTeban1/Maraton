@@ -7,9 +7,9 @@
 <div class="d-flex justify-content-center text-center py-5">
 
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Actualizar caridad</h1>
+               <h1>Actualizar Caridad</h1>
           <div class="form-group">
-          <label for="NombreCaridad">NombreCaridad</label>
+          <label for="actualizarNombreCaridad">Nombre Caridad</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="NombreCaridad" class="form-control" type="text" name="actualizarNombreCaridad">
+               <input id="actualizarNombreCaridad" class="form-control" type="text" name="actualizarNombreCaridad">
           </div>
 
           <div class="form-group">
-          <label for="DescripcionCaridad">DescripcionCaridad</label>
+          <label for="actualizarDescripcionCaridad">Descripcion Caridad</label>
           
                <div class="input-group">
           
@@ -33,24 +33,28 @@
                          </span>
                     </div>
                            
-               <input id="DescripcionCaridad" class="form-control" type="text" name="actualizarDescripcionCaridad">
+               <input id="actualizarDescripcionCaridad" class="form-control" type="text" name="actualizarDescripcionCaridad">
           </div>
 
-          <div class="form-group">
-          <label for="LogoCaridad">LogoCaridad</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="LogoCaridad" class="form-control" type="text" name="actualizarLogoCaridad">
-          </div>
 
-         
+
+               <div class="form-group">
+                    <label for="text">Logo Caridad</label>
+     
+                 <div class="input-group">
+     
+                      <div class="input-group-prepend">
+                           <span class="input-group-text">
+                                <i class="fas fa-lock"></i>
+                           </span>
+                      </div>
+                      
+                      <input id="img" class="form-control" type="file" name="actualizarLogoCaridad" accept=".jpg , .png , .gif">
+                 </div>
+
+               </div>
+
+
           <?php
 
                $actualizarCaridad = ControladorCaridad::ctrActualizarRegistroCaridad();
@@ -70,7 +74,7 @@
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido Actualizar</div>';
+                    echo '<div class="alert alert-success">El Usuario ha sido registado</div>';
 
                }
 

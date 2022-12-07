@@ -60,11 +60,11 @@ class ControladorMaraton{
 
 			$tabla = "TBL_Maraton";
 
-			$datos = array("MaratonID" => $_POST[""],
-							"NombreMaraton" => $_POST[""],
-				           "NombreCiudad" => $_POST[""],
-				           "NombreCelebracion" => $_POST[""],
-						   "FK_CodigoPaisID" => $_POST[""]);
+			$datos = array("maratonID" => $_POST[""],
+							"NombreMaraton" => $_POST["actualizarNombreMaraton"],
+				           "NombreCiudad" => $_POST["actualizarNombreCiudad"],
+				           "NombreCelebracion" => $_POST["actualizarNombreCelebracion"],
+						   "fk_PaisID" => $_POST["actualizarfk_PaisID"]);
 
 			$respuesta = ModeloMaraton::mdlActualizarMaraton($tabla, $datos);
 

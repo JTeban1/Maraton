@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Actualizar patrocinio</h1>
           <div class="form-group">
-          <label for="NombrePatrocinador">NombrePatrocinador</label>
+          <label for="actualizarNombrePatrocinador">NombrePatrocinador</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="NombrePatrocinador" class="form-control" type="text" name="actualizarNombrePatrocinador">
+               <input id="actualizarNombrePatrocinador" class="form-control" type="text" name="actualizarNombrePatrocinador">
           </div>
 
           <div class="form-group">
-          <label for="Montopatrocinador">Monto</label>
+          <label for="actualizarMontopatrocinador">Monto</label>
           
                <div class="input-group">
           
@@ -33,21 +33,31 @@
                          </span>
                     </div>
                            
-               <input id="Montopatrocinador" class="form-control" type="number" name="actualizarMontopatrocinador">
+               <input id="actualizarMontopatrocinador" class="form-control" type="number" name="actualizarMontopatrocinador">
           </div>
 
+          
+
+
+
+
           <div class="form-group">
-          <label for="FK_RegistroIDpatrocinador">FK_RegistroID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_RegistroIDpatrocinador" class="form-control" type="Select" name="actualizarFK_RegistroIDpatrocinador">
+                    <label for="text">Registro</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_RegistroID">
+               
+                    <?php
+                     foreach ($registro  as $registros) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $registros["RegistroID"];?>'><?php echo $registros["Costo"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
          
           <?php
@@ -69,7 +79,7 @@
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido Actualizar</div>';
+                    echo '<div class="alert alert-success">El Usuario ha sido registado</div>';
 
                }
 

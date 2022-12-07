@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro personal</h1>
           <div class="form-group">
-          <label for="Nombrepersonal">Nombres</label>
+          <label for="registroNombrepersonal">Nombres</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="Nombrepersonal" class="form-control" type="text" name="registroNombrepersonal">
+               <input id="registroNombrepersonal" class="form-control" type="text" name="registroNombrepersonal">
           </div>
 
           <div class="form-group">
-          <label for="Apellidopesonal">Apellidos</label>
+          <label for="registroApellidopesonal">Apellidos</label>
           
                <div class="input-group">
           
@@ -33,11 +33,11 @@
                          </span>
                     </div>
                            
-               <input id="Apellidopesonal" class="form-control" type="text" name="registroApellidopesonal">
+               <input id="registroApellidopesonal" class="form-control" type="text" name="registroApellidopesonal">
           </div>
 
           <div class="form-group">
-          <label for="FechaNacimientopersonal">FechaNacimiento</label>
+          <label for="registroFechaNacimientopersonal">FechaNacimiento</label>
           
                <div class="input-group">
           
@@ -47,10 +47,10 @@
                          </span>
                     </div>
                            
-               <input id="FechaNacimientopersonal" class="form-control" type="Date" name="registroFechaNacimientopersonal">
+               <input id="registroFechaNacimientopersonal" class="form-control" type="date" name="registroFechaNacimientopersonal">
           </div>
           <div class="form-group">
-          <label for="Generopersonal">Genero</label>
+          <label for="registroGeneropersonal">Genero</label>
           
                <div class="input-group">
           
@@ -60,10 +60,10 @@
                          </span>
                     </div>
                            
-               <input id="Generopersonal" class="form-control" type="text" name="registroGeneropersonal">
+               <input id="registroGeneropersonal" class="form-control" type="text" name="registroGeneropersonal">
           </div>
           <div class="form-group">
-          <label for="Comentariopersonal">Comentarios</label>
+          <label for="registroComentariopersonal">Comentarios</label>
           
                <div class="input-group">
           
@@ -73,7 +73,7 @@
                          </span>
                     </div>
                            
-               <input id="GeneroperComentariopersonalsonal" class="form-control" type="text" name="registroComentariopersonal">
+               <input id="registroComentariopersonal" class="form-control" type="text" name="registroComentariopersonal">
           </div>
 
 

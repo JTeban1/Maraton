@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro Voluntario</h1>
           <div class="form-group">
-          <label for="Nombrevoluntario">Nombres</label>
+          <label for="registroNombrevoluntario">Nombres</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="Nombrevoluntario" class="form-control" type="text" name="registroNombrevoluntario">
+               <input id="registroNombrevoluntario" class="form-control" type="text" name="registroNombrevoluntario">
           </div>
 
           <div class="form-group">
-          <label for="Apellidovoluntario">Apellidos</label>
+          <label for="registroApellidovoluntario">Apellidos</label>
           
                <div class="input-group">
           
@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="Apellidovoluntario" class="form-control" type="text" name="registroApellidovoluntario">
+               <input id="registroApellidovoluntario" class="form-control" type="text" name="registroApellidovoluntario">
           </div>
 
 

@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro Evento</h1>
           <div class="form-group">
-          <label for="NumDorsalevento">NumDorsal</label>
+          <label for="registroNumDorsalevento">NumDorsal</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="NumDorsalevento" class="form-control" type="number" name="registroNumDorsalevento">
+               <input id="registroNumDorsalevento" class="form-control" type="number" name="registroNumDorsalevento">
           </div>
 
           <div class="form-group">
-          <label for="TiempoCarreraevento">Tiempo Carrera</label>
+          <label for="registroTiempoCarreraevento">Tiempo Carrera</label>
           
                <div class="input-group">
           
@@ -33,7 +33,7 @@
                          </span>
                     </div>
                            
-               <input id="TiempoCarreraevento" class="form-control" type="time" name="registroTiempoCarreraevento">
+               <input id="registroTiempoCarreraevento" class="form-control" type="time" name="registroTiempoCarreraevento">
           </div>
 
 

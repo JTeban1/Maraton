@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Actualizar genero</h1>
           <div class="form-group">
-          <label for="Genero">Genero</label>
+          <label for="actualizarGenero">Genero</label>
           
                <div class="input-group">
           
@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="Genero" class="form-control" type="text" name="actualizarGenero">
+               <input id="actualizarGenero" class="form-control" type="text" name="actualizarGenero">
           </div>
          
           <?php

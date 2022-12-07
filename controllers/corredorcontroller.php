@@ -61,10 +61,10 @@ class ControladorCorredor{
 			$tabla = "TBL_Corredor";
 
 			$datos = array("CorredorID" => $_POST[""],
-							"FechaNacimiento" => $_POST[""],
-							"FK_Genero" => $_POST[""],
-							"FK_Email" => $_POST[""],
-							"FK_PaisID" => $_POST[""]);
+							"FechaNacimiento" => $_POST["actualizarFechaNacimiento"],
+							"fk_GeneroID" => $_POST["actualizarfk_GeneroID"],
+							"fk_UsuarioID" => $_POST["actualizarfk_UsuarioID"],
+							"fk_PaisID" => $_POST["actualizarfk_paisID"]);
 
 			$respuesta = ModeloCorredor::mdlActualizarCorredor($tabla, $datos);
 

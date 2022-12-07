@@ -16,7 +16,7 @@ class ControladorPatrocinio{
 
 			$datos = array("NombrePatrocinador" => $_POST["registroNombrePatrocinador"],
 							"Monto" => $_POST["registroMontopatrocinador"],
-							"fk_RegistroID" => $_POST["registroFK_RegistroID"]);
+							"fk_RegistroID" => $_POST["registrofk_RegistroID"]);
 
 			$respuesta = ModeloPatrocinio::mdlPatrocinio($tabla, $datos);
 
@@ -62,7 +62,7 @@ class ControladorPatrocinio{
 			$datos = array("PatrocinioID" => $_POST[""],
 							"NombrePatrocinador" => $_POST["actualizarNombrePatrocinador"],
 				           "Monto" => $_POST["actualizarMontopatrocinador"],
-				           "FK_RegistroID" => $_POST["actualizarFK_RegistroIDpatrocinador"]);
+				           "fk_RegistroID" => $_POST["actualizarfk_RegistroIDpatrocinador"]);
 
 			$respuesta = ModeloPatrocinio::mdlActualizarPatrocinio($tabla, $datos);
 

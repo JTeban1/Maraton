@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro tipoenvento</h1>
           <div class="form-group">
-          <label for="NombreTipoEvento">NombreTipoEvento</label>
+          <label for="registroNombreTipoEvento">NombreTipoEvento</label>
           
                <div class="input-group">
           
@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="NombreTipoEvento" class="form-control" type="text" name="registroNombreTipoEvento">
+               <input id="registroNombreTipoEvento" class="form-control" type="text" name="registroNombreTipoEvento">
           </div>
 
 

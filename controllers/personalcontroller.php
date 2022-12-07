@@ -69,8 +69,8 @@ class ControladorPersonal{
 				           "FechaNacimiento" => $_POST["actualizarFechaNacimientopersonal"],
 						   "Genero" => $_POST["actualizarGeneropersonal"],
 						   "Comentarios" => $_POST["actualizarComentariopersonal"],
-						   "FK_RolID" => $_POST["actualizarFK_RolIDpersonal"],
-						   "FK_PosicionID" => $_POST["actualizarFK_PosicionIDpersonal"],);
+						   "fk_RolID" => $_POST["actualizarfk_RolID"],
+						   "fk_PosicionID" => $_POST["actualizarfk_PosicionID"]);
 
 			$respuesta = ModeloPersonal::mdlActualizarPersonal($tabla, $datos);
 

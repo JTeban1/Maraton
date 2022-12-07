@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Actualizar rol</h1>
           <div class="form-group">
-          <label for="Rol">Rol</label>
+          <label for="actualizarRol">Rol</label>
           
                <div class="input-group">
           
@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="Rol" class="form-control" type="text" name="actualizarRol">
+               <input id="actualizarRol" class="form-control" type="text" name="actualizarRol">
           </div>
 
           

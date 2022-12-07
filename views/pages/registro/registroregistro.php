@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro</h1>
           <div class="form-group">
-          <label for="FechaRegistroregistro">FechaRegistro</label>
+          <label for="registroFechaRegistroregistro">FechaRegistro</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="FechaRegistroregistro" class="form-control" type="date" name="registroFechaRegistroregistro">
+               <input id="registroFechaRegistroregistro" class="form-control" type="date" name="registroFechaRegistroregistro">
           </div>
 
           <div class="form-group">
-          <label for="Costoregistro">Costo</label>
+          <label for="registroCostoregistro">Costo</label>
           
                <div class="input-group">
           
@@ -33,11 +33,11 @@
                          </span>
                     </div>
                            
-               <input id="Costoregistro" class="form-control" type="number" name="registroCostoregistro">
+               <input id="registroCostoregistro" class="form-control" type="number" name="registroCostoregistro">
           </div>
 
           <div class="form-group">
-          <label for="ObjetivoPatrocinioregistro">ObjetivoPatrocinio</label>
+          <label for="registroObjetivoPatrocinioregistro">ObjetivoPatrocinio</label>
           
                <div class="input-group">
           
@@ -47,7 +47,7 @@
                          </span>
                     </div>
                            
-               <input id="ObjetivoPatrocinioregistro" class="form-control" type="textarea" name="registroObjetivoPatrocinioregistro">
+               <input id="registroObjetivoPatrocinioregistro" class="form-control" type="textarea" name="registroObjetivoPatrocinioregistro">
           </div>
 
 

@@ -62,9 +62,9 @@ class ControladorVoluntario{
 
 			$datos = array("VoluntarioID" => $_POST[""],
 							"Nombres" => $_POST["actualizarNombrevoluntario"],
-				           "Apellidos" => $_POST["actualizarApellidosvoluntario"],
-				           "FK_CodigoPais" => $_POST["actualizarfk_PaisIDvoluntario"],
-						   "FK_Genero" => $_POST["actualizarfk_GeneroIDvoluntario"]);
+				           "Apellidos" => $_POST["actualizarApellidovoluntario"],
+				           "fk_PaisID" => $_POST["actualizarFK_Paisvoluntario"],
+						   "fk_GeneroID" => $_POST["actualizarFK_Generovoluntario"]);
 
 			$respuesta = ModeloVoluntario::mdlActualizarVoluntario($tabla, $datos);
 

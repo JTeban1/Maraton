@@ -7,9 +7,9 @@
 <div class="d-flex justify-content-center text-center py-5">
 
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Actualizar Tipo Envento</h1>
+               <h1>Actualizar tipoenvento</h1>
           <div class="form-group">
-          <label for="NombreTipoEvento">NombreTipoEvento</label>
+          <label for="actualizarNombreTipoEvento">NombreTipoEvento</label>
           
                <div class="input-group">
           
@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="NombreTipoEvento" class="form-control" type="text" name="actualizarNombreTipoEvento">
+               <input id="actualizarNombreTipoEvento" class="form-control" type="text" name="actualizarNombreTipoEvento">
           </div>
 
 
@@ -48,7 +48,7 @@
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido Actualizar</div>';
+                    echo '<div class="alert alert-success">El Usuario ha sido registado</div>';
 
                }
 

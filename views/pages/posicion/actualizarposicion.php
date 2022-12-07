@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Actualizar posicion</h1>
           <div class="form-group">
-          <label for="NombrePosicionposicion">NombrePosicion</label>
+          <label for="actualizarNombrePosicionposicion">NombrePosicion</label>
           
                <div class="input-group">
           
@@ -19,11 +19,11 @@
                          </span>
                     </div>
                            
-               <input id="NombrePosicionposicion" class="form-control" type="text" name="actualizarNombrePosicionposicion">
+               <input id="actualizarNombrePosicionposicion" class="form-control" type="text" name="actualizarNombrePosicionposicion">
           </div>
 
           <div class="form-group">
-          <label for="DescripcionPosicion">DescripcionPosicion</label>
+          <label for="actualizarDescripcionPosicion">DescripcionPosicion</label>
           
                <div class="input-group">
           
@@ -33,11 +33,11 @@
                          </span>
                     </div>
                            
-               <input id="DescripcionPosicion" class="form-control" type="textarea" name="actualizarDescripcionPosicion">
+               <input id="actualizarDescripcionPosicion" class="form-control" type="text" name="actualizarDescripcionPosicion">
           </div>
 
           <div class="form-group">
-          <label for="TarifaPagoposicion">TarifaPago</label>
+          <label for="actualizarTarifaPagoposicion">TarifaPago</label>
           
                <div class="input-group">
           
@@ -47,7 +47,7 @@
                          </span>
                     </div>
                            
-               <input id="TarifaPagoposicion" class="form-control" type="number" name="actualizarTarifaPagoposicion">
+               <input id="actualizarTarifaPagoposicion" class="form-control" type="number" name="actualizarTarifaPagoposicion">
           </div>
 
          

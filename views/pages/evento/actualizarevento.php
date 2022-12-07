@@ -7,9 +7,10 @@
 <div class="d-flex justify-content-center text-center py-5">
 
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Actualizar evento</h1>
-          <div class="form-group">
-          <label for="NombreEvento">NombreEvento</label>
+               <h1>Actualizar Evento</h1>
+
+               <div class="form-group">
+          <label for="actualizarNombreEvento">Nombre Evento</label>
           
                <div class="input-group">
           
@@ -19,25 +20,12 @@
                          </span>
                     </div>
                            
-               <input id="NombreEvento" class="form-control" type="text" name="actualizarNombreEvento">
+               <input id="actualizarNombreEvento" class="form-control" type="text" name="actualizarNombreEvento">
           </div>
 
-          <div class="form-group">
-          <label for="FechaInicio">FechaInicio</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FechaInicio" class="form-control" type="text" name="actualizarFechaInicio">
-          </div>
 
           <div class="form-group">
-          <label for="Valor">Valor</label>
+          <label for="actualizarFechaInicio">Fecha Inicio</label>
           
                <div class="input-group">
           
@@ -47,51 +35,89 @@
                          </span>
                     </div>
                            
-               <input id="Valor" class="form-control" type="number" name="actualizarValor">
+               <input id="actualizarFechaInicio" class="form-control" type="date" name="actualizarFechaInicio">
           </div>
 
+          
           <div class="form-group">
-          <label for="ParticipantesMax">ParticipantesMax</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="ParticipantesMax" class="form-control" type="text" name="actualizarParticipantesMax">
+            <label for="actualizarValor">Valor</label>
+            
+                <div class="input-group">
+            
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-evelope"></i>
+                            </span>
+                        </div>
+                            
+                <input id="actualizarValor" class="form-control" type="text" name="actualizarValor">
           </div>
 
-          <div class="form-group">
-          <label for="FK_MaratonID">FK_MaratonID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_MaratonID" class="form-control" type="number" name="actualizarFK_MaratonID">
-          </div>
 
-          <div class="form-group">
-          <label for="FK_TipoEventoID">FK_TipoEventoID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_TipoEventoID" class="form-control" type="number" name="actualizarFK_TipoEventoID">
-          </div>
-         
+
+               <div class="form-group">
+                    <label for="actualizarParticipantesMax">Participantes Max</label>
+     
+                 <div class="input-group">
+     
+                      <div class="input-group-prepend">
+                           <span class="input-group-text">
+                                <i class="fas fa-lock"></i>
+                           </span>
+                      </div>
+                      
+                      <input id="actualizarParticipantesMax" class="form-control" type="int" name="actualizarParticipantesMax">
+                 </div>
+
+               </div>
+
+
+
+               <div class="form-group">
+                    <label for="text">Nombre Maraton</label>
+                    <div class="input-group">
+                    <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_MaratonID">
+               
+                    <?php
+                     foreach ($maraton  as $maratones) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $maratones["maratonID"];?>'><?php echo $maratones["NombreMaraton"];?></option>
+                    <?php
+
+                     }
+                    ?>
+                    </select>
+               </div>
+
+               </div>
+
+
+
+               <div class="form-group">
+                    <label for="text">Tipo Evento</label>
+                    <div class="input-group">
+                    <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_TipoEventoID">
+               
+                    <?php
+                     foreach ($evento  as $eventos) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $eventos["TipoEventoID"];?>'><?php echo $eventos["NombreTipoEvento"];?></option>
+                    <?php
+
+                     }
+                    ?>
+                    </select>
+               </div>
+
+               </div>
+
+
           <?php
 
                $actualizarEvento = ControladorEvento::ctrActualizarRegistroEvento();
@@ -111,7 +137,7 @@
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido Actualizar</div>';
+                    echo '<div class="alert alert-success">registro corredor </div>';
 
                }
 
