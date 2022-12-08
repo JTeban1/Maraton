@@ -46,20 +46,13 @@ class ControladorPatrocinio{
 	=============================================*/
 	static public function ctrActualizarRegistroPatrocinio(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarNombrePatrocinador"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+	
 
 			$tabla = "TBL_Patrocinio";
 
-			$datos = array("PatrocinioID" => $_POST[""],
+			$datos = array("PatrocinioID" => $_POST["idcorredor"],
 							"NombrePatrocinador" => $_POST["actualizarNombrePatrocinador"],
 				           "Monto" => $_POST["actualizarMontopatrocinador"],
 				           "fk_RegistroID" => $_POST["actualizarfk_RegistroIDpatrocinador"]);

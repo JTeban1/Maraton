@@ -38,6 +38,7 @@ if(isset($_GET["estadoID"])){
                               
 
                          <input type="text" class="form-control" value="<?php echo $estadoRegistro["estadoRegitro"]; ?>"  id="actualizarEstadoRegistro" name="actualizarEstadoRegistro">
+                         <input type="hidden" name="idestadoR" value='<?php echo $estadoRegistro["estadoID"]; ?>'>
                     </div>
           </div>
           

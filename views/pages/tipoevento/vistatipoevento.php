@@ -72,7 +72,7 @@
                                   <?php
 
                                     $eliminar = new ControladorTipoEvento();
-                                    $eliminar -> ctrSeleccionarRegistroTipoEven();
+                                    $eliminar -> ctrEliminarRegistroTipoEven();
 
                                   ?>
 

@@ -68,7 +68,7 @@
                                   <?php
 
                                     $eliminar = new ControladorPais();
-                                    $eliminar -> ctrSeleccionarRegistroPais();
+                                    $eliminar -> ctrEliminarRegistroPais();
 
                                   ?>
 

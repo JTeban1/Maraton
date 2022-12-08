@@ -47,20 +47,13 @@ class ControladorHojaTiempo{
 	=============================================*/
 	static public function ctrActualizarRegistroHojaTiem(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarFechaInicio"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+		
 
 			$tabla = "TBL_HojaTiempo";
 
-			$datos = array("HojaID" => $_POST[""],
+			$datos = array("HojaID" => $_POST["idhojatiem"],
 							"FechaInicio" => $_POST["actualizarFechaInicio"],
 							"FechaFinal" => $_POST["actualizarFechaFinal"],
 							"ValorPagar" => $_POST["actualizarValorPagar"],

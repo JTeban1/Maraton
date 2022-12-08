@@ -77,7 +77,7 @@
                                   <?php
 
                                     $eliminar = new ControladorRegistroEvento();
-                                    $eliminar -> ctrSeleccionarRegistroRegistroEven();
+                                    $eliminar -> ctrEliminarRegistroRegistroEven();
 
                                   ?>
 

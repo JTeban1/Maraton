@@ -41,6 +41,7 @@ if(isset($_GET["id"])){
                     </div>
                            
                <input id="actualizarGenero" class="form-control" value="<?php echo $genero["FechaNacimiento"]; ?>" type="text" name="actualizarGenero">
+               <input type="hidden" name="idgenero" value='<?php echo $genero["generoID"]; ?>'>
           </div>
          
           <?php

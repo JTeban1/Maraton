@@ -54,6 +54,7 @@ if(isset($_GET["id"])){
                     </div>
                            
                <input id="actualizarContrasenausuario" class="form-control" value="<?php echo $usuario["Contrasena"]; ?>" type="password" name="actualizarContrasenausuario">
+               <input type="hidden" name="idusuario" value='<?php echo $usuario["UsuarioID"]; ?>'>
           </div>
 
           <div class="form-group">

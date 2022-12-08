@@ -80,7 +80,7 @@
                                   <?php
 
                                     $eliminar = new ControladorUsuario();
-                                    $eliminar -> ctrSeleccionarRegistroUsuario();
+                                    $eliminar -> ctrEliminarRegistroUsuario();
 
                                   ?>
 

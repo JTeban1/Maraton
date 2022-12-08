@@ -34,11 +34,11 @@ class ModeloRol {
 
     // funcion mostrar
 
-    static public function mdlSeleccionarRol($tabla){
-        $item1 = null;
-		$valor1 = null;
+    static public function mdlSeleccionarRol($tabla, $item, $valor){
 
-		if($item1 == null && $valor1 == null){
+	
+
+		if($item == null && $valor == null){
 
 		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
 

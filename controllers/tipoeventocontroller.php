@@ -44,20 +44,12 @@ class ControladorTipoEvento{
 	=============================================*/
 	static public function ctrActualizarRegistroTipoEven(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarNombreTipoEvento"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
-
+			
 			$tabla = "TBL_TipoEvento";
 
-			$datos = array("TipoEventoID" => $_POST[""],
+			$datos = array(
 							"NombreTipoEvento" => $_POST["actualizarNombreTipoEvento"]);
 
 			$respuesta = ModeloTipoEvento::mdlActualizarTipoEvento($tabla, $datos);

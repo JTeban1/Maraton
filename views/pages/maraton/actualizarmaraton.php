@@ -39,6 +39,7 @@ if(isset($_GET["id"])){
                 </div>
                            
                <input id="actualizarNombreMaraton" class="form-control" value="<?php echo $maraton["NombreMaraton"]; ?>" type="text" name="actualizarNombreMaraton">
+               <input type="hidden" name="idmaraton" value='<?php echo $maraton["maratonID"]; ?>'>
           </div>
 
 

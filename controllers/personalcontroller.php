@@ -50,16 +50,7 @@ class ControladorPersonal{
 	=============================================*/
 	static public function ctrActualizarRegistroPersonal(){
 
-		if(isset($_POST[""])){
-
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+		if(isset($_POST["actualizarNombrepersonal"])){
 
 			$tabla = "TBL_Personal";
 

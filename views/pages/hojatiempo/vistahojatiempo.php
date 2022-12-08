@@ -70,7 +70,7 @@
                                   <?php
 
                                     $eliminar = new ctrRegistroHojaTiem();
-                                    $eliminar -> ctrSeleccionarRegistroHojaTiem();
+                                    $eliminar -> ctrEliminarRegistroHojaTiem();
 
                                   ?>
 

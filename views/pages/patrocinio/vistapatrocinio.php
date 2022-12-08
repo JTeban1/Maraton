@@ -72,7 +72,7 @@
                                   <?php
 
                                     $eliminar = new ControladorPatrocinio();
-                                    $eliminar -> ctrSeleccionarRegistroPatrocinio();
+                                    $eliminar -> ctrEliminarRegistroPatrocinio();
 
                                   ?>
 

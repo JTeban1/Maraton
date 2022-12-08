@@ -40,6 +40,7 @@ if(isset($_GET["id"])){
                     </div>
                            
                <input id="actualizarFechaRegistroregistro" class="form-control" value="<?php echo $registro["FechaRegistro"]; ?>" type="date" name="actualizarFechaRegistroregistro">
+               <input type="hidden" name="idregistro" value='<?php echo $registro["RegistroID"]; ?>'>
           </div>
 
           <div class="form-group">

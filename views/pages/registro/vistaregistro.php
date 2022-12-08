@@ -82,7 +82,7 @@
                                   <?php
 
                                     $eliminar = new ControladorRegis();
-                                    $eliminar -> ctrSeleccionarRegistroRegis();
+                                    $eliminar -> ctrEliminarRegistroRegis();
 
                                   ?>
 

@@ -74,7 +74,7 @@
                                   <?php
 
                                     $eliminar = new ControladorPosicion();
-                                    $eliminar -> ctrSeleccionarRegistroPosi();
+                                    $eliminar -> ctrEliminarRegistroPosi();
 
                                   ?>
 

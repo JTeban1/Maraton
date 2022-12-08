@@ -45,20 +45,13 @@ class ControladorPais{
 	=============================================*/
 	static public function ctrActualizarRegistroPais(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarNombrePais"])){
 
-			if($_POST[""] != ""){			
 
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
 
 			$tabla = "TBL_Pais";
 
-			$datos = array("PaisID" => $_POST[""],
+			$datos = array("PaisID" => $_POST["idpais"],
 							"NombrePais" => $_POST["actualizarNombrePais"],
 							"BanderaPais"=> addslashes(file_get_contents ($_FILES["actualizarBanderaPais"]["tmp_name"])));//ES IMG;
 

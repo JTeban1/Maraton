@@ -46,20 +46,12 @@ class ControladorPosicion{
 	=============================================*/
 	static public function ctrActualizarRegistroPosi(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarNombrePosicionposicion"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
-
+			
 			$tabla = "TBL_Posicion";
 
-			$datos = array("PosicionID" => $_POST[""],
+			$datos = array("PosicionID" => $_POST["idposicion"],
 							"NombrePosicion" => $_POST["actualizarNombrePosicionposicion"],
 				           "DescripcionPosicion" => $_POST["actualizarDescripcionPosicion"],
 						   "TarifaPago" => $_POST["actualizarTarifaPagoposicion"]);

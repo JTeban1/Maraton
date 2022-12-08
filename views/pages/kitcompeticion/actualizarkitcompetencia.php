@@ -40,6 +40,7 @@ if(isset($_GET["id"])){
                     </div>
                            
                <input id="actualizarOpcionKit" class="form-control" value="<?php echo $kitcompetencia["opcionkit"]; ?>" type="text" name="actualizarOpcionKit">
+               <input type="hidden" name="idkit" value='<?php echo $kitcompetencia["kitID"]; ?>'>
           </div>
 
           <div class="form-group">

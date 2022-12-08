@@ -42,6 +42,7 @@ if(isset($_GET["id"])){
                 </div>
                            
                <input id="actualizarFechaInicio" class="form-control" value="<?php echo $hojatiempo["FechaInicio"]; ?>" type="date" name="actualizarFechaInicio">
+               <input type="hidden" name="idhojatiem" value='<?php echo $hojatiempo["HojaID"]; ?>'>
           </div>
 
 

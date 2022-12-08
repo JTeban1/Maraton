@@ -47,20 +47,13 @@ class ControladorCorredor{
 	=============================================*/
 	static public function ctrActualizarRegistroCorredor(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarFechaNacimiento"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+			
 
 			$tabla = "TBL_Corredor";
 
-			$datos = array("CorredorID" => $_POST[""],
+			$datos = array("CorredorID" => $_POST["idcorredor"],
 							"FechaNacimiento" => $_POST["actualizarFechaNacimiento"],
 							"fk_GeneroID" => $_POST["actualizarfk_GeneroID"],
 							"fk_UsuarioID" => $_POST["actualizarfk_UsuarioID"],

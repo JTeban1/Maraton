@@ -49,20 +49,12 @@ class ControladorEvento{
 	=============================================*/
 	static public function ctrActualizarRegistroEvento(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarNombreEvento"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
-
+			
 			$tabla = "TBL_Evento";
 
-			$datos = array("EventoID" => $_POST[""],
+			$datos = array("EventoID" => $_POST["idevento"],
 							"NombreEvento" => $_POST["actualizarNombreEvento"],
 				           "FechaInicio" => $_POST["actualizarFechaInicio"],
 				           "Valor" => $_POST["actualizarValor"],

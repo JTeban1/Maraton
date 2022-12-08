@@ -47,20 +47,11 @@ class ControladorMaraton{
 	=============================================*/
 	static public function ctrActualizarRegistroMaraton(){
 
-		if(isset($_POST[""])){
-
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+		if(isset($_POST["actualizarNombreMaraton"])){
 
 			$tabla = "TBL_Maraton";
 
-			$datos = array("maratonID" => $_POST[""],
+			$datos = array("maratonID" => $_POST["idmaraton"],
 							"NombreMaraton" => $_POST["actualizarNombreMaraton"],
 				           "NombreCiudad" => $_POST["actualizarNombreCiudad"],
 				           "NombreCelebracion" => $_POST["actualizarNombreCelebracion"],

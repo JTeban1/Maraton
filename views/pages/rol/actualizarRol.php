@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["rolID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "rolID";
+	$valor = $_GET["rolID"];
 
 
      $rol = ControladorRol ::ctrSeleccionarRegistroRol($item, $valor);
@@ -38,6 +38,7 @@ if(isset($_GET["id"])){
                     </div>
                            
                <input id="actualizarRol" class="form-control" value="<?php echo $rol["rol"]; ?>" type="text" name="actualizarRol">
+               <input type="hidden" name="idRol" value='<?php echo $rol["rolID"]; ?>'>
           </div>
 
           
@@ -67,7 +68,7 @@ if(isset($_GET["id"])){
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido actualizado</div>';
+                    echo '<div class="alert alert-success"> ha sido actualizado</div>';
 
                }
 

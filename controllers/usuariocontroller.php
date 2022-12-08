@@ -49,7 +49,7 @@ class ControladorUsuario{
 	=============================================*/
 	static public function ctrActualizarRegistroUsuario(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarEmailusuario"])){
 
 			if($_POST[""] != ""){			
 
@@ -62,7 +62,7 @@ class ControladorUsuario{
 
 			$tabla = "TBL_Usuario";
 
-			$datos = array("UsuarioID" => $_POST[""],
+			$datos = array("UsuarioID" => $_POST["idusuario"],
 							"Email" => $_POST["actualizarEmailusuario"],
 				           "Contrasena" => $_POST["actualizarContrasenausuario"],
 				           "Nombre" => $_POST["actualizarNombreusuario"],

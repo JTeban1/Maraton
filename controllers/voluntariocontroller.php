@@ -47,20 +47,12 @@ class ControladorVoluntario{
 	=============================================*/
 	static public function ctrActualizarRegistroVoluntario(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarNombrevoluntario"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
-
+			
 			$tabla = "TBL_Voluntario";
 
-			$datos = array("VoluntarioID" => $_POST[""],
+			$datos = array("VoluntarioID" => $_POST["idvoluntario"],
 							"Nombres" => $_POST["actualizarNombrevoluntario"],
 				           "Apellidos" => $_POST["actualizarApellidovoluntario"],
 				           "fk_PaisID" => $_POST["actualizarFK_Paisvoluntario"],

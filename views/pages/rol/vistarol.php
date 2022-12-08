@@ -72,7 +72,7 @@
                                   <?php
 
                                     $eliminar = new ControladorRol();
-                                    $eliminar -> ctrSeleccionarRegistroRol();
+                                    $eliminar -> ctrEliminarRegistroRol();
 
                                   ?>
 

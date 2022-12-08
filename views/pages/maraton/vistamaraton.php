@@ -71,7 +71,7 @@
                                   <?php
 
                                     $eliminar = new ControladorMaraton();
-                                    $eliminar -> ctrSeleccionarRegistroMaraton();
+                                    $eliminar -> ctrEliminarRegistroMaraton();
 
                                   ?>
 

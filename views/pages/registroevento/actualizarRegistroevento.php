@@ -44,6 +44,7 @@ if(isset($_GET["id"])){
                     </div>
                            
                <input id="actualizarNumDorsalevento" class="form-control" value="<?php echo $registroRegistroEven["NumDorsal"]; ?>" type="number" name="actualizarNumDorsalevento">
+               <input type="hidden" name="idregistroevento" value='<?php echo $registroRegistroEven["RegistroID"]; ?>'>
           </div>
 
           <div class="form-group">

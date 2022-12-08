@@ -49,20 +49,13 @@ class ControladorRegis{
 	=============================================*/
 	static public function ctrActualizarRegistroRegis(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarFechaRegistroregistro"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+			
 
 			$tabla = "TBL_Registro";
 
-			$datos = array("RegistroID" => $_POST[""],
+			$datos = array("RegistroID" => $_POST["idregistro"],
 							"FechaRegistro" => $_POST["actualizarFechaRegistroregistro"],
 				           "Costo" => $_POST["actualizarCostoregistro"],
 						   "ObjetivoPatrocinio" => $_POST["actualizarObjetivoPatrocinioregistro"],

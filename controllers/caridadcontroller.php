@@ -47,20 +47,13 @@ class ControladorCaridad{
 	=============================================*/
 	static public function ctrActualizarRegistroCaridad(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarNombreCaridad"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+			
 
 			$tabla = "TBL_Caridad";
 
-			$datos = array("CaridadID" => $_POST[""],
+			$datos = array("CaridadID" => $_POST["idcaridad"],
 							"NombreCaridad" => $_POST["actualizarNombreCaridad"],
 				           "Descripcion" => $_POST["actualizarDescripcionCaridad"],
 						   "logoCaridad" => addslashes(file_get_contents ($_FILES["actualizarLogoCaridad"]["tmp_name"])));//es IMG);

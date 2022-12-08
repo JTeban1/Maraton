@@ -39,6 +39,7 @@ if(isset($_GET["id"])){
                     </div>
                            
                <input id="actualizarNombrevoluntario" class="form-control"  value="<?php echo $voluntario["Nombres"]; ?>" type="text" name="actualizarNombrevoluntario">
+               <input type="hidden" name="idvoluntario" value='<?php echo $voluntario["VoluntarioID"]; ?>'>
           </div>
 
           <div class="form-group">

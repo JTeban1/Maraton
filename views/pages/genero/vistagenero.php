@@ -64,7 +64,7 @@
                                   <?php
 
                                     $eliminar = new ControladorGenero();
-                                    $eliminar -> ctrSeleccionarRegistroGenero();
+                                    $eliminar -> ctrEliminarRegistroGenero();
 
                                   ?>
 

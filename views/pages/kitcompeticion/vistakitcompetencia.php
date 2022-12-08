@@ -66,7 +66,7 @@
                                   <?php
 
                                     $eliminar = new ControladorKitCompetencia();
-                                    $eliminar -> ctrSeleccionarRegistroKitCompe();
+                                    $eliminar -> ctrEliminarRegistroKitCompe();
 
                                   ?>
 

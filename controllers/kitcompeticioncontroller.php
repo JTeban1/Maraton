@@ -46,20 +46,11 @@ class ControladorKitCompetencia{
 	=============================================*/
 	static public function ctrActualizarRegistroKitCompe(){
 
-		if(isset($_POST[""])){
-
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+		if(isset($_POST["actualizarOpcionKit"])){
 
 			$tabla = "TBL_KitCompeticion";
 
-			$datos = array("kitID" => $_POST[""],
+			$datos = array("kitID" => $_POST["idkit"],
 							"opcionkit" => $_POST["actualizarOpcionKit"],
 				           "valorkit" => $_POST["actualizarValorKit"]);
 

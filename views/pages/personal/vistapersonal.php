@@ -80,7 +80,7 @@
                                   <?php
 
                                     $eliminar = new ControladorPersonal();
-                                    $eliminar -> ctrSeleccionarRegistroPersonal();
+                                    $eliminar -> ctrEliminarRegistroPersonal();
 
                                   ?>
 

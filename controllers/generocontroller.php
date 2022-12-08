@@ -43,20 +43,11 @@ class ControladorGenero{
 	=============================================*/
 	static public function ctrActualizarRegistroGenero(){
 
-		if(isset($_POST[""])){
-
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+		if(isset($_POST["actualizarGenero"])){
 
 			$tabla = "TBL_Genero";
 
-			$datos = array("generoID" => $_POST[""],
+			$datos = array("generoID" => $_POST["idgenero"],
 							"genero" => $_POST["actualizarGenero"]);
 
 			$respuesta = ModelosGenero::mdlActualizarGenero($tabla, $datos);
