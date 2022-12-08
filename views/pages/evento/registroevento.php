@@ -50,7 +50,7 @@
                             </span>
                         </div>
                             
-                <input id="registroValor" class="form-control" type="text" name="registroValor">
+                <input id="registroValor" class="form-control" type="number" name="registroValor">
           </div>
 
 

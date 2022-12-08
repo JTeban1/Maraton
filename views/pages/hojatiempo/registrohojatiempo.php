@@ -51,7 +51,7 @@
                             </span>
                 </div>
                            
-               <input id="registroValorPagar" class="form-control" type="int" name="registroValorPagar">
+               <input id="registroValorPagar" class="form-control" type="number" name="registroValorPagar">
           </div>
 
 
