@@ -31,11 +31,11 @@
 
           <?php
 
-               $registroEvento = ControladorTipoEvento::ctrRegistroTipoEven();
+               $registroTipoEvento = ControladorTipoEvento::ctrRegistroTipoEven();
  
  
  
-               if($registroEvento == "ok")
+               if($registroTipoEvento == "ok")
                {
                     echo '<script>
 

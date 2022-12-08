@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Actualizar patrocinio</h1>
           <div class="form-group">
-          <label for="actualizarNombrePatrocinador">NombrePatrocinador</label>
+          <label for="actualizarNombrePatrocinador">Nombre Patrocinador</label>
           
                <div class="input-group">
           

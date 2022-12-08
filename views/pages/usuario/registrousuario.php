@@ -80,7 +80,7 @@
                     
                     
 
-                     <option value='<?php echo $roles["EventoID"];?>'><?php echo $roles["NombreEvento"];?></option>
+                     <option value='<?php echo $roles["rolID"];?>'><?php echo $roles["rol"];?></option>
                     <?php
 
                      }

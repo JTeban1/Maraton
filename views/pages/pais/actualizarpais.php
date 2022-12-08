@@ -23,7 +23,7 @@
           </div>
 
           <div class="form-group">
-          <label for="BanderaPais">Bandefa</label>
+          <label for="BanderaPais">Bandera</label>
           
                <div class="input-group">
           
