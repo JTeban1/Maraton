@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["generoID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "generoID";
+	$valor = $_GET["generoID"];
 
 
     
@@ -40,7 +40,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarGenero" class="form-control" value="<?php echo $genero["FechaNacimiento"]; ?>" type="text" name="actualizarGenero">
+               <input id="actualizarGenero" class="form-control" value="<?php echo $genero["genero"]; ?>" type="text" name="actualizarGenero">
                <input type="hidden" name="idgenero" value='<?php echo $genero["generoID"]; ?>'>
           </div>
          
@@ -63,7 +63,7 @@ if(isset($_GET["id"])){
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido Actualizar</div>';
+                    echo '<div class="alert alert-success">se ha sido Actualizar</div>';
 
                }
 
