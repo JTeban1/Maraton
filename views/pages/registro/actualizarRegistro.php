@@ -39,7 +39,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarFechaRegistroregistro" class="form-control" type="date" name="actualizarFechaRegistroregistro">
+               <input id="actualizarFechaRegistroregistro" class="form-control" value="<?php echo $registro["FechaRegistro"]; ?>" type="date" name="actualizarFechaRegistroregistro">
           </div>
 
           <div class="form-group">
@@ -53,7 +53,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarCostoregistro" class="form-control" type="number" name="actualizarCostoregistro">
+               <input id="actualizarCostoregistro" class="form-control" value="<?php echo $registro["Costo"]; ?>" type="number" name="actualizarCostoregistro">
           </div>
 
           <div class="form-group">
@@ -67,7 +67,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarObjetivoPatrocinioregistro" class="form-control" type="text" name="actualizarObjetivoPatrocinioregistro">
+               <input id="actualizarObjetivoPatrocinioregistro" class="form-control" value="<?php echo $registro["ObjetivoPatrocinio"]; ?>" type="text" name="actualizarObjetivoPatrocinioregistro">
           </div>
 
 
@@ -76,7 +76,7 @@ if(isset($_GET["id"])){
                     <label for="text">Corredor</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_CorredorIDregistro">
-               
+               <option value='<?php echo $registro["fk_CorredorID"];?>'><?php echo $registro["FechaNacimiento"];?></option>
                     <?php
                      foreach ($corredor  as $corredores) {
                         ?>
@@ -100,7 +100,7 @@ if(isset($_GET["id"])){
                     <label for="text">Kit</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_kitIDregistro">
-               
+               <option value='<?php echo $registro["fk_kitID"];?>'><?php echo $registro["opcionkit"];?></option>
                     <?php
                      foreach ($kit  as $kits) {
                         ?>
@@ -121,7 +121,7 @@ if(isset($_GET["id"])){
                     <label for="text">Estado Registro</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_EstadoRegistroIDregistro">
-               
+               <option value='<?php echo $registro["fk_EstadoRegistroID"];?>'><?php echo $registro["estadoRegitro"];?></option>
                     <?php
                      foreach ($estado  as $estados) {
                         ?>
@@ -141,7 +141,7 @@ if(isset($_GET["id"])){
                     <label for="text">Caridad</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_CaridadIDregistro">
-               
+               <option value='<?php echo $registro["fk_CaridadID"];?>'><?php echo $registro["NombreCaridad"];?></option>
                     <?php
                      foreach ($caridad  as $caridades) {
                         ?>

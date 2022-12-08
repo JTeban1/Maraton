@@ -38,7 +38,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarNombrevoluntario" class="form-control" type="text" name="actualizarNombrevoluntario">
+               <input id="actualizarNombrevoluntario" class="form-control"  value="<?php echo $voluntario["Nombres"]; ?>" type="text" name="actualizarNombrevoluntario">
           </div>
 
           <div class="form-group">
@@ -52,7 +52,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarApellidovoluntario" class="form-control" type="text" name="actualizarApellidovoluntario">
+               <input id="actualizarApellidovoluntario" class="form-control"  value="<?php echo $voluntario["Apellidos"]; ?>" type="text" name="actualizarApellidovoluntario">
           </div>
 
 
@@ -63,7 +63,7 @@ if(isset($_GET["id"])){
                     <label for="text">Pais</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_Paisvoluntario">
-               
+               <option value='<?php echo $voluntario["fk_PaisID"];?>'><?php echo $voluntario["NombrePais"];?></option>
                     <?php
                      foreach ($pais  as $paises) {
                         ?>
@@ -83,7 +83,7 @@ if(isset($_GET["id"])){
                     <label for="text">Genero</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_Generovoluntario">
-               
+               <option value='<?php echo $voluntario["fk_GeneroID"];?>'><?php echo $voluntario["NombrePais"];?></option>
                     <?php
                      foreach ($genero  as $generos) {
                         ?>

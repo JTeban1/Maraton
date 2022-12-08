@@ -38,7 +38,7 @@ if(isset($_GET["id"])){
                             </span>
                 </div>
                            
-               <input id="actualizarNombreMaraton" class="form-control" type="text" name="actualizarNombreMaraton">
+               <input id="actualizarNombreMaraton" class="form-control" value="<?php echo $maraton["NombreMaraton"]; ?>" type="text" name="actualizarNombreMaraton">
           </div>
 
 
@@ -53,7 +53,7 @@ if(isset($_GET["id"])){
                             </span>
                 </div>
                            
-               <input id="actualizarNombreCiudad" class="form-control" type="text" name="actualizarNombreCiudad">
+               <input id="actualizarNombreCiudad" class="form-control"  value="<?php echo $maraton["NombreCiudad"]; ?>" type="text" name="actualizarNombreCiudad">
           </div>
 
 
@@ -68,7 +68,7 @@ if(isset($_GET["id"])){
                             </span>
                 </div>
                            
-               <input id="actualizarNombreCelebracion" class="form-control" type="text" name="actualizarNombreCelebracion">
+               <input id="actualizarNombreCelebracion" class="form-control" value="<?php echo $maraton["NombreCelebracion"]; ?>" type="text" name="actualizarNombreCelebracion">
           </div>
 
 
@@ -76,7 +76,7 @@ if(isset($_GET["id"])){
                     <label for="text">Pais</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PaisID">
-               
+               <option value='<?php echo $maraton["fk_PaisID"];?>'><?php echo $maraton["NombrePais"];?></option>
                     <?php
                      foreach ($pais  as $paises) {
                         ?>

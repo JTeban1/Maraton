@@ -39,7 +39,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarEmailusuario" class="form-control" type="email" name="actualizarEmailusuario">
+               <input id="actualizarEmailusuario" class="form-control" value="<?php echo $usuario["Email"]; ?>" type="email" name="actualizarEmailusuario">
           </div>
 
           <div class="form-group">
@@ -53,7 +53,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarContrasenausuario" class="form-control" type="password" name="actualizarContrasenausuario">
+               <input id="actualizarContrasenausuario" class="form-control" value="<?php echo $usuario["Contrasena"]; ?>" type="password" name="actualizarContrasenausuario">
           </div>
 
           <div class="form-group">
@@ -67,7 +67,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarNombreusuario" class="form-control" type="text" name="actualizarNombreusuario">
+               <input id="actualizarNombreusuario" class="form-control" value="<?php echo $usuario["Nombre"]; ?>" type="text" name="actualizarNombreusuario">
           </div>
 
           <div class="form-group">
@@ -81,7 +81,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarApellidousuario" class="form-control" type="text" name="actualizarApellidousuario">
+               <input id="actualizarApellidousuario" class="form-control" value="<?php echo $usuario["Apellido"]; ?>" type="text" name="actualizarApellidousuario">
           </div>
 
 
@@ -93,7 +93,7 @@ if(isset($_GET["id"])){
                     <label for="text">Rol</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_RolIDusuario">
-               
+               <option value='<?php echo $usuario["fk_RolID"];?>'><?php echo $usuario["NombreEvento"];?></option>
                     <?php
                      foreach ($rol  as $roles) {
                         ?>

@@ -43,7 +43,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarNumDorsalevento" class="form-control" type="number" name="actualizarNumDorsalevento">
+               <input id="actualizarNumDorsalevento" class="form-control" value="<?php echo $registroRegistroEven["NumDorsal"]; ?>" type="number" name="actualizarNumDorsalevento">
           </div>
 
           <div class="form-group">
@@ -57,7 +57,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarTiempoCarreraevento" class="form-control" type="time" name="actualizarTiempoCarreraevento">
+               <input id="actualizarTiempoCarreraevento" class="form-control" value="<?php echo $registroRegistroEven["TiempoCarrera"]; ?>" type="time" name="actualizarTiempoCarreraevento">
           </div>
 
 
@@ -67,7 +67,7 @@ if(isset($_GET["id"])){
                     <label for="text">Registro</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_RegistroIDevento">
-               
+               <option value='<?php echo $registroRegistroEven["fk_RegistroID"];?>'><?php echo $registroRegistroEven["ObjetivoPatrocinio"];?></option>
                     <?php
                      foreach ($registro  as $registros) {
                         ?>
@@ -89,7 +89,7 @@ if(isset($_GET["id"])){
                     <label for="text">Eventos</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_EventoIDevento">
-               
+               <option value='<?php echo $registroRegistroEven["fk_EventoID"];?>'><?php echo $registroRegistroEven["NombreEvento"];?></option>
                     <?php
                      foreach ($evento  as $eventos) {
                         ?>

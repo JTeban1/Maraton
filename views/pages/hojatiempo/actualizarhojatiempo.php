@@ -41,7 +41,7 @@ if(isset($_GET["id"])){
                             </span>
                 </div>
                            
-               <input id="actualizarFechaInicio" class="form-control" type="date" name="actualizarFechaInicio">
+               <input id="actualizarFechaInicio" class="form-control" value="<?php echo $hojatiempo["FechaInicio"]; ?>" type="date" name="actualizarFechaInicio">
           </div>
 
 
@@ -56,7 +56,7 @@ if(isset($_GET["id"])){
                             </span>
                 </div>
                            
-               <input id="actualizarFechaFinal" class="form-control" type="date" name="actualizarFechaFinal">
+               <input id="actualizarFechaFinal" class="form-control"  value="<?php echo $hojatiempo["FechaFinal"]; ?>" type="date" name="actualizarFechaFinal">
           </div>
 
 
@@ -72,7 +72,7 @@ if(isset($_GET["id"])){
                             </span>
                 </div>
                            
-               <input id="actualizarValorPagar" class="form-control" type="number" name="actualizarValorPagar">
+               <input id="actualizarValorPagar" class="form-control" value="<?php echo $hojatiempo["ValorPagar"]; ?>" type="number" name="actualizarValorPagar">
           </div>
 
 
@@ -80,7 +80,9 @@ if(isset($_GET["id"])){
                     <label for="text">Personal</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PersonalID">
-               
+
+               <option value='<?php echo $hojatiempo["fk_PersonalID"];?>'><?php echo $hojatiempo["Nombres"];?></option>
+
                     <?php
                      foreach ($personal  as $personales) {
                         ?>

@@ -41,7 +41,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarFechaNacimiento" class="form-control" value="<?php echo $usuario["FechaNacimiento"]; ?>" type="date" name="actualizarFechaNacimiento">
+               <input id="actualizarFechaNacimiento" class="form-control" value="<?php echo $corredor["FechaNacimiento"]; ?>" type="date" name="actualizarFechaNacimiento">
           </div>
           <div class="form-group">
                     <label for="text">Genero</label>

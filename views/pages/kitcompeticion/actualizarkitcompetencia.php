@@ -1,3 +1,23 @@
+<?php
+
+if(isset($_GET["id"])){
+
+	$item = "id";
+	$valor = $_GET["id"];
+
+
+     $kitcompetencia = ControladorKitCompetencia ::ctrSeleccionarRegistroKitCompe($item, $valor);
+
+     
+
+}
+
+?>
+
+
+
+
+
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -19,7 +39,7 @@
                          </span>
                     </div>
                            
-               <input id="actualizarOpcionKit" class="form-control" type="text" name="actualizarOpcionKit">
+               <input id="actualizarOpcionKit" class="form-control" value="<?php echo $kitcompetencia["opcionkit"]; ?>" type="text" name="actualizarOpcionKit">
           </div>
 
           <div class="form-group">
@@ -33,7 +53,7 @@
                          </span>
                     </div>
                            
-               <input id="actualizarValorKit" class="form-control" type="number" name="actualizarValorKit">
+               <input id="actualizarValorKit" class="form-control" value="<?php echo $kitcompetencia["valorkit"]; ?>" type="number" name="actualizarValorKit">
           </div>
 
          

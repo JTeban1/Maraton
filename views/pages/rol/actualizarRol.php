@@ -1,3 +1,21 @@
+<?php
+
+if(isset($_GET["id"])){
+
+	$item = "id";
+	$valor = $_GET["id"];
+
+
+     $rol = ControladorRol ::ctrSeleccionarRegistroRol($item, $valor);
+ 
+     
+
+}
+
+?>
+
+
+
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -19,7 +37,7 @@
                          </span>
                     </div>
                            
-               <input id="actualizarRol" class="form-control" type="text" name="actualizarRol">
+               <input id="actualizarRol" class="form-control" value="<?php echo $rol["rol"]; ?>" type="text" name="actualizarRol">
           </div>
 
           

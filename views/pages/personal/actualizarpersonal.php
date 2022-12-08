@@ -37,7 +37,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarNombrepersonal" class="form-control" type="text" name="actualizarNombrepersonal">
+               <input id="actualizarNombrepersonal" class="form-control"  value="<?php echo $personal["Nombres"]; ?>" type="text" name="actualizarNombrepersonal">
           </div>
 
           <div class="form-group">
@@ -51,7 +51,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarApellidopesonal" class="form-control" type="text" name="actualizarApellidopesonal">
+               <input id="actualizarApellidopesonal" class="form-control" value="<?php echo $personal["Apellidos"]; ?>" type="text" name="actualizarApellidopesonal">
           </div>
 
           <div class="form-group">
@@ -65,7 +65,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarFechaNacimientopersonal" class="form-control" type="date" name="actualizarFechaNacimientopersonal">
+               <input id="actualizarFechaNacimientopersonal" class="form-control"  value="<?php echo $personal["FechaNacimiento"]; ?>" type="date" name="actualizarFechaNacimientopersonal">
           </div>
           <div class="form-group">
           <label for="actualizarGeneropersonal">Genero</label>
@@ -78,7 +78,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarGeneropersonal" class="form-control" type="text" name="actualizarGeneropersonal">
+               <input id="actualizarGeneropersonal" class="form-control" type="text" value="<?php echo $personal["FechaNacimiento"]; ?>" name="actualizarGeneropersonal">
           </div>
           <div class="form-group">
           <label for="actualizarComentariopersonal">Comentarios</label>
@@ -91,7 +91,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarComentariopersonal" class="form-control" type="text" name="actualizarComentariopersonal">
+               <input id="actualizarComentariopersonal" class="form-control" type="text" value="<?php echo $personal["Comentarios"]; ?>" name="actualizarComentariopersonal">
           </div>
 
 
@@ -101,7 +101,7 @@ if(isset($_GET["id"])){
                     <label for="text">Rol</label>
                     <div class="input-group">
                     <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_RolID">
-               
+                    <option value='<?php echo $personal["fk_RolID"];?>'><?php echo $personal["rol"];?></option>
                     <?php
                      foreach ($rol  as $roles) {
                         ?>
@@ -126,7 +126,7 @@ if(isset($_GET["id"])){
                     <label for="text">Posicion</label>
                     <div class="input-group">
                     <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_PosicionID">
-               
+                    <option value='<?php echo $personal["fk_PosicionID"];?>'><?php echo $personal["NombrePosicion"];?></option>
                     <?php
                      foreach ($posicion  as $posiciones) {
                         ?>

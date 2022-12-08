@@ -1,3 +1,21 @@
+<?php
+
+if(isset($_GET["id"])){
+
+	$item = "id";
+	$valor = $_GET["id"];
+
+     $pais = ControladorPais::ctrSeleccionarRegistroPais($item, $valor);
+     
+
+}
+
+?>
+
+
+
+
+
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -19,7 +37,7 @@
                          </span>
                     </div>
                            
-               <input id="actualizarNombrePais" class="form-control" type="text" name="actualizarNombrePais">
+               <input id="actualizarNombrePais" class="form-control" value="<?php echo $pais["NombrePais"]; ?>" type="text" name="actualizarNombrePais">
           </div>
 
           <div class="form-group">
@@ -33,7 +51,7 @@
                          </span>
                     </div>
                            
-               <input id="BanderaPais" class="form-control" type="file" name="actualizarBanderaPais">
+               <input id="BanderaPais" class="form-control"  value="<?php echo $pais["BanderaPais"]; ?>" type="file" name="actualizarBanderaPais">
           </div>
 
          

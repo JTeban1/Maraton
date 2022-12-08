@@ -37,7 +37,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarNombrePatrocinador" class="form-control" type="text" name="actualizarNombrePatrocinador">
+               <input id="actualizarNombrePatrocinador" class="form-control" value="<?php echo $patrocinio["NombrePatrocinador"]; ?>" type="text" name="actualizarNombrePatrocinador">
           </div>
 
           <div class="form-group">
@@ -50,8 +50,8 @@ if(isset($_GET["id"])){
                               <i class="fas fa-evelope"></i>
                          </span>
                     </div>
-                           
-               <input id="actualizarMontopatrocinador" class="form-control" type="number" name="actualizarMontopatrocinador">
+                            
+               <input id="actualizarMontopatrocinador" class="form-control" value="<?php echo $patrocinio["Monto"]; ?>" type="number" name="actualizarMontopatrocinador">
           </div>
 
           
@@ -63,7 +63,7 @@ if(isset($_GET["id"])){
                     <label for="text">Registro</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_RegistroID">
-               
+               <option value='<?php echo $patrocinio["fk_RegistroID"];?>'><?php echo $patrocinio["Costo"];?></option>
                     <?php
                      foreach ($registro  as $registros) {
                         ?>
