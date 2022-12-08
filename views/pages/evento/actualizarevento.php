@@ -37,7 +37,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarNombreEvento" class="form-control" type="text" name="actualizarNombreEvento">
+               <input id="actualizarNombreEvento" class="form-control" value="<?php echo $evento["NombreEvento"]; ?>" type="text" name="actualizarNombreEvento">
           </div>
 
 
@@ -52,7 +52,7 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarFechaInicio" class="form-control" type="date" name="actualizarFechaInicio">
+               <input id="actualizarFechaInicio" class="form-control" value="<?php echo $evento["FechaInicio"]; ?>" type="date" name="actualizarFechaInicio">
           </div>
 
           
@@ -67,7 +67,7 @@ if(isset($_GET["id"])){
                             </span>
                         </div>
                             
-                <input id="actualizarValor" class="form-control" type="text" name="actualizarValor">
+                <input id="actualizarValor" class="form-control" value="<?php echo $evento["Valor"]; ?>" type="text" name="actualizarValor">
 </div>
 
           <div class="form-group">
@@ -81,7 +81,7 @@ if(isset($_GET["id"])){
                            </span>
                       </div>
                       
-                      <input id="actualizarParticipantesMax" class="form-control" type="int" name="actualizarParticipantesMax">
+                      <input id="actualizarParticipantesMax" class="form-control" value="<?php echo $evento["ParticipantesMax"]; ?>" type="int" name="actualizarParticipantesMax">
                  </div>
 
                </div>
@@ -92,7 +92,9 @@ if(isset($_GET["id"])){
                          <label for="text">Nombre Maraton</label>
                          <div class="input-group">
                          <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_MaratonID">
-                    
+
+                         <option value='<?php echo $evento["fk_MaratonID"];?>'><?php echo $evento["NombreMaraton"];?></option>
+
                          <?php
                          foreach ($maraton  as $maratones) {
                          ?>
@@ -116,7 +118,7 @@ if(isset($_GET["id"])){
                     <label for="text">Tipo Evento</label>
                     <div class="input-group">
                     <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_TipoEventoID">
-               
+                    <option value='<?php echo $evento["fk_TipoEventoID"];?>'><?php echo $evento["NombreTipoEvento"];?></option>
                     <?php
                      foreach ($evento  as $eventos) {
                         ?>

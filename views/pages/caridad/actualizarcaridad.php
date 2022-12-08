@@ -1,3 +1,21 @@
+<?php
+
+if(isset($_GET["id"])){
+
+	$item = "id";
+	$valor = $_GET["id"];
+
+
+     $caridad = ControladorCaridad ::ctrSeleccionarRegistroCaridad($item, $valor);
+     
+
+}
+
+?>
+
+
+
+
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -19,7 +37,7 @@
                          </span>
                     </div>
                            
-               <input id="actualizarNombreCaridad" class="form-control" type="text" name="actualizarNombreCaridad">
+               <input id="actualizarNombreCaridad" class="form-control" value="<?php echo $caridad["NombreCaridad"]; ?>" type="text" name="actualizarNombreCaridad">
           </div>
 
           <div class="form-group">
@@ -33,7 +51,7 @@
                          </span>
                     </div>
                            
-               <input id="actualizarDescripcionCaridad" class="form-control" type="text" name="actualizarDescripcionCaridad">
+               <input id="actualizarDescripcionCaridad" class="form-control" value="<?php echo $caridad["Descripcion"]; ?>" type="text" name="actualizarDescripcionCaridad">
           </div>
 
 
@@ -49,7 +67,7 @@
                            </span>
                       </div>
                       
-                      <input id="img" class="form-control" type="file" name="actualizarLogoCaridad" accept=".jpg , .png , .gif">
+                      <input id="img" class="form-control" value="<?php echo $caridad["logoCaridad"]; ?>" type="file" name="actualizarLogoCaridad" accept=".jpg , .png , .gif">
                  </div>
 
                </div>

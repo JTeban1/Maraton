@@ -41,13 +41,13 @@ if(isset($_GET["id"])){
                          </span>
                     </div>
                            
-               <input id="actualizarFechaNacimiento" class="form-control" type="date" name="actualizarFechaNacimiento">
+               <input id="actualizarFechaNacimiento" class="form-control" value="<?php echo $usuario["FechaNacimiento"]; ?>" type="date" name="actualizarFechaNacimiento">
           </div>
           <div class="form-group">
                     <label for="text">Genero</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_GeneroID">
-               
+               <option value='<?php echo $corredor["fk_GeneroID"];?>'><?php echo $corredor["genero"];?></option>
                     <?php
                      foreach ($genero  as $generos) {
                         ?>
@@ -67,7 +67,7 @@ if(isset($_GET["id"])){
                     <label for="text">Usuario</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_UsuarioID">
-               
+               <option value='<?php echo $corredor["fk_UsuarioID"];?>'><?php echo $corredor["Nombre"];?></option>
                     <?php
                      foreach ($usuario  as $usuarios) {
                         ?>
@@ -89,7 +89,7 @@ if(isset($_GET["id"])){
                     <label for="text">Pais</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_paisID">
-               
+               <option value='<?php echo $corredor["fk_PaisID"];?>'><?php echo $corredor["NombrePais"];?></option>
                     <?php
                      foreach ($pais  as $paises) {
                         ?>
