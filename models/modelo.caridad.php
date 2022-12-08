@@ -34,7 +34,7 @@ class ModeloCaridad {
 
     // funcion mostrar
 
-    static public function mdlSeleccionarCaridad($tabla){
+    static public function mdlSeleccionarCaridad($tabla, $item, $valor){
 
         $item1 = null;
 		$valor1 = null;

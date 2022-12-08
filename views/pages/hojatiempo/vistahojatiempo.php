@@ -57,13 +57,13 @@
 
                               <div class="px-1">
                               
-                              <a href="index.php?paginas=editar&id=<?php echo $value["id"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
+                              <a href="index.php?pages=/hojatiempo/actualizarhojatiempo&HojaID=<?php echo $value["HojaID"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
 
                               </div>
 
                               <form method="post">
 
-                                  <input type="hidden" value="<?php echo $value["id"]; ?>" name="eliminarRegistroHojaTiempo">
+                                  <input type="hidden" value="<?php echo $value["HojaID"]; ?>" name="eliminarRegistroHojaTiempo">
                                   
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Eliminar</button>
 

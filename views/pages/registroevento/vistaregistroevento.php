@@ -64,13 +64,13 @@
 
                               <div class="px-1">
                               
-                              <a href="index.php?paginas=editar&id=<?php echo $value["id"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
+                              <a href="index.php?pages=/registroevento/actualizarRegistroevento&RegistroID=<?php echo $value["RegistroID"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
 
                               </div>
 
                               <form method="post">
 
-                                  <input type="hidden" value="<?php echo $value["id"]; ?>" name="eliminarRegistroEvento">
+                                  <input type="hidden" value="<?php echo $value["RegistroID"]; ?>" name="eliminarRegistroEvento">
                                   
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Eliminar</button>
 

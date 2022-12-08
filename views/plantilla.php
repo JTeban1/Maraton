@@ -1405,6 +1405,8 @@
                $_GET["pages"] == ""){
 
                     include "pages/".$_GET["pages"].".php";
+                  
+                    
 
 
                }else{

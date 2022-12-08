@@ -29,7 +29,7 @@ class ControladorEstadoRegistro{
 
 	static public function ctrSeleccionarRegistroEstaRegis($item, $valor){
 
-		$tabla = "TBL_EstadoRegistro";
+		$tabla = "tbl_estadoregistro";
 
 		$respuesta = ModeloEstadoRegistro::mdlSeleccionarEstadoRegistro($tabla, $item, $valor);
 
@@ -43,20 +43,12 @@ class ControladorEstadoRegistro{
 	=============================================*/
 	static public function ctrActualizarRegistroEstaRegis(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarEstadoRegistro"])){
 
-			if($_POST[""] != ""){			
 
-				$password = $_POST[""];
+			$tabla = "tbl_estadoregistro";
 
-			}else{
-
-				$password = $_POST[""];
-			}
-
-			$tabla = "TBL_EstadoRegistro";
-
-			$datos = array("estadoID" => $_POST[""],
+			$datos = array("estadoID" => $_POST["ID"],
 							"estadoRegitro" => $_POST["actualizarEstadoRegistro"]);
 
 			$respuesta = ModeloEstadoRegistro::mdlActualizarEstadoRegistro($tabla, $datos);

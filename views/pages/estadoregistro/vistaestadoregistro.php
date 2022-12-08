@@ -40,7 +40,7 @@
                       <tr>
                         
                         <td scope="row"><?php echo ($key+1) ; ?></td>
-                        <td><?php echo $value["EstadoRegistro"]; ?></td>
+                        <td><?php echo $value["estadoRegitro"]; ?></td>
                         
 
                         <td>
@@ -51,13 +51,13 @@
 
                               <div class="px-1">
                               
-                              <a href="index.php?paginas=editar&id=<?php echo $value["id"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
+                              <a href="index.php?pages=/estadoregistro/actualizarestadoregistro&estadoID=<?php echo $value["estadoID"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
 
                               </div>
 
                               <form method="post">
 
-                                  <input type="hidden" value="<?php echo $value["id"]; ?>" name="eliminarRegistroEstadoRegistro">
+                                  <input type="hidden" value="<?php echo $value["estadoID"]; ?>" name="eliminarRegistroEstadoRegistro">
                                   
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Eliminar</button>
 

@@ -1,12 +1,12 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["estadoID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "estadoID";
+	$valor = $_GET["estadoID"];
 
 
-     $estadoregistro = ControladorEstadoRegistro ::ctrSeleccionarRegistroEstaRegis($item, $valor);
+     $estadoRegistro = ControladorEstadoRegistro::ctrSeleccionarRegistroEstaRegis($item, $valor);
     
 
 }
@@ -23,23 +23,24 @@ if(isset($_GET["id"])){
 
 <div class="d-flex justify-content-center text-center py-5">
 
-          <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
+     <form class="p-5 bg-light" method="post">
                <h1>Actualizar estado registro</h1>
           <div class="form-group">
-          <label for="actualizarEstadoRegistro">EstadoRegistro</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="actualizarEstadoRegistro" class="form-control" value="<?php echo $estadoregistro["estadoRegitro"]; ?>" type="text" name="actualizarEstadoRegistro">
-          </div>
+               <label for="actualizarEstadoRegistro">EstadoRegistro</label>
+               
+                    <div class="input-group">
+               
+                         <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                   <i class="fas fa-evelope"></i>
+                              </span>
+                         </div>
+                              
 
-         
+                         <input type="text" class="form-control" value="<?php echo $estadoRegistro["estadoRegitro"]; ?>"  id="actualizarEstadoRegistro" name="actualizarEstadoRegistro">
+                    </div>
+          </div>
+          
           <?php
 
                $actualizarEstaRegis = ControladorEstadoRegistro::ctrActualizarRegistroEstaRegis();

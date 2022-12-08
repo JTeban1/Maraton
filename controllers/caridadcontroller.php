@@ -13,7 +13,7 @@ class ControladorCaridad{
 
 		if(isset($_POST["registroNombreCaridad"])){
 
-			$tabla = "TBL_Caridad";
+			$tabla = "tbl_caridad";
 
 			$datos = array("NombreCaridad " => $_POST["registroNombreCaridad"],
 				           "Descripcion" => $_POST["registroDescripcionCaridad"],
