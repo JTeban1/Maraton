@@ -18,7 +18,6 @@
                               <i class="fas fa-evelope"></i>
                          </span>
                     </div>
-                           
                <input id="NombrePosicionposicion" class="form-control" type="text" name="registroNombrePosicionposicion">
           </div>
 
