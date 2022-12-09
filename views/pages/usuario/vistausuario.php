@@ -49,7 +49,7 @@
                         <td scope="row"><?php echo ($key+1) ; ?></td>
                         <td><?php echo $value["Email"]; ?></td>
                         <td><?php echo $value["Contrasena"]; ?></td>
-                        <td><?php echo $value["Nombres"]; ?></td>
+                        <td><?php echo $value["Nombre"]; ?></td>
                         <td><?php echo $value["Apellido"]; ?></td>
                         <td><?php echo $value["FK_RolID"]; ?></td>
                         
