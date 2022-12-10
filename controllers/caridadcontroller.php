@@ -15,7 +15,7 @@ class ControladorCaridad{
 
 			$tabla = "tbl_caridad";
 
-			$datos = array("NombreCaridad " => $_POST["registroNombreCaridad"],
+			$datos = array("NombreCaridad" => $_POST["registroNombreCaridad"],
 				           "Descripcion" => $_POST["registroDescripcionCaridad"],
 				           "logoCaridad" => addslashes(file_get_contents ($_FILES["registroLogoCaridad"]["tmp_name"])));//es IMG
 
