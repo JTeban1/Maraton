@@ -878,12 +878,12 @@
                               <li>
                                    <?php if($_GET["pages"] == "registroregistro"):?>
                                         <li class="nav-item">
-                                             <a class="nav-link active" href="index.php?pages=/registro/vistaregistro">Registro Registro</a>
+                                             <a class="nav-link active" href="index.php?pages=/registro/registroregistro">Registro Registro</a>
                                         </li>
 
                                    <?php else: ?>
                                         <li class="nav-item">
-                                             <a class="nav-link" href="index.php?pages=/registro/vistaregistro">Registro Registro</a>
+                                             <a class="nav-link" href="index.php?pages=/registro/registroregistro">Registro Registro</a>
                                         </li>
 
                                    <?php endif ?>

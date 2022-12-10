@@ -42,8 +42,8 @@
                         
                         <td scope="row"><?php echo ($key+1) ; ?></td>
                         <td><?php echo $value["NombreCaridad"]; ?></td>
-                        <td><?php echo $value["DescripcionCaridad"]; ?></td>
-                        <td><img style="width: 100px;" src="data:image/jpg;base64, <?php echo base64_encode($value['LogoCaridad']) ?>"   > </td>
+                        <td><?php echo $value["Descripcion"]; ?></td>
+                        <td><img style="width: 100px;" src="data:image/jpg;base64, <?php echo base64_encode($value['LogoCaridad']) ?>"> </td>
 
                         <td>
                             <div class="btn-agroup">

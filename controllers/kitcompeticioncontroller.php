@@ -15,7 +15,7 @@ class ControladorKitCompetencia{
 
 			$tabla = "TBL_KitCompeticion";
 
-			$datos = array("opcionkit " => $_POST["registroOpcionKit"],
+			$datos = array("opcionkit" => $_POST["registroOpcionKit"],
 				           "valorkit" => $_POST["registroValorKit"]);
 
 			$respuesta = ModelosKitCompeticion::mdlKitcompeticion($tabla, $datos);

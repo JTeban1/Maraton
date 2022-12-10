@@ -4,7 +4,7 @@
      $valor = null;
 
      $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
-     $evento = ControladorEvento::ctrSeleccionarRegistroEvento($item, $valor);
+     $evento = ControladorTipoEvento::ctrSeleccionarRegistroTipoEven($item, $valor);
      
 
 
@@ -77,9 +77,9 @@
 
 
           <div class="form-group">
-                    <label for="text">Eventos</label>
+                    <label for="text">Tipos Eventos</label>
                     <div class="input-group">
-               <select class="form-select" aria-label="Disabled select example"  name="registroFK_EventoIDevento">
+               <select class="form-select" aria-label="Disabled select example"  name="registrofk_TipoEventoID">
                
                     <?php
                      foreach ($evento  as $eventos) {
@@ -87,7 +87,7 @@
                     
                     
 
-                     <option value='<?php echo $eventos["EventoID"];?>'><?php echo $eventos["NombreEvento"];?></option>
+                     <option value='<?php echo $eventos["TipoEventoID"];?>'><?php echo $eventos["NombreTipoEvento"];?></option>
                     <?php
 
                      }

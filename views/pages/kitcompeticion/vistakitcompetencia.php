@@ -41,8 +41,8 @@
                       <tr>
                         
                         <td scope="row"><?php echo ($key+1) ; ?></td>
-                        <td><?php echo $value["OpcionKit"]; ?></td>
-                        <td><?php echo $value["ValorKit"]; ?></td>
+                        <td><?php echo $value["opcionkit"]; ?></td>
+                        <td><?php echo $value["valorkit"]; ?></td>
                         
 
                         <td>

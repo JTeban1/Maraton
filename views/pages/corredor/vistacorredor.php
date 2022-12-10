@@ -29,7 +29,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Fecha De Nacimiento</th>
                         <th scope="col">FK_Genero</th>
-                        <th scope="col">FK_Email</th>
+                        <th scope="col">fk_Usuario</th>
                         <th scope="col">FK_PaisID</th>
                         <th>Acciones</th>
                         
@@ -45,9 +45,9 @@
                         
                         <td scope="row"><?php echo ($key+1) ; ?></td>
                         <td><?php echo $value["FechaNacimiento"]; ?></td>
-                        <td><?php echo $value["FK_Genero"]; ?></td>
-                        <td><?php echo $value["FK_Email"]; ?></td>
-                        <td><?php echo $value["FK_PaisID"]; ?></td>
+                        <td><?php echo $value["fk_GeneroID"]; ?></td>
+                        <td><?php echo $value["fk_UsuarioID"]; ?></td>
+                        <td><?php echo $value["fk_PaisID"]; ?></td>
 
                         <td>
                             <div class="btn-agroup">

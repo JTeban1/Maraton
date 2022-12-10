@@ -14,7 +14,7 @@ class ModeloCorredor {
     static public function mdlCorredor($tabla, $datos){
 
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(FechaNacimiento, fk_GeneroID, fk_UsuarioID, fk_PaisID) 
-        VALUES (:FechaNacimiento, :fk_GeneroID,:fk_UsuarioID,:fk_PaisID)");
+        VALUES (:FechaNacimiento,:fk_GeneroID,:fk_UsuarioID,:fk_PaisID)");
 
         $stmt->bindParam(":FechaNacimiento", $datos["FechaNacimiento"], PDO::PARAM_STR);
         $stmt->bindParam(":fk_GeneroID", $datos["fk_GeneroID"], PDO::PARAM_STR);
