@@ -13,8 +13,7 @@ class ModelosGenero{
 
     static public function mdlGenero($tabla, $datos){
 
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(genero) 
-        VALUES (:genero)");
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(genero) VALUES (:genero)");
 
         $stmt->bindParam(":genero", $datos["genero"], PDO::PARAM_STR);
 
@@ -39,7 +38,7 @@ class ModelosGenero{
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
 
 		  $stmt->execute();
 

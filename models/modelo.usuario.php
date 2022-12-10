@@ -38,12 +38,11 @@ class ModelosUsuario {
 
     // funcion mostrar
 
-    static public function mdlSeleccionarUsuario($tabla){
+    static public function mdlSeleccionarUsuario($tabla, $item, $valor){
 
-        $item1 = null;
-		$valor1 = null;
+	
 
-		if($item1 == null && $valor1 == null){
+		if($item == null && $valor == null){
 
 		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
 

@@ -12,20 +12,21 @@ class ControladorCorredor{
 
 		if(isset($_POST["registroFechaNacimiento"])){
 
-			$tabla = "TBL_Corredor";
+			$tabla = "tbl_corredor";
 
 			$datos = array("FechaNacimiento" => $_POST["registroFechaNacimiento"],
-				           "fk_Genero" => $_POST["registrofk_GeneroID"],
-				           "fk_UsuarioID" => $_POST["registrofk_UsuarioID"],
-						   "fk_PaisID" => $_POST["registrosfk_paisID"]);
+							"fk_GeneroID" => $_POST["registrofk_GeneroID"],
+							"fk_UsuarioID" => $_POST["registrofk_UsuarioID"],
+							"fk_PaisID" => $_POST["registrosfk_paisID"]);
 
-			$respuesta = ModeloCorredor::mdlCorredor($tabla, $datos);
+			$respuesta = ModelosGenero::mdlGenero($tabla, $datos);
 
 			return $respuesta;
 
 		}
 
 	}
+
 
 	/*=============================================
 	Seleccionar Registros

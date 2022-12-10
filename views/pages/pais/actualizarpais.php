@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["PaisID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "PaisID";
+	$valor = $_GET["PaisID"];
 
      $pais = ControladorPais::ctrSeleccionarRegistroPais($item, $valor);
      

@@ -11,7 +11,7 @@ class ControladorGenero{
 
 		if(isset($_POST["registrogenero"])){
 
-			$tabla = "TBL_Genero";
+			$tabla = "tbl_genero";
 
 			$datos = array("genero" => $_POST["registrogenero"]);
 
@@ -29,7 +29,7 @@ class ControladorGenero{
 
 	static public function ctrSeleccionarRegistroGenero($item, $valor){
 
-		$tabla = "TBL_Genero";
+		$tabla = "tbl_genero";
 
 		$respuesta = ModelosGenero::mdlSeleccionarGenero($tabla, $item, $valor);
 

@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["PersonalID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "PersonalID";
+	$valor = $_GET["PersonalID"];
 
 
      $personal = ControladorPersonal ::ctrSeleccionarRegistroPersonal($item, $valor);

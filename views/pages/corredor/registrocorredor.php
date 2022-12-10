@@ -39,7 +39,7 @@
           </div>
 
           <div class="form-group">
-                    <label for="text">Genero</label>
+                    <label for="text">genero</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="registrofk_GeneroID">
                
@@ -56,7 +56,6 @@
                     ?>
                </select>
           </div>
-
 
           <div class="form-group">
                     <label for="text">Usuario</label>

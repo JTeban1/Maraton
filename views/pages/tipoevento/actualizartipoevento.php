@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["TipoEventoID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "TipoEventoID";
+	$valor = $_GET["TipoEventoID"];
 
 
      $tipoevento = ControladorTipoEvento ::ctrSeleccionarRegistroTipoEven($item, $valor);

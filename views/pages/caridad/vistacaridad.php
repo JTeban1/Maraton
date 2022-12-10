@@ -53,7 +53,7 @@
 
                               <div class="px-1">
                               
-                              <a href="index.php?paginas=editar&id=<?php echo $value["CaridadID"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
+                              <a href="index.php?pages=/caridad/actualizarcaridad&CaridadID=<?php echo $value["CaridadID"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
 
                               </div>
 

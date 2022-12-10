@@ -1,12 +1,12 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["VoluntarioID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "VoluntarioID";
+	$valor = $_GET["VoluntarioID"];
 
 
-     $voluntario = ControladorVoluntario ::ctrSeleccionarRegistroVoluntario($item, $valor);
+     $voluntario = ControladorVoluntario::ctrSeleccionarRegistroVoluntario($item, $valor);
      $pais = ControladorPais::ctrSeleccionarRegistroPais($item, $valor);
      $genero = ControladorGenero::ctrSeleccionarRegistroGenero($item, $valor);
      

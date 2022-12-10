@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["RegistroID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "RegistroID";
+	$valor = $_GET["RegistroID"];
 
      $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
      $corredor = ControladorCorredor::ctrSeleccionarRegistroCorredor($item, $valor);

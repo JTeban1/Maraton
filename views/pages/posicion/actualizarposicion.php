@@ -1,14 +1,13 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["PosicionID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "PosicionID";
+	$valor = $_GET["PosicionID"];
 
 
-     $posicion = ControladorPosicion ::ctrSeleccionarRegistroPatrocinio($item, $valor);
+     $posicion = ControladorPosicion::ctrSeleccionarRegistroPosi($item, $valor);
   
-     
 
 }
 

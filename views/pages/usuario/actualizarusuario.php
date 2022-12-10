@@ -1,12 +1,12 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["UsuarioID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "UsuarioID";
+	$valor = $_GET["UsuarioID"];
 
 
-     $usuario = ControladorUsuario ::ctrSeleccionarRegistroUsuario($item, $valor);
+     $usuario = ControladorUsuario::ctrSeleccionarRegistroUsuario($item, $valor);
      $rol = ControladorRol::ctrSeleccionarRegistroRol($item, $valor);
     
      

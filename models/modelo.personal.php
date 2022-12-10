@@ -40,11 +40,11 @@ class ModeloPersonal{
 
     // funcion mostrar
 
-    static public function mdlSeleccionarPersonal($tabla){
-        $item1 = null;
-		$valor1 = null;
+    static public function mdlSeleccionarPersonal($tabla, $item, $valor){
 
-		if($item1 == null && $valor1 == null){
+	
+
+		if($item == null && $valor == null){
 
 		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
 

@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["PatrocinioID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "PatrocinioID";
+	$valor = $_GET["PatrocinioID"];
 
 
      $patrocinio = ControladorPatrocinio ::ctrSeleccionarRegistroPatrocinio($item, $valor);

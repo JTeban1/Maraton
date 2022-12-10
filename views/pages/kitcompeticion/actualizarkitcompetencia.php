@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["kitID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "kitID";
+	$valor = $_GET["kitID"];
 
 
      $kitcompetencia = ControladorKitCompetencia ::ctrSeleccionarRegistroKitCompe($item, $valor);

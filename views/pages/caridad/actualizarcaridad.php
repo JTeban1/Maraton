@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["CaridadID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "CaridadID";
+	$valor = $_GET["CaridadID"];
 
 
      $caridad = ControladorCaridad ::ctrSeleccionarRegistroCaridad($item, $valor);
@@ -68,7 +68,7 @@ if(isset($_GET["id"])){
                            </span>
                       </div>
                       
-                      <input id="img" class="form-control" value="<?php echo $caridad["logoCaridad"]; ?>" type="file" name="actualizarLogoCaridad" accept=".jpg , .png , .gif">
+                   <input id="img" class="form-control" <?php echo base64_encode($caridad['logoCaridad']); ?>  type="file" name="actualizarLogoCaridad" accept=".jpg , .png , .gif">
                  </div>
 
                </div>

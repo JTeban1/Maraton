@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["maratonID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "maratonID";
+	$valor = $_GET["maratonID"];
 
 
      $maraton = ControladorMaraton ::ctrSeleccionarRegistroMaraton($item, $valor);
