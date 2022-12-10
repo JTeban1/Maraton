@@ -19,7 +19,7 @@ class ControladorRegis{
 							"fK_CorredorID" => $_POST["registroFK_CorredorIDregistro"],
 							"fK_kitID" => $_POST["registroFK_KitIDregistro"],
 							"fK_EstadoRegistroID" => $_POST["registroFK_EstadoRegistroIDregistro"],
-							"fK_CaridadID"=> $_POST["registroFK_CaridadIDregistros"]);
+							"fK_CaridadID"=> $_POST["registroFK_CaridadIDregistro"]);
 
 			$respuesta = ModeloRegistro::mdlRegistro($tabla, $datos);
 

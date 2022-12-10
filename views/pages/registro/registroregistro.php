@@ -81,7 +81,7 @@
                     
                     
 
-                     <option value='<?php echo $corredores["CorredorID"];?>'><?php echo $corredores["CorredorID"];?></option>
+                     <option value='<?php echo $corredores["CorredorID"];?>'><?php echo $corredores["FechaNacimiento"];?></option>
                     <?php
 
                      }

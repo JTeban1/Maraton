@@ -14,7 +14,7 @@ class ModeloRegistro{
 
     static public function mdlRegistro($tabla, $datos){
 
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(FechaRegistro, Costo, ObjetivoPatrocinio, fk_CorredorID, fk_kitID,fk_EstadoRegistroID,fk_CaridadID) 
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(FechaRegistro, Costo, ObjetivoPatrocinio,fk_CorredorID,fk_kitID,fk_EstadoRegistroID,fk_CaridadID) 
         VALUES (:FechaRegistro, :Costo, :ObjetivoPatrocinio, :fk_CorredorID, :fk_kitID, :fk_EstadoRegistroID, :fk_CaridadID)");
 
         $stmt->bindParam(":FechaRegistro", $datos["FechaRegistro"], PDO::PARAM_STR);
