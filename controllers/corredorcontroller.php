@@ -19,7 +19,7 @@ class ControladorCorredor{
 							"fk_UsuarioID" => $_POST["registrofk_UsuarioID"],
 							"fk_PaisID" => $_POST["registrosfk_paisID"]);
 
-			$respuesta = ModelosGenero::mdlGenero($tabla, $datos);
+			$respuesta = ModeloCorredor::mdlCorredor($tabla, $datos);
 
 			return $respuesta;
 
