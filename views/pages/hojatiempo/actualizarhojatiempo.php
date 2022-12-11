@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET["id"])){
+if(isset($_GET["HojaID"])){
 
-	$item = "id";
-	$valor = $_GET["id"];
+	$item = "HojaID";
+	$valor = $_GET["HojaID"];
 
 
      $hojatiempo = ControladorHojaTiempo ::ctrSeleccionarRegistroHojaTiem($item, $valor);
