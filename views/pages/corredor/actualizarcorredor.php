@@ -6,7 +6,7 @@ if(isset($_GET["CorredorID"])){
 	$valor = $_GET["CorredorID"];
 
 
-     $corredor = ControladorCorredor ::ctrSeleccionarRegistroCorredor($item, $valor);
+     $corredor = ControladorCorredor::ctrSeleccionarRegistroCorredor($item, $valor);
      $genero = ControladorGenero::ctrSeleccionarRegistroGenero($item, $valor);
      $usuario = ControladorUsuario::ctrSeleccionarRegistroUsuario($item, $valor);
      $pais = ControladorPais::ctrSeleccionarRegistroPais($item, $valor);
@@ -44,11 +44,13 @@ if(isset($_GET["CorredorID"])){
                <input id="actualizarFechaNacimiento" class="form-control" value="<?php echo $corredor["FechaNacimiento"]; ?>" type="date" name="actualizarFechaNacimiento">
                <input type="hidden" name="idcorredor" value='<?php echo $corredor["CorredorID"]; ?>'>
           </div>
+
           <div class="form-group">
-                    <label for="text">Genero</label>
+                    <label for="text">genero</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_GeneroID">
                <option value='<?php echo $corredor["fk_GeneroID"];?>'><?php echo $corredor["genero"];?></option>
+               
                     <?php
                      foreach ($genero  as $generos) {
                         ?>
