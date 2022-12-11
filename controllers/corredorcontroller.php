@@ -34,7 +34,7 @@ class ControladorCorredor{
 
 	static public function ctrSeleccionarRegistroCorredor($item, $valor){
 
-		$tabla = "TBL_Corredor";
+		$tabla = "tbl_corredor";
 
 		$respuesta = ModeloCorredor::mdlSeleccionarCorredor($tabla, $item, $valor);
 
@@ -52,7 +52,7 @@ class ControladorCorredor{
 
 			
 
-			$tabla = "TBL_Corredor";
+			$tabla = "tbl_corredor";
 
 			$datos = array("CorredorID" => $_POST["idcorredor"],
 							"FechaNacimiento" => $_POST["actualizarFechaNacimiento"],
@@ -76,7 +76,7 @@ class ControladorCorredor{
 
 		if(isset($_POST["eliminarRegistroCorredor"])){
 
-			$tabla = "TBL_Corredor";
+			$tabla = "tbl_corredor";
 			$valor = $_POST["eliminarRegistroCorredor"];
 
 			$respuesta = ModeloCorredor::mdlEliminarCorredor($tabla, $valor);

@@ -6,7 +6,7 @@ if(isset($_GET["PatrocinioID"])){
 	$valor = $_GET["PatrocinioID"];
 
 
-     $patrocinio = ControladorPatrocinio ::ctrSeleccionarRegistroPatrocinio($item, $valor);
+     $patrocinio = ControladorPatrocinio::ctrSeleccionarRegistroPatrocinio($item, $valor);
      $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
 
 }

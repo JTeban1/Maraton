@@ -12,7 +12,7 @@ class ControladorPais{
 
 		if(isset($_POST["registroNombrePais"])){
 
-			$tabla = "TBL_Pais";
+			$tabla = "tbl_pais";
 
 			$datos = array("NombrePais" => $_POST["registroNombrePais"],
 				           "BanderaPais"=> addslashes(file_get_contents ($_FILES["registroBanderaPais"]["tmp_name"])));//ES IMG
@@ -31,7 +31,7 @@ class ControladorPais{
 
 	static public function ctrSeleccionarRegistroPais($item, $valor){
 
-		$tabla = "TBL_Pais";
+		$tabla = "tbl_pais";
 
 		$respuesta = ModeloPais::mdlSeleccionarPais($tabla, $item, $valor);
 
@@ -49,7 +49,7 @@ class ControladorPais{
 
 
 
-			$tabla = "TBL_Pais";
+			$tabla = "tbl_pais";
 
 			$datos = array("PaisID" => $_POST["idpais"],
 							"NombrePais" => $_POST["actualizarNombrePais"],
@@ -71,7 +71,7 @@ class ControladorPais{
 
 		if(isset($_POST["eliminarRegistroPais"])){
 
-			$tabla = "TBL_Pais";
+			$tabla = "tbl_pais";
 			$valor = $_POST["eliminarRegistroPais"];
 
 			$respuesta = ModeloPais::mdlEliminarPais($tabla, $valor);

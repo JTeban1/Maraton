@@ -43,7 +43,7 @@ class ModeloMaraton {
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+		  $stmt = Conexion::conectar()->prepare("SELECT maratonID,NombreMaraton,NombreCiudad,NombreCelebracion ,NombrePais FROM $tabla,tbl_pais WHERE $tabla.fk_PaisID = tbl_pais.PaisID");
           //SELECT maratonID,NombreMaraton,NombreCiudad,NombreCelebracion AS NombreMaraton,NombrePais ,FROM $tabla,tbl_pais WHERE $tabla.fk_PaisID =tbl_pais.PaisID
 
 		  $stmt->execute();
@@ -52,7 +52,7 @@ class ModeloMaraton {
 
 	  }else{
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+		  $stmt = Conexion::conectar()->prepare("SELECT maratonID,NombreMaraton,NombreCiudad,NombreCelebracion,NombrePais FROM tbl_maraton,tbl_pais WHERE $item = :$item AND tbl_maraton.fk_PaisID = tbl_pais.PaisID");
 
 		  $stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
 

@@ -99,7 +99,7 @@ if(isset($_GET["CorredorID"])){
                     
                     
 
-                     <option value='<?php echo $paises["PaisID"];?>'><?php echo $paises["NombrePais"];?></option>
+                     <option value='<?php echo $paises["paisID"];?>'><?php echo $paises["NombrePais"];?></option>
                     <?php
 
                      }

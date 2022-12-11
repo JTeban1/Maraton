@@ -45,7 +45,7 @@ class ModeloEvento{
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+		  $stmt = Conexion::conectar()->prepare("SELECT EventoID,NombreEvento,FechaInicio,Valor,ParticiantesMax,NombreMaraton,NombreTipoEvento FROM $tabla,tbl_maraton,tbl_tipoevento WHERE tbl_evento.fk_MaratonID = tbl_maraton.maratonID AND tbl_evento.fk_TipoEventoID = tbl_tipoevento.TipoEventoID");
 
           //SELECT EventoID,NombreEvento,FechaInicio,Valor,ParticipantesMax,AS NombreEvento,NombreMaraton,NombreTipoEvento FROM $tabla,tbl_maraton,tbl_tipoevento WHERE tbl_evento.fk_MaratonID = tbl_maraton.maratonID AND tbl_evento.fk_TipoEventoID
 
@@ -55,7 +55,7 @@ class ModeloEvento{
 
 	  }else{
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+		  $stmt = Conexion::conectar()->prepare("SELECT EventoID,NombreEvento,FechaInicio,Valor,ParticiantesMax ,NombreMaraton,NombreTipoEvento FROM tbl_evento,tbl_maraton,tbl_tipoevento WHERE $item = :$item AND tbl_evento.fk_MaratonID = tbl_maraton.maratonID AND tbl_evento.fk_TipoEventoID = tbl_tipoevento.TipoEventoID");
 
 		  $stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
 

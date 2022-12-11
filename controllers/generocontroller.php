@@ -45,7 +45,7 @@ class ControladorGenero{
 
 		if(isset($_POST["actualizarGenero"])){
 
-			$tabla = "TBL_Genero";
+			$tabla = "tbl_genero";
 
 			$datos = array("generoID" => $_POST["idgenero"],
 							"genero" => $_POST["actualizarGenero"]);
@@ -66,7 +66,7 @@ class ControladorGenero{
 
 		if(isset($_POST["eliminarRegistroGenero"])){
 
-			$tabla = "TBL_Genero";
+			$tabla = "tbl_genero";
 			$valor = $_POST["eliminarRegistroGenero"];
 
 			$respuesta = ModelosGenero::mdlEliminarGenero($tabla, $valor);

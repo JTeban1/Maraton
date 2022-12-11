@@ -12,7 +12,7 @@ class ControladorEvento{
 
 		if(isset($_POST["registroNombreEvento"])){
 
-			$tabla = "TBL_Evento";
+			$tabla = "tbl_evento";
 
 			$datos = array("NombreEvento" => $_POST["registroNombreEvento"],
 							"FechaInicio" => $_POST["registroFechaInicio"],
@@ -35,7 +35,7 @@ class ControladorEvento{
 
 	static public function ctrSeleccionarRegistroEvento($item, $valor){
 
-		$tabla = "TBL_Evento";
+		$tabla = "tbl_evento";
 
 		$respuesta = ModeloEvento::mdlSeleccionarEvento($tabla, $item, $valor);
 
@@ -52,7 +52,7 @@ class ControladorEvento{
 		if(isset($_POST["actualizarNombreEvento"])){
 
 			
-			$tabla = "TBL_Evento";
+			$tabla = "tbl_evento";
 
 			$datos = array("EventoID" => $_POST["idevento"],
 							"NombreEvento" => $_POST["actualizarNombreEvento"],
@@ -78,7 +78,7 @@ class ControladorEvento{
 
 		if(isset($_POST["eliminarRegistroEvento"])){
 
-			$tabla = "TBL_Evento";
+			$tabla = "tbl_evento";
 			$valor = $_POST["eliminarRegistroEvento"];
 
 			$respuesta = ModeloEvento::mdlEliminarEvento($tabla, $valor);

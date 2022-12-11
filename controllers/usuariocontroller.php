@@ -12,7 +12,7 @@ class ControladorUsuario{
 
 		if(isset($_POST["registroEmailusuario"])){
 
-			$tabla = "TBL_Usuario";
+			$tabla = "tbl_usuario";
 
 			$datos = array("Email" => $_POST["registroEmailusuario"],
 				           "Contrasena" => $_POST["registroContrasenausuario"],
@@ -35,7 +35,7 @@ class ControladorUsuario{
 
 	static public function ctrSeleccionarRegistroUsuario($item, $valor){
 
-		$tabla = "TBL_Usuario";
+		$tabla = "tbl_usuario";
 
 		$respuesta = ModelosUsuario::mdlSeleccionarUsuario($tabla, $item, $valor);
 
@@ -60,7 +60,7 @@ class ControladorUsuario{
 				$password = $_POST[""];
 			}
 
-			$tabla = "TBL_Usuario";
+			$tabla = "tbl_usuario";
 
 			$datos = array("UsuarioID" => $_POST["idusuario"],
 							"Email" => $_POST["actualizarEmailusuario"],
@@ -85,7 +85,7 @@ class ControladorUsuario{
 
 		if(isset($_POST["eliminarRegistroUsuario"])){
 
-			$tabla = "TBL_Usuario";
+			$tabla = "tbl_usuario";
 			$valor = $_POST["eliminarRegistroUsuario"];
 
 			$respuesta = ModelosUsuario::mdlEliminarUsuario($tabla, $valor);

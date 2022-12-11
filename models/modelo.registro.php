@@ -47,7 +47,7 @@ class ModeloRegistro{
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+		  $stmt = Conexion::conectar()->prepare("SELECT RegistroID,FechaRegistro, Costo, ObjetivoPatrocinio , FechaNacimiento, opcionkit, NombreCaridad, estadoRegitro FROM $tabla, tbl_corredor, tbl_kitcompeticion, tbl_caridad,tbl_estadoregistro WHERE tbl_registro.fk_CaridadID = tbl_caridad.CaridadID AND tbl_registro.fk_CorredorID = tbl_corredor.CorredorID AND tbl_registro.fk_kitID = tbl_kitcompeticion.kitID AND tbl_registro.fk_EstadoRegistroID = tbl_estadoregistro.estadoID AND tbl_registro.fk_CaridadID = tbl_caridad.CaridadID");
           //SELECT RegistroID, Costo, ObjetivoPatrocinio As Patrocinio, estadoRegistro, NombreCaridad, Nombre FROM $tabla, tbl_corredor, tbl_estadoregistro, tbl_caridad,tbl_usuario WHERE tbl_registro.fk_CaridadID = tbl_caridad.CaridadID AND tbl_registro.fk_CorredorID = tbl_estadoregistro.estadoID AND tbl_usuario.UsuarioID = tbl_corredor.fk_UsuarioID
 
 		  $stmt->execute();
@@ -56,7 +56,7 @@ class ModeloRegistro{
 
 	  }else{
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+		  $stmt = Conexion::conectar()->prepare("SELECT RegistroID, FechaRegistro,Costo, ObjetivoPatrocinio , FechaNacimiento, opcionkit, NombreCaridad, estadoRegitro FROM tbl_registro, tbl_corredor, tbl_kitcompeticion, tbl_caridad,tbl_estadoregistro WHERE $item = :$item AND tbl_registro.fk_CaridadID = tbl_caridad.CaridadID AND tbl_registro.fk_CorredorID = tbl_corredor.CorredorID AND tbl_registro.fk_kitID = tbl_kitcompeticion.kitID AND tbl_registro.fk_EstadoRegistroID = tbl_estadoregistro.estadoID AND tbl_registro.fk_CaridadID = tbl_caridad.CaridadID");
 
 		  $stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
 

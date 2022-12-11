@@ -44,7 +44,7 @@ class ModeloVoluntario{
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+		  $stmt = Conexion::conectar()->prepare("SELECT VoluntarioID, Nombres, Apellidos ,NombrePais,genero FROM $tabla,tbl_pais, tbl_genero WHERE tbl_voluntario.fk_PaisID = tbl_pais.PaisID AND tbl_voluntario.fk_GeneroID = tbl_genero.generoID");
           //SELECT VoluntarioID, Nombres, Apellidos AS apellido ,NombrePais,genero FROM $tabla,tbl_pais, tbl_genero WHERE tbl_voluntario.fk_PaisID = tbl_pais.PaisID AND tbl_voluntario.fk_GeneroID = tbl_genero.generoID
 
 		  $stmt->execute();
@@ -53,7 +53,7 @@ class ModeloVoluntario{
 
 	  }else{
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+		  $stmt = Conexion::conectar()->prepare("SELECT VoluntarioID, Nombres, Apellidos ,NombrePais,genero FROM tbl_voluntario, tbl_pais, tbl_genero WHERE $item = :$item AND tbl_voluntario.fk_PaisID = tbl_pais.PaisID AND tbl_voluntario.fk_GeneroID = tbl_genero.generoID");
 
 		  $stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
 

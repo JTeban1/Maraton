@@ -12,7 +12,7 @@ class ControladorMaraton{
 
 		if(isset($_POST["registroNombreMaraton"])){
 
-			$tabla = "TBL_Maraton";
+			$tabla = "tbl_maraton";
 
 			$datos = array("NombreMaraton" => $_POST["registroNombreMaraton"],
 							"NombreCiudad" => $_POST["registroNombreCiudad"],
@@ -33,7 +33,7 @@ class ControladorMaraton{
 
 	static public function ctrSeleccionarRegistroMaraton($item, $valor){
 
-		$tabla = "TBL_Maraton";
+		$tabla = "tbl_maraton";
 
 		$respuesta = ModeloMaraton::mdlSeleccionarMaraton($tabla, $item, $valor);
 
@@ -49,7 +49,7 @@ class ControladorMaraton{
 
 		if(isset($_POST["actualizarNombreMaraton"])){
 
-			$tabla = "TBL_Maraton";
+			$tabla = "tbl_maraton";
 
 			$datos = array("maratonID" => $_POST["idmaraton"],
 							"NombreMaraton" => $_POST["actualizarNombreMaraton"],
@@ -73,7 +73,7 @@ class ControladorMaraton{
 
 		if(isset($_POST["eliminarRegistroMaraton"])){
 
-			$tabla = "TBL_Maraton";
+			$tabla = "tbl_maraton";
 			$valor = $_POST["eliminarRegistroMaraton"];
 
 			$respuesta = ModeloMaraton::mdlEliminarMaraton($tabla, $valor);

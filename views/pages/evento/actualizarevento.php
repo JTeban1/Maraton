@@ -82,7 +82,7 @@ if(isset($_GET["EventoID"])){
                            </span>
                       </div>
                       
-                      <input id="actualizarParticipantesMax" class="form-control" value="<?php echo $evento["ParticipantesMax"]; ?>" type="int" name="actualizarParticipantesMax">
+                      <input id="actualizarParticipantesMax" class="form-control" value="<?php echo $evento["ParticiantesMax"]; ?>" type="int" name="actualizarParticipantesMax">
                  </div>
 
                </div>

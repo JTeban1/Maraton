@@ -54,7 +54,7 @@
                         <td><?php echo $value["ObjetivoPatrocinio"]; ?></td>
                         <td><?php echo $value["FechaNacimiento"]; ?></td>
                         <td><?php echo $value["opcionkit"]; ?></td>
-                        <td><?php echo $value["estadoRegistro"]; ?></td>
+                        <td><?php echo $value["estadoRegitro"]; ?></td>
                         <td><?php echo $value["NombreCaridad"]; ?></td>
                 
                        

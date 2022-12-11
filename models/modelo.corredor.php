@@ -43,7 +43,7 @@ class ModeloCorredor {
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+		  $stmt = Conexion::conectar()->prepare("SELECT CorredorID,FechaNacimiento,genero,Nombre,NombrePais FROM $tabla,tbl_genero,tbl_usuario,tbl_pais WHERE tbl_corredor.fk_GeneroID = tbl_genero.generoID AND tbl_corredor.fk_UsuarioID = tbl_usuario.UsuarioID AND tbl_corredor.fk_PaisID = tbl_pais.PaisID");
           //SELECT CorredorID,FechaNacimiento,AS genero,Nombre,NombrePais FROM $tabla,tbl_genero,tbl_usuario,tbl_tipoevento WHERE tbl_corredor.fk_GeneroID = tbl_genero.fk_GeneroID AND tbl_usuario.UsuarioID = tbl_tipoevento.fk_PaisID
 
 		  $stmt->execute();
@@ -52,7 +52,7 @@ class ModeloCorredor {
 
 	  }else{
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+		  $stmt = Conexion::conectar()->prepare("SELECT CorredorID,FechaNacimiento,genero,Nombre,NombrePais FROM tbl_corredor,tbl_genero,tbl_usuario,tbl_pais WHERE $item = :$item AND tbl_corredor.fk_GeneroID = tbl_genero.generoID AND tbl_corredor.fk_UsuarioID = tbl_usuario.UsuarioID AND tbl_corredor.fk_PaisID = tbl_pais.PaisID");
 
 		  $stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
 

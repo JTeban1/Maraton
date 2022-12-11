@@ -44,7 +44,7 @@ class ModelosUsuario {
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+		  $stmt = Conexion::conectar()->prepare("SELECT UsuarioID , Email, Contrasena, Nombre, Apellido , rol FROM  $tabla, tbl_rol Where $tabla.fk_RolID = tbl_rol.rolID");
           //SELECT UsuarioID , Email, Contrasena, Nombre, Apellido AS  rol FROM  $tabla, tbl_rol Where $tabla.fk_RolID = tbl_rol.rolID
 
 		  $stmt->execute();
@@ -53,7 +53,7 @@ class ModelosUsuario {
 
 	  }else{
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+		  $stmt = Conexion::conectar()->prepare("SELECT UsuarioID , Email, Contrasena, Nombre, Apellido ,rol FROM tbl_usuario, tbl_rol WHERE $item = :$item AND tbl_usuario.fk_RolID = tbl_rol.rolID");
 
 		  $stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
 
