@@ -46,7 +46,7 @@
                         <td><?php echo $value["NombreMaraton"]; ?></td>
                         <td><?php echo $value["NombreCiudad"]; ?></td>
                         <td><?php echo $value["NombreCelebracion"]; ?></td>
-                        <td><?php echo $value["fk_PaisID"]; ?></td>
+                        <td><?php echo $value["NombrePais"]; ?></td>
                         
                         
 

@@ -48,8 +48,8 @@
                         <td scope="row"><?php echo ($key+1) ; ?></td>
                         <td><?php echo $value["NumDorsal"]; ?></td>
                         <td><?php echo $value["TiempoCarrera"]; ?></td>
-                        <td><?php echo $value["fK_RegistroID"]; ?></td>
-                        <td><?php echo $value["fK_EventoID"]; ?></td>
+                        <td><?php echo $value["FechaRegistro"]; ?></td>
+                        <td><?php echo $value["NombreEvento"]; ?></td>
                         
                 
                        

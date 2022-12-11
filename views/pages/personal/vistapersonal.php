@@ -53,8 +53,8 @@
                         <td><?php echo $value["FechaNacimiento"]; ?></td>
                         <td><?php echo $value["Genero"]; ?></td>
                         <td><?php echo $value["Comentarios"]; ?></td>
-                        <td><?php echo $value["fk_RolID"]; ?></td>
-                        <td><?php echo $value["fk_PosicionID"]; ?></td>
+                        <td><?php echo $value["rol"]; ?></td>
+                        <td><?php echo $value["NombrePosicion"]; ?></td>
                        
                         
                         

@@ -52,10 +52,10 @@
                         <td><?php echo $value["FechaRegistro"]; ?></td>
                         <td><?php echo $value["Costo"]; ?></td>
                         <td><?php echo $value["ObjetivoPatrocinio"]; ?></td>
-                        <td><?php echo $value["fk_CorredorID"]; ?></td>
-                        <td><?php echo $value["fk_kitID"]; ?></td>
-                        <td><?php echo $value["fk_EstadoRegistroID"]; ?></td>
-                        <td><?php echo $value["fk_CaridadID"]; ?></td>
+                        <td><?php echo $value["FechaNacimiento"]; ?></td>
+                        <td><?php echo $value["opcionkit"]; ?></td>
+                        <td><?php echo $value["estadoRegistro"]; ?></td>
+                        <td><?php echo $value["NombreCaridad"]; ?></td>
                 
                        
                         

@@ -46,7 +46,7 @@
                         <td scope="row"><?php echo ($key+1) ; ?></td>
                         <td><?php echo $value["NombrePatrocinador"]; ?></td>
                         <td><?php echo $value["Monto"]; ?></td>
-                        <td><?php echo $value["fk_RegistroID"]; ?></td>
+                        <td><?php echo $value["Costo"]; ?></td>
                        
                         
                         

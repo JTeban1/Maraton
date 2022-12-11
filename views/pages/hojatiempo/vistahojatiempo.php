@@ -46,7 +46,7 @@
                         <td><?php echo $value["FechaInicio"]; ?></td>
                         <td><?php echo $value["FechaFinal"]; ?></td>
                         <td><?php echo $value["ValorPagar"]; ?></td>
-                        <td><?php echo $value["fk_PersonalID"]; ?></td>
+                        <td><?php echo $value["Nombres"]; ?></td>
                         
 
                         <td>

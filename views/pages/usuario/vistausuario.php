@@ -51,7 +51,7 @@
                         <td><?php echo $value["Contrasena"]; ?></td>
                         <td><?php echo $value["Nombre"]; ?></td>
                         <td><?php echo $value["Apellido"]; ?></td>
-                        <td><?php echo $value["fk_RolID"]; ?></td>
+                        <td><?php echo $value["rol"]; ?></td>
                         
                         
                 
