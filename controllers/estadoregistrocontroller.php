@@ -11,7 +11,7 @@ class ControladorEstadoRegistro{
 
 		if(isset($_POST["registroEstadoRegistro"])){
 
-			$tabla = "TBL_EstadoRegistro";
+			$tabla = "tbl_estadoregistro";
 
 			$datos = array("estadoRegitro" => $_POST["registroEstadoRegistro"]);
 

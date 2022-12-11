@@ -47,7 +47,8 @@ class ModeloRegistro{
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT RegistroID, Costo, ObjetivoPatrocinio As Patrocinio, estadoRegistro, NombreCaridad, Nombre FROM $tabla, tbl_corredor, tbl_estadoregistro, tbl_caridad,tbl_usuario WHERE tbl_registro.fk_CaridadID = tbl_caridad.CaridadID AND tbl_registro.fk_CorredorID = tbl_estadoregistro.estadoID AND tbl_usuario.UsuarioID = tbl_corredor.fk_UsuarioID");
+		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+          //SELECT RegistroID, Costo, ObjetivoPatrocinio As Patrocinio, estadoRegistro, NombreCaridad, Nombre FROM $tabla, tbl_corredor, tbl_estadoregistro, tbl_caridad,tbl_usuario WHERE tbl_registro.fk_CaridadID = tbl_caridad.CaridadID AND tbl_registro.fk_CorredorID = tbl_estadoregistro.estadoID AND tbl_usuario.UsuarioID = tbl_corredor.fk_UsuarioID
 
 		  $stmt->execute();
 

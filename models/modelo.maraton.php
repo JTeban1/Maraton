@@ -43,7 +43,8 @@ class ModeloMaraton {
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT maratonID,NombreMaraton,NombreCiudad,NombreCelebracion AS NombreMaraton,NombrePais ,FROM $tabla,tbl_pais WHERE $tabla.fk_PaisID =tbl_pais.PaisID ");
+		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+          //SELECT maratonID,NombreMaraton,NombreCiudad,NombreCelebracion AS NombreMaraton,NombrePais ,FROM $tabla,tbl_pais WHERE $tabla.fk_PaisID =tbl_pais.PaisID
 
 		  $stmt->execute();
 

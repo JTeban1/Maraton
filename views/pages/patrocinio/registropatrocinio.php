@@ -65,7 +65,7 @@ $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
                     
                     
 
-                     <option value='<?php echo $registros["RegistroID"];?>'><?php echo $registros["Costo"];?></option>
+                     <option value='<?php echo $registros["RegistroID"];?>'><?php echo $registros["FechaRegistro"];?></option>
                     <?php
 
                      }

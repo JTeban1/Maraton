@@ -48,9 +48,9 @@
                         <td><?php echo $value["NombreEvento"]; ?></td>
                         <td><?php echo $value["FechaInicio"]; ?></td>
                         <td><?php echo $value["Valor"]; ?></td>
-                        <td><?php echo $value["ParticipantesMax"]; ?></td>
-                        <td><?php echo $value["FK_MaratonID"]; ?></td>
-                        <td><?php echo $value["FK_TipoEventoID"]; ?></td>
+                        <td><?php echo $value["ParticiantesMax"]; ?></td>
+                        <td><?php echo $value["NombreMaraton"]; ?></td>
+                        <td><?php echo $value["NombreTipoEvento"]; ?></td>
                         
 
                         <td>
@@ -61,20 +61,20 @@
 
                               <div class="px-1">
                               
-                              <a href="index.php?pages=/evento/actualizarevento&id=<?php echo $value["estadoID"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
+                              <a href="index.php?pages=/evento/actualizarevento&EventoID=<?php echo $value["EventoID"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
 
                               </div>
 
                               <form method="post">
 
-                                  <input type="hidden" value="<?php echo $value["estadoID"]; ?>" name="eliminarRegistroEvento">
+                                  <input type="hidden" value="<?php echo $value["EventoID"]; ?>" name="eliminarRegistroEvento">
                                   
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Eliminar</button>
 
                                   <?php
 
                                     $eliminar = new ControladorEvento();
-                                    $eliminar -> ctrSeleccionarRegistroEvento();
+                                    $eliminar -> ctrEliminarRegistroEvento();
 
                                   ?>
 
