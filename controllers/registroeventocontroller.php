@@ -11,14 +11,14 @@ class ControladorRegistroEvento{
 
 	static public function ctrRegistroRegistroEven(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNumDorsalevento"])){
 
 			$tabla = "TBL_RegistroEvento";
 
 			$datos = array("NumDorsal" => $_POST["registroNumDorsalevento"],
 							"TiempoCarrera" => $_POST["registroTiempoCarreraevento"],
 							"fK_RegistroID" => $_POST["registroFK_RegistroIDevento"],
-							"fK_EventoID" => $_POST["registroFK_EventoIDevento"]);
+							"fK_EventoID" => $_POST["registrofk_TipoEventoID"]);
 
 			$respuesta = ModeloRegistroEvento::mdlRegistroEvento($tabla, $datos);
 
