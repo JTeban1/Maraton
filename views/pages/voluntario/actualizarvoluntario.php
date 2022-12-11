@@ -84,7 +84,7 @@ if(isset($_GET["VoluntarioID"])){
                     <label for="text">Genero</label>
                     <div class="input-group">
                <select class="form-select" aria-label="Disabled select example"  name="actualizarFK_Generovoluntario">
-               <option value='<?php echo $voluntario["fk_GeneroID"];?>'><?php echo $voluntario["NombrePais"];?></option>
+               <option value='<?php echo $voluntario["fk_GeneroID"];?>'><?php echo $voluntario["genero"];?></option>
                     <?php
                      foreach ($genero  as $generos) {
                         ?>
