@@ -17,7 +17,7 @@
 ?>
 
 
-<h1>genero</h1>
+<h1>Hoja Tiempo</h1>
 
 <div class="container-fluid">
           <div class="container py-5">
@@ -46,7 +46,7 @@
                         <td><?php echo $value["FechaInicio"]; ?></td>
                         <td><?php echo $value["FechaFinal"]; ?></td>
                         <td><?php echo $value["ValorPagar"]; ?></td>
-                        <td><?php echo $value["FK_PersonalID"]; ?></td>
+                        <td><?php echo $value["fk_PersonalID"]; ?></td>
                         
 
                         <td>
@@ -69,7 +69,7 @@
 
                                   <?php
 
-                                    $eliminar = new ctrRegistroHojaTiem();
+                                    $eliminar = new ControladorHojaTiempo();
                                     $eliminar -> ctrEliminarRegistroHojaTiem();
 
                                   ?>

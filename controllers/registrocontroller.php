@@ -11,15 +11,15 @@ class ControladorRegis{
 
 		if(isset($_POST["registroFechaRegistroregistro"])){
 
-			$tabla = "TBL_Registro";
+			$tabla = "tbl_registro";
 
 			$datos = array("FechaRegistro" => $_POST["registroFechaRegistroregistro"],
 							"Costo" => $_POST["registroCostoregistro"],
 							"ObjetivoPatrocinio" => $_POST["registroObjetivoPatrocinioregistro"],
-							"fK_CorredorID" => $_POST["registroFK_CorredorIDregistro"],
-							"fK_kitID" => $_POST["registroFK_KitIDregistro"],
-							"fK_EstadoRegistroID" => $_POST["registroFK_EstadoRegistroIDregistro"],
-							"fK_CaridadID"=> $_POST["registroFK_CaridadIDregistros"]);
+							"fk_CorredorID" => $_POST["registroFK_CorredorIDregistro"],
+							"fk_kitID" => $_POST["registroFK_KitIDregistro"],
+							"fk_EstadoRegistroID" => $_POST["registroFK_KitIDregistro"],
+							"fk_CaridadID"=> $_POST["registroFK_CaridadIDregistro"]);
 
 			$respuesta = ModeloRegistro::mdlRegistro($tabla, $datos);
 

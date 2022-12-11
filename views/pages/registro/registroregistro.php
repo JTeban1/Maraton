@@ -65,7 +65,7 @@
                          </span>
                     </div>
                            
-               <input id="registroObjetivoPatrocinioregistro" class="form-control" type="textarea" name="registroObjetivoPatrocinioregistro">
+               <input id="registroObjetivoPatrocinioregistro" class="form-control" type="number" name="registroObjetivoPatrocinioregistro">
           </div>
 
 

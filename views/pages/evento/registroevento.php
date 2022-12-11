@@ -4,7 +4,7 @@
      $valor = null;
 
      $maraton = ControladorMaraton::ctrSeleccionarRegistroMaraton($item, $valor);
-     $evento = ControladorEvento::ctrSeleccionarRegistroEvento($item, $valor);
+     $evento = ControladorTipoEvento::ctrSeleccionarRegistroTipoEven($item, $valor);
 
 
 
