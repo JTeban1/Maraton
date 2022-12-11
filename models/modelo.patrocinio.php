@@ -41,7 +41,7 @@ class ModeloPatrocinio {
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+		  $stmt = Conexion::conectar()->prepare("SELECT PatrocinioID,NombrePatrocinador,Monto,AS Monto,ObjetivoPatrocinio FROM $tabla,tbl_registro  WHERE tbl_patrocinio.RegistroID = tbl_registro.RegistroID");
 
 		  $stmt->execute();
 
