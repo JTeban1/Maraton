@@ -3,7 +3,7 @@
 require_once "config/conexion.php";  
 
 
-class ModeloVoluntario {
+class ModeloVoluntario{
     
     /*=============================================
     tabla voluntario
@@ -97,12 +97,12 @@ class ModeloVoluntario {
     
     static public function mdlActualizarVoluntario($tabla, $datos){
         
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET Nombres=:Nombres, Apellidos=:Apellidos, fk_PaisID=:fk_PaisID, fk_Genero=:fk_Genero WHERE VoluntarioID = :VoluntarioID");
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET Nombres=:Nombres, Apellidos=:Apellidos, fk_PaisID=:fk_PaisID, fk_GeneroID=:fk_GeneroID WHERE VoluntarioID = :VoluntarioID");
 
         $stmt->bindParam(":Nombres", $datos["Nombres"], PDO::PARAM_STR);
         $stmt->bindParam(":Apellidos", $datos["Apellidos"], PDO::PARAM_STR);
         $stmt->bindParam(":fk_PaisID", $datos["fk_PaisID"], PDO::PARAM_STR);
-        $stmt->bindParam(":fk_Genero", $datos["fk_Genero"], PDO::PARAM_STR);
+        $stmt->bindParam(":fk_GeneroID", $datos["fk_GeneroID"], PDO::PARAM_STR);
         $stmt->bindParam(":VoluntarioID", $datos["VoluntarioID"], PDO::PARAM_INT);
 
         if($stmt->execute()){

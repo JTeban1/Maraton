@@ -52,7 +52,9 @@ if(isset($_GET["PaisID"])){
                          </span>
                     </div>
                            
-               <input id="BanderaPais" class="form-control"  value="<?php echo $pais["BanderaPais"]; ?>" type="file" name="actualizarBanderaPais">
+
+               <input id="BanderaPais" class="form-control" <?php echo base64_encode($pais['BanderaPais']); ?>  type="file" name="actualizarBanderaPais" accept=".jpg , .png , .gif">
+          
           </div>
 
          

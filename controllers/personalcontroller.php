@@ -54,7 +54,7 @@ class ControladorPersonal{
 
 			$tabla = "TBL_Personal";
 
-			$datos = array("PersonalID" => $_POST[""],
+			$datos = array("PersonalID" => $_POST["idpersonal"],
 							"Nombres" => $_POST["actualizarNombrepersonal"],
 				           "Apellidos" => $_POST["actualizarApellidopesonal"],
 				           "FechaNacimiento" => $_POST["actualizarFechaNacimientopersonal"],
