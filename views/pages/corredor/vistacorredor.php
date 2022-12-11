@@ -45,9 +45,9 @@
                         
                         <td scope="row"><?php echo ($key+1) ; ?></td>
                         <td><?php echo $value["FechaNacimiento"]; ?></td>
-                        <td><?php echo $value["genero"]; ?></td>
-                        <td><?php echo $value["genero"]; ?></td>
-                        <td><?php echo $value["genero"]; ?></td>
+                        <td><?php echo $value["fk_GeneroID"]; ?></td>
+                        <td><?php echo $value["fk_UsuarioID"]; ?></td>
+                        <td><?php echo $value["fk_PaisID"]; ?></td>
 
                         <td>
                             <div class="btn-agroup">

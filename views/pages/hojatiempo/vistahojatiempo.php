@@ -17,7 +17,7 @@
 ?>
 
 
-<h1>genero</h1>
+<h1>Hoja Tiempo</h1>
 
 <div class="container-fluid">
           <div class="container py-5">

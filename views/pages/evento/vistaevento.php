@@ -49,8 +49,8 @@
                         <td><?php echo $value["FechaInicio"]; ?></td>
                         <td><?php echo $value["Valor"]; ?></td>
                         <td><?php echo $value["ParticiantesMax"]; ?></td>
-                        <td><?php echo $value["NombreMaraton"]; ?></td>
-                        <td><?php echo $value["NombreTipoEvento"]; ?></td>
+                        <td><?php echo $value["fk_MaratonID"]; ?></td>
+                        <td><?php echo $value["fk_TipoEventoID"]; ?></td>
                         
 
                         <td>
