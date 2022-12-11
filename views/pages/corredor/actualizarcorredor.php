@@ -6,7 +6,7 @@ if(isset($_GET["CorredorID"])){
 	$valor = $_GET["CorredorID"];
 
 
-     $corredor = ControladorCorredor ::ctrSeleccionarRegistroCorredor($item, $valor);
+     $corredor = ControladorCorredor::ctrSeleccionarRegistroCorredor($item, $valor);
      $genero = ControladorGenero::ctrSeleccionarRegistroGenero($item, $valor);
      $usuario = ControladorUsuario::ctrSeleccionarRegistroUsuario($item, $valor);
      $pais = ControladorPais::ctrSeleccionarRegistroPais($item, $valor);
