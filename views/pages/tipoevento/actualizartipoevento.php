@@ -6,7 +6,7 @@ if(isset($_GET["TipoEventoID"])){
 	$valor = $_GET["TipoEventoID"];
 
 
-     $tipoevento = ControladorTipoEvento ::ctrSeleccionarRegistroTipoEven($item, $valor);
+     $tipoevento = ControladorTipoEvento::ctrSeleccionarRegistroTipoEven($item, $valor);
  
      
 
