@@ -44,7 +44,8 @@ class ModelosUsuario {
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT UsuarioID , Email, Contrasena, Nombre, Apellido AS  rol FROM  $tabla, tbl_rol Where $tabla.fk_RolID = tbl_rol.rolID");
+		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+          //SELECT UsuarioID , Email, Contrasena, Nombre, Apellido AS  rol FROM  $tabla, tbl_rol Where $tabla.fk_RolID = tbl_rol.rolID
 
 		  $stmt->execute();
 

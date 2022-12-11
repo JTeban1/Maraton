@@ -42,7 +42,7 @@ class ModeloPais {
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
 
 		  $stmt->execute();
 
