@@ -43,7 +43,7 @@ class ModeloCorredor {
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+		  $stmt = Conexion::conectar()->prepare("SELECT CorredorID,FechaNacimiento,AS genero,Nombre,NombrePais FROM $tabla,tbl_genero,tbl_usuario,tbl_tipoevento WHERE tbl_corredor.fk_GeneroID = tbl_genero.fk_GeneroID AND tbl_usuario.UsuarioID = tbl_tipoevento.fk_PaisID");
 
 		  $stmt->execute();
 

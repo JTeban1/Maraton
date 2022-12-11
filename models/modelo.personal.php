@@ -46,7 +46,7 @@ class ModeloPersonal{
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+		  $stmt = Conexion::conectar()->prepare("SELECT PersonalID,Nombres,Apellidos,FechaNacimiento,Genero,Comentarios AS Comentarios, rol, NombrePosicion FROM $tabla ,tbl_rol, tbl_posicion WHERE tbl_personal.fk_RolID = tbl_rol.rolID AND tbl_personal.fk_PosicionID");
 
 		  $stmt->execute();
 

@@ -42,7 +42,7 @@ class ModeloHojatiempo {
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+		  $stmt = Conexion::conectar()->prepare("SELECT HojaID,FechaInicio,FechaFinal,ValorPagar,AS Nombres FROM $tabla,tbl_personal WHERE $tabla.fk_PersonalID = tbl_personal.PersonalID");
 
 		  $stmt->execute();
 
