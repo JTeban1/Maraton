@@ -22,8 +22,8 @@
                <input id="NombrePosicionposicion" class="form-control" type="text" name="registroNombrePosicionposicion">
 <!-- ======= -->
                          
-               <input id="registroNombrePosicionposicion" class="form-control" type="text" name="registroNombrePosicionposicion">
-<!-- 36af26245a003e96d554f3153039a2a652d11027 -->
+               <!-- <input id="registroNombrePosicionposicion" class="form-control" type="text" name="registroNombrePosicionposicion">
+36af26245a003e96d554f3153039a2a652d11027 -->
           </div>
 
           <div class="form-group">
