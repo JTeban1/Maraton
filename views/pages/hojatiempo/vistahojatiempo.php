@@ -69,7 +69,7 @@
 
                                   <?php
 
-                                    $eliminar = new ctrRegistroHojaTiem();
+                                    $eliminar = new ControladorHojaTiempo();
                                     $eliminar -> ctrEliminarRegistroHojaTiem();
 
                                   ?>

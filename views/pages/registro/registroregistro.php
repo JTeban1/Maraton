@@ -65,7 +65,7 @@
                          </span>
                     </div>
                            
-               <input id="registroObjetivoPatrocinioregistro" class="form-control" type="textarea" name="registroObjetivoPatrocinioregistro">
+               <input id="registroObjetivoPatrocinioregistro" class="form-control" type="number" name="registroObjetivoPatrocinioregistro">
           </div>
 
 
@@ -81,7 +81,7 @@
                     
                     
 
-                     <option value='<?php echo $corredores["CorredorID"];?>'><?php echo $corredores["FechaNacimiento"];?></option>
+                     <option value='<?php echo $corredores["CorredorID"];?>'><?php echo $corredores["CorredorID"];?></option>
                     <?php
 
                      }

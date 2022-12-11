@@ -17,7 +17,7 @@ class ControladorEvento{
 			$datos = array("NombreEvento" => $_POST["registroNombreEvento"],
 							"FechaInicio" => $_POST["registroFechaInicio"],
 							"Valor" => $_POST["registroValor"],
-							"ParticipantesMax" => $_POST["RegistroParticipantesMax"],
+							"ParticiantesMax" => $_POST["RegistroParticipantesMax"],
 							"fk_MaratonID" => $_POST["RegistroFK_MaratonID"],
 							"fk_TipoEventoID" => $_POST["RegistroFK_TipoEventoID"]);
 
