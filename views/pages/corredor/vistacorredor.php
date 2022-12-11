@@ -29,7 +29,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Fecha De Nacimiento</th>
                         <th scope="col">FK_Genero</th>
-                        <th scope="col">FK_Email</th>
+                        <th scope="col">fk_Usuario</th>
                         <th scope="col">FK_PaisID</th>
                         <th>Acciones</th>
                         
@@ -45,9 +45,9 @@
                         
                         <td scope="row"><?php echo ($key+1) ; ?></td>
                         <td><?php echo $value["FechaNacimiento"]; ?></td>
-                        <td><?php echo $value["FK_Genero"]; ?></td>
-                        <td><?php echo $value["FK_Email"]; ?></td>
-                        <td><?php echo $value["FK_PaisID"]; ?></td>
+                        <td><?php echo $value["genero"]; ?></td>
+                        <td><?php echo $value["genero"]; ?></td>
+                        <td><?php echo $value["genero"]; ?></td>
 
                         <td>
                             <div class="btn-agroup">
@@ -57,13 +57,13 @@
 
                               <div class="px-1">
                               
-                              <a href="index.php?paginas=editar&id=<?php echo $value["id"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
+                              <a href="index.php?pages=/corredor/actualizarcorredor&CaridadID=<?php echo $value["CorredorID"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
 
                               </div>
 
                               <form method="post">
 
-                                  <input type="hidden" value="<?php echo $value["id"]; ?>" name="eliminarRegistroCorredor">
+                                  <input type="hidden" value="<?php echo $value["CorredorID"]; ?>" name="eliminarRegistroCorredor">
                                   
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Eliminar</button>
 

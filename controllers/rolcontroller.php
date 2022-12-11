@@ -10,11 +10,11 @@ class ControladorRol{
 
 	static public function ctrRegistroRol(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroRol"])){
 
 			$tabla = "TBL_Rol";
 
-			$datos = array("Rol" => $_POST[""]);
+			$datos = array("rol" => $_POST["registroRol"]);
 
 			$respuesta = ModeloRol::mdlRol($tabla, $datos);
 
@@ -44,21 +44,12 @@ class ControladorRol{
 	=============================================*/
 	static public function ctrActualizarRegistroRol(){
 
-		if(isset($_POST[""])){
-
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+		if(isset($_POST["actualizarRol"])){
 
 			$tabla = "TBL_Rol";
 
-			$datos = array("RolID" => $_POST[""],
-							"Rol" => $_POST[""]);
+			$datos = array("rolID" => $_POST["idRol"],
+							"rol" => $_POST["actualizarRol"]);
 
 			$respuesta = ModeloRol::mdlActualizarRol($tabla, $datos);
 

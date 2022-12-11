@@ -36,13 +36,13 @@ class ModeloHojatiempo {
 
     // funcion mostrar
 
-    static public function mdlSeleccionarHojatiempo($tabla){
-        $item1 = null;
-		$valor1 = null;
+    static public function mdlSeleccionarHojatiempo($tabla, $item, $valor){
 
-		if($item1 == null && $valor1 == null){
+	
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+		if($item == null && $valor == null){
+
+		  $stmt = Conexion::conectar()->prepare("SELECT HojaID,FechaInicio,FechaFinal,ValorPagar,AS Nombres FROM $tabla,tbl_personal WHERE $tabla.fk_PersonalID = tbl_personal.PersonalID");
 
 		  $stmt->execute();
 

@@ -9,11 +9,11 @@ class ControladorEstadoRegistro{
 
 	static public function ctrRegistroEstaRegis(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroEstadoRegistro"])){
 
 			$tabla = "TBL_EstadoRegistro";
 
-			$datos = array("EstadoRegistro" => $_POST[""]);
+			$datos = array("estadoRegitro" => $_POST["registroEstadoRegistro"]);
 
 			$respuesta = ModeloEstadoRegistro::mdlEstadoRegistro($tabla, $datos);
 
@@ -29,7 +29,7 @@ class ControladorEstadoRegistro{
 
 	static public function ctrSeleccionarRegistroEstaRegis($item, $valor){
 
-		$tabla = "TBL_EstadoRegistro";
+		$tabla = "tbl_estadoregistro";
 
 		$respuesta = ModeloEstadoRegistro::mdlSeleccionarEstadoRegistro($tabla, $item, $valor);
 
@@ -43,21 +43,13 @@ class ControladorEstadoRegistro{
 	=============================================*/
 	static public function ctrActualizarRegistroEstaRegis(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarEstadoRegistro"])){
 
-			if($_POST[""] != ""){			
 
-				$password = $_POST[""];
+			$tabla = "tbl_estadoregistro";
 
-			}else{
-
-				$password = $_POST[""];
-			}
-
-			$tabla = "TBL_EstadoRegistro";
-
-			$datos = array("EstadoID" => $_POST[""],
-							"EstadoRegistro" => $_POST[""]);
+			$datos = array("estadoID" => $_POST["idestadoR"],
+				"estadoRegitro" => $_POST["actualizarEstadoRegistro"]);
 
 			$respuesta = ModeloEstadoRegistro::mdlActualizarEstadoRegistro($tabla, $datos);
 

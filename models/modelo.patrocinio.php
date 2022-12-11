@@ -35,14 +35,13 @@ class ModeloPatrocinio {
 
     // funcion mostrar
 
-    static public function mdlSeleccionarPatrocinio($tabla){
+    static public function mdlSeleccionarPatrocinio($tabla, $item, $valor){
 
-        $item1 = null;
-		$valor1 = null;
+	
 
-		if($item1 == null && $valor1 == null){
+		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+		  $stmt = Conexion::conectar()->prepare("SELECT PatrocinioID,NombrePatrocinador,Monto,AS Monto,ObjetivoPatrocinio FROM $tabla,tbl_registro  WHERE tbl_patrocinio.RegistroID = tbl_registro.RegistroID");
 
 		  $stmt->execute();
 

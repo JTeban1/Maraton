@@ -9,7 +9,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro rol</h1>
           <div class="form-group">
-          <label for="Rol">Rol</label>
+          <label for="registroRol">Rol</label>
           
                <div class="input-group">
           
@@ -19,7 +19,7 @@
                          </span>
                     </div>
                            
-               <input id="Rol" class="form-control" type="text" name="registroRol">
+               <input id="registroRol" class="form-control" type="text" name="registroRol">
           </div>
 
           

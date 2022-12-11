@@ -1,3 +1,18 @@
+<?php
+
+     $item = null;
+     $valor = null;
+
+     $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
+     $tipoevento = ControladorTipoEvento::ctrSeleccionarRegistroTipoEven($item, $valor);
+     
+
+
+?>
+
+
+
+
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -9,7 +24,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro Evento</h1>
           <div class="form-group">
-          <label for="NumDorsalevento">NumDorsal</label>
+          <label for="registroNumDorsalevento">NumDorsal</label>
           
                <div class="input-group">
           
@@ -19,11 +34,11 @@
                          </span>
                     </div>
                            
-               <input id="NumDorsalevento" class="form-control" type="number" name="registroNumDorsalevento">
+               <input id="registroNumDorsalevento" class="form-control" type="number" name="registroNumDorsalevento">
           </div>
 
           <div class="form-group">
-          <label for="TiempoCarreraevento">TiempoCarrera</label>
+          <label for="registroTiempoCarreraevento">Tiempo Carrera</label>
           
                <div class="input-group">
           
@@ -33,52 +48,60 @@
                          </span>
                     </div>
                            
-               <input id="TiempoCarreraevento" class="form-control" type="text" name="registroTiempoCarreraevento">
+               <input id="registroTiempoCarreraevento" class="form-control" type="time" name="registroTiempoCarreraevento">
           </div>
+
+
+
 
           <div class="form-group">
-          <label for="FK_RegistroIDevento">FK_RegistroID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_RegistroIDevento" class="form-control" type="Select" name="registroFK_RegistroIDevento">
+                    <label for="text">Registro</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registroFK_RegistroIDevento">
+               
+                    <?php
+                     foreach ($registro  as $registros) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $registros["RegistroID"];?>'><?php echo $registros["ObjetivoPatrocinio"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+
+
+
 
           <div class="form-group">
-          <label for="FK_EventoIDevento">FK_EventoID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_EventoIDevento" class="form-control" type="Select" name="registroFK_EventoIDevento">
+                    <label for="text">Tipos Eventos</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registrofk_TipoEventoID">
+               
+                    <?php
+                     foreach ($tipoevento  as $tipoeventos) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $tipoeventos["TipoEventoID"];?>'><?php echo $tipoeventos["NombreTipoEvento"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
-
-          
-
-
-
-
-              
-
 
           <?php
 
-               $registroEvento = ControladorRegistroEvento::ctrRegistroRegistroEven();
+               $registroRegistroEvento = ControladorRegistroEvento::ctrRegistroRegistroEven();
  
  
  
-               if($registroEvento == "ok")
+               if($registroRegistroEvento == "ok")
                {
                     echo '<script>
 

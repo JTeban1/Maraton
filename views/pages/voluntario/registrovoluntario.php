@@ -1,3 +1,18 @@
+<?php
+
+     $item = null;
+     $valor = null;
+
+     $pais = ControladorPais::ctrSeleccionarRegistroPais($item, $valor);
+     $genero = ControladorGenero::ctrSeleccionarRegistroGenero($item, $valor);
+
+
+
+
+?>
+
+
+
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -9,7 +24,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro Voluntario</h1>
           <div class="form-group">
-          <label for="Nombrevoluntario">Nombres</label>
+          <label for="registroNombrevoluntario">Nombres</label>
           
                <div class="input-group">
           
@@ -19,11 +34,11 @@
                          </span>
                     </div>
                            
-               <input id="Nombrevoluntario" class="form-control" type="text" name="registroNombrevoluntario">
+               <input id="registroNombrevoluntario" class="form-control" type="text" name="registroNombrevoluntario">
           </div>
 
           <div class="form-group">
-          <label for="Apellidovoluntario">Apellidos</label>
+          <label for="registroApellidovoluntario">Apellidos</label>
           
                <div class="input-group">
           
@@ -33,41 +48,51 @@
                          </span>
                     </div>
                            
-               <input id="Apellidovoluntario" class="form-control" type="text" name="registroApellidovoluntario">
+               <input id="registroApellidovoluntario" class="form-control" type="text" name="registroApellidovoluntario">
           </div>
+
+
+
+
 
           <div class="form-group">
-          <label for="FK_CodigoPaisvoluntario">FK_CodigoPais</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_CodigoPaisvoluntario" class="form-control" type="Select" name="registroFK_CodigoPaisvoluntario">
+                    <label for="text">Pais</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registroFK_Paisvoluntario">
+               
+                    <?php
+                     foreach ($pais  as $paises) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $paises["PaisID"];?>'><?php echo $paises["NombrePais"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+
 
           <div class="form-group">
-          <label for="FK_Generovoluntario">FK_Genero</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_Generovoluntario" class="form-control" type="Select" name="registroFK_Generovoluntario">
+                    <label for="text">Genero</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registroFK_Generovoluntario">
+               
+                    <?php
+                     foreach ($genero  as $generos) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $generos["generoID"];?>'><?php echo $generos["genero"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
-
-
-
-
-              
 
 
           <?php

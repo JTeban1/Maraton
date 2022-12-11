@@ -10,13 +10,13 @@ class ControladorPatrocinio{
 
 	static public function ctrRegistroPatrocinio(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombrePatrocinador"])){
 
 			$tabla = "TBL_Patrocinio";
 
-			$datos = array("NombrePatrocinador" => $_POST[""],
-							"Monto" => $_POST[""],
-							"FK_RegistroID" => $_POST[""]);
+			$datos = array("NombrePatrocinador" => $_POST["registroNombrePatrocinador"],
+							"Monto" => $_POST["registroMontopatrocinador"],
+							"fk_RegistroID" => $_POST["registrofk_RegistroID"]);
 
 			$respuesta = ModeloPatrocinio::mdlPatrocinio($tabla, $datos);
 
@@ -46,23 +46,16 @@ class ControladorPatrocinio{
 	=============================================*/
 	static public function ctrActualizarRegistroPatrocinio(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarNombrePatrocinador"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+	
 
 			$tabla = "TBL_Patrocinio";
 
-			$datos = array("PatrocinioID" => $_POST[""],
-							"NombrePatrocinador" => $_POST[""],
-				           "Monto" => $_POST[""],
-				           "FK_RegistroID" => $_POST[""]);
+			$datos = array("PatrocinioID" => $_POST["idcorredor"],
+							"NombrePatrocinador" => $_POST["actualizarNombrePatrocinador"],
+				           "Monto" => $_POST["actualizarMontopatrocinador"],
+				           "fk_RegistroID" => $_POST["actualizarfk_RegistroIDpatrocinador"]);
 
 			$respuesta = ModeloPatrocinio::mdlActualizarPatrocinio($tabla, $datos);
 

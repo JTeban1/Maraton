@@ -1,3 +1,21 @@
+<?php
+
+     $item = null;
+     $valor = null;
+
+     $corredor = ControladorCorredor::ctrSeleccionarRegistroCorredor($item, $valor);
+     $kit = ControladorKitCompetencia::ctrSeleccionarRegistroKitCompe($item, $valor);
+     $estado = ControladorEstadoRegistro::ctrSeleccionarRegistroEstaRegis($item, $valor);
+     $caridad = ControladorCaridad::ctrSeleccionarRegistroCaridad($item, $valor);
+
+
+
+?>
+
+
+
+
+
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -9,7 +27,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro</h1>
           <div class="form-group">
-          <label for="FechaRegistroregistro">FechaRegistro</label>
+          <label for="registroFechaRegistroregistro">FechaRegistro</label>
           
                <div class="input-group">
           
@@ -19,11 +37,11 @@
                          </span>
                     </div>
                            
-               <input id="FechaRegistroregistro" class="form-control" type="Data" name="registroFechaRegistroregistro">
+               <input id="registroFechaRegistroregistro" class="form-control" type="date" name="registroFechaRegistroregistro">
           </div>
 
           <div class="form-group">
-          <label for="Costoregistro">Costo</label>
+          <label for="registroCostoregistro">Costo</label>
           
                <div class="input-group">
           
@@ -33,11 +51,11 @@
                          </span>
                     </div>
                            
-               <input id="Costoregistro" class="form-control" type="number" name="registroCostoregistro">
+               <input id="registroCostoregistro" class="form-control" type="number" name="registroCostoregistro">
           </div>
 
           <div class="form-group">
-          <label for="ObjetivoPatrocinioregistro">ObjetivoPatrocinio</label>
+          <label for="registroObjetivoPatrocinioregistro">ObjetivoPatrocinio</label>
           
                <div class="input-group">
           
@@ -47,68 +65,94 @@
                          </span>
                     </div>
                            
-               <input id="ObjetivoPatrocinioregistro" class="form-control" type="textarea" name="registroObjetivoPatrocinioregistro">
+               <input id="registroObjetivoPatrocinioregistro" class="form-control" type="textarea" name="registroObjetivoPatrocinioregistro">
           </div>
+
+
 
           <div class="form-group">
-          <label for="FK_CorredorIDregistro">FK_CorredorID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_CorredorIDregistro" class="form-control" type="Select" name="registroFK_CorredorIDregistro">
+                    <label for="text">Corredor</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registroFK_CorredorIDregistro">
+               
+                    <?php
+                     foreach ($corredor  as $corredores) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $corredores["CorredorID"];?>'><?php echo $corredores["FechaNacimiento"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+
+
+
+
+
+
           <div class="form-group">
-          <label for="FK_KitIDregistro">FK_KitID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_KitIDregistro" class="form-control" type="Select" name="registroFK_KitIDregistro">
+                    <label for="text">Kit</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registroFK_KitIDregistro">
+               
+                    <?php
+                     foreach ($kit  as $kits) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $kits["kitID"];?>'><?php echo $kits["opcionkit"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+
+
+
           <div class="form-group">
-          <label for="FK_EstadoRegistroIDregistro">FK_EstadoRegistroID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_EstadoRegistroIDregistro" class="form-control" type="Select" name="registroFK_EstadoRegistroIDregistro">
+                    <label for="text">Estado Registro</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registroFK_EstadoRegistroIDregistro">
+               
+                    <?php
+                     foreach ($estado  as $estados) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $estados["estadoID"];?>'><?php echo $estados["estadoRegitro"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+
+
           <div class="form-group">
-          <label for="FK_CaridadIDregistro">FK_CaridadID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_CaridadIDregistro" class="form-control" type="Select" name="registroFK_CaridadIDregistro">
+                    <label for="text">Caridad</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registroFK_CaridadIDregistro">
+               
+                    <?php
+                     foreach ($caridad  as $caridades) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $caridades["CaridadID"];?>'><?php echo $caridades["NombreCaridad"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
-
-          
-
-
-
-
-              
 
 
           <?php
@@ -138,16 +182,10 @@
                ?>
 
 
-
-         
-
                <button type="submit" class="btn btn-primary">Guardar</button>
           </div>
 
 
           </form>
-
-
-
 
  </div>

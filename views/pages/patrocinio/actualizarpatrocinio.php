@@ -1,14 +1,19 @@
-
 <?php
 
-$item = null;
-$valor = null;
+if(isset($_GET["PatrocinioID"])){
 
-$registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
+	$item = "PatrocinioID";
+	$valor = $_GET["PatrocinioID"];
 
 
+     $patrocinio = ControladorPatrocinio ::ctrSeleccionarRegistroPatrocinio($item, $valor);
+     $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
+
+}
 
 ?>
+
+
 
 
 <head>
@@ -20,9 +25,9 @@ $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
 <div class="d-flex justify-content-center text-center py-5">
 
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Registro patrocinio</h1>
+               <h1>Actualizar patrocinio</h1>
           <div class="form-group">
-          <label for="registroNombrePatrocinador">NombrePatrocinador</label>
+          <label for="actualizarNombrePatrocinador">Nombre Patrocinador</label>
           
                <div class="input-group">
           
@@ -32,11 +37,12 @@ $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
                          </span>
                     </div>
                            
-               <input id="registroNombrePatrocinador" class="form-control" type="text" name="registroNombrePatrocinador">
+               <input id="actualizarNombrePatrocinador" class="form-control" value="<?php echo $patrocinio["NombrePatrocinador"]; ?>" type="text" name="actualizarNombrePatrocinador">
+               <input type="hidden" name="idcorredor" value='<?php echo $patrocinio["PatrocinioID"]; ?>'>
           </div>
 
           <div class="form-group">
-          <label for="registroMontopatrocinador">Monto</label>
+          <label for="actualizarMontopatrocinador">Monto</label>
           
                <div class="input-group">
           
@@ -45,8 +51,8 @@ $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
                               <i class="fas fa-evelope"></i>
                          </span>
                     </div>
-                           
-               <input id="registroMontopatrocinador" class="form-control" type="number" name="registroMontopatrocinador">
+                            
+               <input id="actualizarMontopatrocinador" class="form-control" value="<?php echo $patrocinio["Monto"]; ?>" type="number" name="actualizarMontopatrocinador">
           </div>
 
           
@@ -57,8 +63,8 @@ $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
           <div class="form-group">
                     <label for="text">Registro</label>
                     <div class="input-group">
-               <select class="form-select" aria-label="Disabled select example"  name="registrofk_RegistroID">
-               
+               <select class="form-select" aria-label="Disabled select example"  name="actualizarfk_RegistroID">
+               <option value='<?php echo $patrocinio["fk_RegistroID"];?>'><?php echo $patrocinio["Costo"];?></option>
                     <?php
                      foreach ($registro  as $registros) {
                         ?>
@@ -75,11 +81,11 @@ $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
          
           <?php
 
-               $registroPatrocinio = ControladorPatrocinio::ctrRegistroPatrocinio();
+               $actualizarPatrocinio = ControladorPatrocinio::ctrActualizarRegistroPatrocinio();
  
  
  
-               if($registroPatrocinio == "ok")
+               if($actualizarPatrocinio == "ok")
                {
                     echo '<script>
 

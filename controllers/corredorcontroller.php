@@ -10,14 +10,14 @@ class ControladorCorredor{
 
 	static public function ctrRegistroCorredor(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroFechaNacimiento"])){
 
-			$tabla = "TBL_Corredor";
+			$tabla = "tbl_corredor";
 
-			$datos = array("FechaNacimiento" => $_POST[""],
-				           "FK_Genero" => $_POST[""],
-				           "FK_Email" => $_POST[""],
-						   "FK_PaisID" => $_POST[""]);
+			$datos = array("FechaNacimiento" => $_POST["registroFechaNacimiento"],
+							"fk_GeneroID" => $_POST["registrofk_GeneroID"],
+							"fk_UsuarioID" => $_POST["registrofk_UsuarioID"],
+							"fk_PaisID" => $_POST["registrosfk_paisID"]);
 
 			$respuesta = ModeloCorredor::mdlCorredor($tabla, $datos);
 
@@ -26,6 +26,7 @@ class ControladorCorredor{
 		}
 
 	}
+
 
 	/*=============================================
 	Seleccionar Registros
@@ -47,24 +48,17 @@ class ControladorCorredor{
 	=============================================*/
 	static public function ctrActualizarRegistroCorredor(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarFechaNacimiento"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+			
 
 			$tabla = "TBL_Corredor";
 
-			$datos = array("CorredorID" => $_POST[""],
-							"FechaNacimiento" => $_POST[""],
-							"FK_Genero" => $_POST[""],
-							"FK_Email" => $_POST[""],
-							"FK_PaisID" => $_POST[""]);
+			$datos = array("CorredorID" => $_POST["idcorredor"],
+							"FechaNacimiento" => $_POST["actualizarFechaNacimiento"],
+							"fk_GeneroID" => $_POST["actualizarfk_GeneroID"],
+							"fk_UsuarioID" => $_POST["actualizarfk_UsuarioID"],
+							"fk_PaisID" => $_POST["actualizarfk_paisID"]);
 
 			$respuesta = ModeloCorredor::mdlActualizarCorredor($tabla, $datos);
 

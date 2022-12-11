@@ -13,8 +13,7 @@ class ModelosGenero{
 
     static public function mdlGenero($tabla, $datos){
 
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(genero) 
-        VALUES (:genero)");
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(genero) VALUES (:genero)");
 
         $stmt->bindParam(":genero", $datos["genero"], PDO::PARAM_STR);
 
@@ -34,13 +33,12 @@ class ModelosGenero{
 
     // funcion mostrar
 
-    static public function mdlSeleccionarGenero($tabla){
-        $item1 = null;
-		$valor1 = null;
+    static public function mdlSeleccionarGenero($tabla, $item, $valor){
+   
 
-		if($item1 == null && $valor1 == null){
+		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
 
 		  $stmt->execute();
 
@@ -91,10 +89,10 @@ class ModelosGenero{
 
     static public function mdlActualizarGenero($tabla, $datos){
         
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET genero=:genero WHERE GeneroID = :GeneroID");
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET genero=:genero WHERE generoID = :generoID");
 
         $stmt->bindParam(":genero", $datos["genero"], PDO::PARAM_STR);
-        $stmt->bindParam(":GeneroID", $datos["GeneroID"], PDO::PARAM_INT);
+        $stmt->bindParam(":generoID", $datos["generoID"], PDO::PARAM_INT);
 
         if($stmt->execute()){
 

@@ -36,7 +36,7 @@
                     <tbody>
 
 
-                    <?php foreach ($maraton as $key => $value): ?>
+                    <?php foreach ($pais as $key => $value): ?>
 
 
                       <tr>
@@ -55,20 +55,20 @@
 
                               <div class="px-1">
                               
-                              <a href="index.php?paginas=editar&id=<?php echo $value["id"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
+                              <a href="index.php?pages=/pais/actualizarpais&PaisID=<?php echo $value["PaisID"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
 
                               </div>
 
                               <form method="post">
 
-                                  <input type="hidden" value="<?php echo $value["id"]; ?>" name="eliminarRegistroPais">
+                                  <input type="hidden" value="<?php echo $value["PaisID"]; ?>" name="eliminarRegistroPais">
                                   
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Eliminar</button>
 
                                   <?php
 
                                     $eliminar = new ControladorPais();
-                                    $eliminar -> ctrSeleccionarRegistroPais();
+                                    $eliminar -> ctrEliminarRegistroPais();
 
                                   ?>
 

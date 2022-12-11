@@ -14,10 +14,10 @@ class ModeloEstadoRegistro {
 
     static public function mdlEstadoRegistro($tabla, $datos){
 
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(estadoRegistro) 
-        VALUES (:estadoRegistro)");
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(estadoRegitro) 
+        VALUES (:estadoRegitro)");
 
-        $stmt->bindParam(":estadoRegistro", $datos["estadoRegistro"], PDO::PARAM_STR);
+        $stmt->bindParam(":estadoRegitro", $datos["estadoRegitro"], PDO::PARAM_STR);
 
         if($stmt->execute()){
 
@@ -35,11 +35,11 @@ class ModeloEstadoRegistro {
 
     // funcion mostrar
 
-    static public function mdlSeleccionarEstadoRegistro($tabla){
-        $item1 = null;
-		$valor1 = null;
+    static public function mdlSeleccionarEstadoRegistro($tabla, $item, $valor){
 
-		if($item1 == null && $valor1 == null){
+	
+
+		if($item == null && $valor == null){
 
 		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
 
@@ -60,10 +60,13 @@ class ModeloEstadoRegistro {
 
 	  }
 
+
+	  
+
 	  $stmt->close();
 
 	  $stmt = null;	
-    }
+   }
 
 
     
@@ -93,9 +96,9 @@ class ModeloEstadoRegistro {
     // funcion actualizar
     static public function mdlActualizarEstadoRegistro($tabla, $datos){
         
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estadoRegistro=:estadoRegistro WHERE estadoID = :estadoID");
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estadoRegitro=:estadoRegitro WHERE estadoID = :estadoID");
 
-        $stmt->bindParam(":estadoRegistro", $datos["estadoRegistro"], PDO::PARAM_STR);
+        $stmt->bindParam(":estadoRegitro", $datos["estadoRegitro"], PDO::PARAM_STR);
         $stmt->bindParam(":estadoID", $datos["estadoID"], PDO::PARAM_INT);
 
         if($stmt->execute()){

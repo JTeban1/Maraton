@@ -14,7 +14,7 @@ class ModeloCorredor {
     static public function mdlCorredor($tabla, $datos){
 
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(FechaNacimiento, fk_GeneroID, fk_UsuarioID, fk_PaisID) 
-        VALUES (:FechaNacimiento, :fk_GeneroID,:fk_UsuarioID,:fk_PaisID)");
+        VALUES (:FechaNacimiento,:fk_GeneroID,:fk_UsuarioID,:fk_PaisID)");
 
         $stmt->bindParam(":FechaNacimiento", $datos["FechaNacimiento"], PDO::PARAM_STR);
         $stmt->bindParam(":fk_GeneroID", $datos["fk_GeneroID"], PDO::PARAM_STR);
@@ -37,14 +37,13 @@ class ModeloCorredor {
 
     // funcion mostrar
 
-    static public function mdlSeleccionarCorredor($tabla){
+    static public function mdlSeleccionarCorredor($tabla, $item, $valor){
 
-        $item1 = null;
-		$valor1 = null;
+	
 
-		if($item1 == null && $valor1 == null){
+		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ");
+		  $stmt = Conexion::conectar()->prepare("SELECT CorredorID,FechaNacimiento,AS genero,Nombre,NombrePais FROM $tabla,tbl_genero,tbl_usuario,tbl_tipoevento WHERE tbl_corredor.fk_GeneroID = tbl_genero.fk_GeneroID AND tbl_usuario.UsuarioID = tbl_tipoevento.fk_PaisID");
 
 		  $stmt->execute();
 

@@ -14,7 +14,7 @@ class ModeloRegistro{
 
     static public function mdlRegistro($tabla, $datos){
 
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(FechaRegistro, Costo, ObjetivoPatrocinio, fk_CorredorID, fk_kitID,fk_EstadoRegistroID,fk_CaridadID) 
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(FechaRegistro, Costo, ObjetivoPatrocinio,fk_CorredorID,fk_kitID,fk_EstadoRegistroID,fk_CaridadID) 
         VALUES (:FechaRegistro, :Costo, :ObjetivoPatrocinio, :fk_CorredorID, :fk_kitID, :fk_EstadoRegistroID, :fk_CaridadID)");
 
         $stmt->bindParam(":FechaRegistro", $datos["FechaRegistro"], PDO::PARAM_STR);
@@ -41,15 +41,13 @@ class ModeloRegistro{
 
     // funcion mostrar
 
-    static public function mdlSeleccionarRegistro($tabla){
-        $item1 = null;
-		$valor1 = null;
+    static public function mdlSeleccionarRegistro($tabla, $item, $valor){
 
-		if($item1 == null && $valor1 == null){
+	
 
-		  $stmt = Conexion::conectar()->prepare("SELECT RegistroID, DATE_FORMAT(fecha, '%d/%m/%Y') AS FechaRegistro, Costo, ObjetivoPatrocinio,  roles.nombreRol AS nombreRol, fk_rol, areas.nombreArea,fk_area  
-          FROM $tabla, roles, areas 
-          WHERE  $tabla.fk_rol = roles.id_rol AND $tabla.fk_area = areas.id_area;");
+		if($item == null && $valor == null){
+
+		  $stmt = Conexion::conectar()->prepare("SELECT RegistroID, Costo, ObjetivoPatrocinio As Patrocinio, estadoRegistro, NombreCaridad, Nombre FROM $tabla, tbl_corredor, tbl_estadoregistro, tbl_caridad,tbl_usuario WHERE tbl_registro.fk_CaridadID = tbl_caridad.CaridadID AND tbl_registro.fk_CorredorID = tbl_estadoregistro.estadoID AND tbl_usuario.UsuarioID = tbl_corredor.fk_UsuarioID");
 
 		  $stmt->execute();
 

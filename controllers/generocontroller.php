@@ -9,11 +9,11 @@ class ControladorGenero{
 
 	static public function ctrRegistroGenero(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registrogenero"])){
 
-			$tabla = "TBL_Genero";
+			$tabla = "tbl_genero";
 
-			$datos = array("Genero" => $_POST[""]);
+			$datos = array("genero" => $_POST["registrogenero"]);
 
 			$respuesta = ModelosGenero::mdlGenero($tabla, $datos);
 
@@ -29,7 +29,7 @@ class ControladorGenero{
 
 	static public function ctrSeleccionarRegistroGenero($item, $valor){
 
-		$tabla = "TBL_Genero";
+		$tabla = "tbl_genero";
 
 		$respuesta = ModelosGenero::mdlSeleccionarGenero($tabla, $item, $valor);
 
@@ -43,21 +43,12 @@ class ControladorGenero{
 	=============================================*/
 	static public function ctrActualizarRegistroGenero(){
 
-		if(isset($_POST[""])){
-
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+		if(isset($_POST["actualizarGenero"])){
 
 			$tabla = "TBL_Genero";
 
-			$datos = array("idFALTA" => $_POST[""],
-							"Genero" => $_POST[""]);
+			$datos = array("generoID" => $_POST["idgenero"],
+							"genero" => $_POST["actualizarGenero"]);
 
 			$respuesta = ModelosGenero::mdlActualizarGenero($tabla, $datos);
 

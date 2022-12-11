@@ -42,8 +42,8 @@
                         
                         <td scope="row"><?php echo ($key+1) ; ?></td>
                         <td><?php echo $value["NombreCaridad"]; ?></td>
-                        <td><?php echo $value["DescripcionCaridad"]; ?></td>
-                        <td><img style="width: 100px;" src="data:image/jpg;base64, <?php echo base64_encode($value['LogoCaridad']) ?>"   > </td>
+                        <td><?php echo $value["Descripcion"]; ?></td>
+                        <td><img style="width: 100px;" src="data:image/jpg;base64, <?php echo base64_encode($value['LogoCaridad']) ?>"> </td>
 
                         <td>
                             <div class="btn-agroup">
@@ -53,13 +53,13 @@
 
                               <div class="px-1">
                               
-                              <a href="index.php?paginas=editar&id=<?php echo $value["id"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
+                              <a href="index.php?pages=/caridad/actualizarcaridad&CaridadID=<?php echo $value["CaridadID"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
 
                               </div>
 
                               <form method="post">
 
-                                  <input type="hidden" value="<?php echo $value["id"]; ?>" name="eliminarRegistroCaridad">
+                                  <input type="hidden" value="<?php echo $value["CaridadID"]; ?>" name="eliminarRegistroCaridad">
                                   
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Eliminar</button>
 

@@ -10,15 +10,15 @@ class ControladorUsuario{
 
 	static public function ctrRegistroUsuario(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroEmailusuario"])){
 
 			$tabla = "TBL_Usuario";
 
-			$datos = array("Email" => $_POST[""],
-				           "Contrasena" => $_POST[""],
-				           "Nombres" => $_POST[""],
-						   "Apellido" => $_POST[""],
-						   "FK_RolID" => $_POST[""]
+			$datos = array("Email" => $_POST["registroEmailusuario"],
+				           "Contrasena" => $_POST["registroContrasenausuario"],
+				           "Nombre" => $_POST["registroNombreusuario"],
+						   "Apellido" => $_POST["registroApellidousuario"],
+						   "fk_RolID" => $_POST["registroFK_RolIDusuario"]
 						);
 
 			$respuesta = ModelosUsuario::mdlUsuario($tabla, $datos);
@@ -49,7 +49,7 @@ class ControladorUsuario{
 	=============================================*/
 	static public function ctrActualizarRegistroUsuario(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarEmailusuario"])){
 
 			if($_POST[""] != ""){			
 
@@ -62,12 +62,12 @@ class ControladorUsuario{
 
 			$tabla = "TBL_Usuario";
 
-			$datos = array("id" => $_POST[""],
-							"Email" => $_POST[""],
-				           "Contrasena" => $_POST[""],
-				           "Nombres" => $_POST[""],
-						   "Apellido" => $_POST[""],
-						   "FK_RolID" => $_POST[""],);
+			$datos = array("UsuarioID" => $_POST["idusuario"],
+							"Email" => $_POST["actualizarEmailusuario"],
+				           "Contrasena" => $_POST["actualizarContrasenausuario"],
+				           "Nombre" => $_POST["actualizarNombreusuario"],
+						   "Apellido" => $_POST["actualizarApellidousuario"],
+						   "fk_RolID" => $_POST["actualizarFK_RolIDusuario"],);
 
 			$respuesta = ModelosUsuario::mdlActualizarUsuario($tabla, $datos);
 

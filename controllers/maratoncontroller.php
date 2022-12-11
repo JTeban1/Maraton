@@ -10,14 +10,14 @@ class ControladorMaraton{
 
 	static public function ctrRegistroMaraton(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombreMaraton"])){
 
 			$tabla = "TBL_Maraton";
 
-			$datos = array("NombreMaraton" => $_POST[""],
-							"NombreCiudad" => $_POST[""],
-							"NombreCelebracion" => $_POST[""],
-							"FK_CodigoPaisID" => $_POST[""]);
+			$datos = array("NombreMaraton" => $_POST["registroNombreMaraton"],
+							"NombreCiudad" => $_POST["registroNombreCiudad"],
+							"NombreCelebracion" => $_POST["registroNombreCelebracion"],
+							"fk_PaisID" => $_POST["registrosfk_PaisID"]);
 
 			$respuesta = ModeloMaraton::mdlMaraton($tabla, $datos);
 
@@ -47,24 +47,15 @@ class ControladorMaraton{
 	=============================================*/
 	static public function ctrActualizarRegistroMaraton(){
 
-		if(isset($_POST[""])){
-
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+		if(isset($_POST["actualizarNombreMaraton"])){
 
 			$tabla = "TBL_Maraton";
 
-			$datos = array("MaratonID" => $_POST[""],
-							"NombreMaraton" => $_POST[""],
-				           "NombreCiudad" => $_POST[""],
-				           "NombreCelebracion" => $_POST[""],
-						   "FK_CodigoPaisID" => $_POST[""]);
+			$datos = array("maratonID" => $_POST["idmaraton"],
+							"NombreMaraton" => $_POST["actualizarNombreMaraton"],
+				           "NombreCiudad" => $_POST["actualizarNombreCiudad"],
+				           "NombreCelebracion" => $_POST["actualizarNombreCelebracion"],
+						   "fk_PaisID" => $_POST["actualizarfk_PaisID"]);
 
 			$respuesta = ModeloMaraton::mdlActualizarMaraton($tabla, $datos);
 

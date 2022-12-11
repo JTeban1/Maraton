@@ -1,14 +1,21 @@
-
 <?php
 
-$item = null;
-$valor = null;
+if(isset($_GET["kitID"])){
 
-$registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
+	$item = "kitID";
+	$valor = $_GET["kitID"];
 
 
+     $kitcompetencia = ControladorKitCompetencia ::ctrSeleccionarRegistroKitCompe($item, $valor);
+
+     
+
+}
 
 ?>
+
+
+
 
 
 <head>
@@ -20,9 +27,9 @@ $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
 <div class="d-flex justify-content-center text-center py-5">
 
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
-               <h1>Registro patrocinio</h1>
+               <h1>Actualizar kit competencia</h1>
           <div class="form-group">
-          <label for="registroNombrePatrocinador">NombrePatrocinador</label>
+          <label for="actualizarOpcionKit">OpcionKit</label>
           
                <div class="input-group">
           
@@ -32,11 +39,12 @@ $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
                          </span>
                     </div>
                            
-               <input id="registroNombrePatrocinador" class="form-control" type="text" name="registroNombrePatrocinador">
+               <input id="actualizarOpcionKit" class="form-control" value="<?php echo $kitcompetencia["opcionkit"]; ?>" type="text" name="actualizarOpcionKit">
+               <input type="hidden" name="idkit" value='<?php echo $kitcompetencia["kitID"]; ?>'>
           </div>
 
           <div class="form-group">
-          <label for="registroMontopatrocinador">Monto</label>
+          <label for="actualizarValorKit">ValorKit</label>
           
                <div class="input-group">
           
@@ -46,40 +54,17 @@ $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
                          </span>
                     </div>
                            
-               <input id="registroMontopatrocinador" class="form-control" type="number" name="registroMontopatrocinador">
+               <input id="actualizarValorKit" class="form-control" value="<?php echo $kitcompetencia["valorkit"]; ?>" type="number" name="actualizarValorKit">
           </div>
 
-          
-
-
-
-
-          <div class="form-group">
-                    <label for="text">Registro</label>
-                    <div class="input-group">
-               <select class="form-select" aria-label="Disabled select example"  name="registrofk_RegistroID">
-               
-                    <?php
-                     foreach ($registro  as $registros) {
-                        ?>
-                    
-                    
-
-                     <option value='<?php echo $registros["RegistroID"];?>'><?php echo $registros["Costo"];?></option>
-                    <?php
-
-                     }
-                    ?>
-               </select>
-          </div>
          
           <?php
 
-               $registroPatrocinio = ControladorPatrocinio::ctrRegistroPatrocinio();
+               $actualizarKitCompe = ControladorKitCompetencia::ctrActualizarRegistroKitCompe();
  
  
  
-               if($registroPatrocinio == "ok")
+               if($actualizarKitCompe == "ok")
                {
                     echo '<script>
 
@@ -92,7 +77,7 @@ $registro = ControladorRegis::ctrSeleccionarRegistroRegis($item, $valor);
 
                     </script>';
 
-                    echo '<div class="alert alert-success">El Usuario ha sido registado</div>';
+                    echo '<div class="alert alert-success">El Usuario ha sido Actualizar</div>';
 
                }
 

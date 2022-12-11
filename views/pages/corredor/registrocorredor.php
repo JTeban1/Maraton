@@ -1,3 +1,19 @@
+<?php
+
+     $item = null;
+     $valor = null;
+
+     $genero = ControladorGenero::ctrSeleccionarRegistroGenero($item, $valor);
+     $usuario = ControladorUsuario::ctrSeleccionarRegistroUsuario($item, $valor);
+     $pais = ControladorPais::ctrSeleccionarRegistroPais($item, $valor);
+
+
+
+?>
+
+
+
+
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -19,53 +35,69 @@
                          </span>
                     </div>
                            
-               <input id="FechaNacimiento" class="form-control" type="text" name="registroFechaNacimiento">
+               <input id="FechaNacimiento" class="form-control" type="date" name="registroFechaNacimiento">
           </div>
 
           <div class="form-group">
-          <label for="fk_GeneroId">FK_GeneroID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="fk_GeneroID" class="form-control" type="text" name="registrofk_GeneroID">
+                    <label for="text">genero</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registrofk_GeneroID">
+               
+                    <?php
+                     foreach ($genero  as $generos) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $generos["generoID"];?>'><?php echo $generos["genero"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
+
           <div class="form-group">
-            <label for="fk_UsuarioID">Fk_UsuarioID</label>
-            
-                <div class="input-group">
-            
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-evelope"></i>
-                            </span>
-                        </div>
-                            
-                <input id="Fk_UsuarioID" class="form-control" type="text" name="fk_UsuarioID">
+                    <label for="text">Usuario</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registrofk_UsuarioID">
+               
+                    <?php
+                     foreach ($usuario  as $usuarios) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $usuarios["UsuarioID"];?>'><?php echo $usuarios["Nombre"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
 
 
 
-               <div class="form-group">
-                    <label for="text">fk_PaisID</label>
-     
-                 <div class="input-group">
-     
-                      <div class="input-group-prepend">
-                           <span class="input-group-text">
-                                <i class="fas fa-lock"></i>
-                           </span>
-                      </div>
-                      
-                      <input id="fk_PaisID" class="form-control" type="file" name="fk_paisID">
-                 </div>
+          <div class="form-group">
+                    <label for="text">Pais</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registrosfk_paisID">
+               
+                    <?php
+                     foreach ($pais  as $paises) {
+                        ?>
+                    
+                    
 
-               </div>
+                     <option value='<?php echo $paises["PaisID"];?>'><?php echo $paises["NombrePais"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
+          </div>
+
+          </div>
 
 
           <?php

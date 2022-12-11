@@ -17,7 +17,7 @@
 ?>
 
 
-<h1>genero</h1>
+<h1>Kit Competencia</h1>
 
 <div class="container-fluid">
           <div class="container py-5">
@@ -41,8 +41,8 @@
                       <tr>
                         
                         <td scope="row"><?php echo ($key+1) ; ?></td>
-                        <td><?php echo $value["OpcionKit"]; ?></td>
-                        <td><?php echo $value["ValorKit"]; ?></td>
+                        <td><?php echo $value["opcionkit"]; ?></td>
+                        <td><?php echo $value["valorkit"]; ?></td>
                         
 
                         <td>
@@ -53,20 +53,20 @@
 
                               <div class="px-1">
                               
-                              <a href="index.php?paginas=editar&id=<?php echo $value["id"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
+                              <a href="index.php?pages=/kitcompeticion/actualizarkitcompetencia&kitID=<?php echo $value["kitID"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
 
                               </div>
 
                               <form method="post">
 
-                                  <input type="hidden" value="<?php echo $value["id"]; ?>" name="eliminarRegistroKitCompetencia">
+                                  <input type="hidden" value="<?php echo $value["kitID"]; ?>" name="eliminarRegistroKitCompetencia">
                                   
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Eliminar</button>
 
                                   <?php
 
                                     $eliminar = new ControladorKitCompetencia();
-                                    $eliminar -> ctrSeleccionarRegistroKitCompe();
+                                    $eliminar -> ctrEliminarRegistroKitCompe();
 
                                   ?>
 

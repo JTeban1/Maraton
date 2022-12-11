@@ -10,14 +10,14 @@ class ControladorVoluntario{
 
 	static public function ctrRegistroVoluntario(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombrevoluntario"])){
 
 			$tabla = "TBL_Voluntario";
 
-			$datos = array("Nombres" => $_POST[""],
-				           "Apellidos" => $_POST[""],
-				           "FK_CodigoPais" => $_POST[""],
-						   "FK_Genero" => $_POST[""]);
+			$datos = array("Nombres" => $_POST["registroNombrevoluntario"],
+				           "Apellidos" => $_POST["registroApellidovoluntario"],
+				           "fk_PaisID" => $_POST["registroFK_Paisvoluntario"],
+						   "fk_GeneroID" => $_POST["registroFK_Generovoluntario"]);
 
 			$respuesta = ModeloVoluntario::mdlVoluntario($tabla, $datos);
 
@@ -47,24 +47,16 @@ class ControladorVoluntario{
 	=============================================*/
 	static public function ctrActualizarRegistroVoluntario(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarNombrevoluntario"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
-
+			
 			$tabla = "TBL_Voluntario";
 
-			$datos = array("VoluntarioID" => $_POST[""],
-							"Nombres" => $_POST[""],
-				           "Apellidos" => $_POST[""],
-				           "FK_CodigoPais" => $_POST[""],
-						   "FK_Genero" => $_POST[""]);
+			$datos = array("VoluntarioID" => $_POST["idvoluntario"],
+							"Nombres" => $_POST["actualizarNombrevoluntario"],
+				           "Apellidos" => $_POST["actualizarApellidovoluntario"],
+				           "fk_PaisID" => $_POST["actualizarFK_Paisvoluntario"],
+						   "fk_GeneroID" => $_POST["actualizarFK_Generovoluntario"]);
 
 			$respuesta = ModeloVoluntario::mdlActualizarVoluntario($tabla, $datos);
 

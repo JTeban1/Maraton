@@ -49,7 +49,7 @@
                         <td scope="row"><?php echo ($key+1) ; ?></td>
                         <td><?php echo $value["Email"]; ?></td>
                         <td><?php echo $value["Contrasena"]; ?></td>
-                        <td><?php echo $value["Nombres"]; ?></td>
+                        <td><?php echo $value["Nombre"]; ?></td>
                         <td><?php echo $value["Apellido"]; ?></td>
                         <td><?php echo $value["FK_RolID"]; ?></td>
                         
@@ -67,20 +67,20 @@
 
                               <div class="px-1">
                               
-                              <a href="index.php?paginas=editar&id=<?php echo $value["id"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
+                              <a href="index.php?pages=/usuario/actualizarusuario&UsuarioID=<?php echo $value["UsuarioID"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Editar</a>
 
                               </div>
 
                               <form method="post">
 
-                                  <input type="hidden" value="<?php echo $value["id"]; ?>" name="eliminarRegistroUsuario">
+                                  <input type="hidden" value="<?php echo $value["UsuarioID"]; ?>" name="eliminarRegistroUsuario">
                                   
                                   <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Eliminar</button>
 
                                   <?php
 
                                     $eliminar = new ControladorUsuario();
-                                    $eliminar -> ctrSeleccionarRegistroUsuario();
+                                    $eliminar -> ctrEliminarRegistroUsuario();
 
                                   ?>
 

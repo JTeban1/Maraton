@@ -10,13 +10,13 @@ class ControladorPosicion{
 
 	static public function ctrRegistroPosi(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombrePosicionposicion"])){
 
 			$tabla = "TBL_Posicion";
 
-			$datos = array("NombrePosicion" => $_POST[""],
-				           "DescripcionPosicion" => $_POST[""],
-				           "TarifaPago" => $_POST[""]);
+			$datos = array("NombrePosicion" => $_POST["registroNombrePosicionposicion"],
+				           "DescripcionPosicion" => $_POST["registroDescripcionPosicion"],
+				           "TarifaPago" => $_POST["registroTarifaPagoposicion"]);
 
 			$respuesta = ModeloPosicion::mdlPosicion($tabla, $datos);
 
@@ -46,23 +46,15 @@ class ControladorPosicion{
 	=============================================*/
 	static public function ctrActualizarRegistroPosi(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarNombrePosicionposicion"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
-
+			
 			$tabla = "TBL_Posicion";
 
-			$datos = array("PosicionID" => $_POST[""],
-							"NombrePosicion" => $_POST[""],
-				           "DescripcionPosicion" => $_POST[""],
-						   "TarifaPago" => $_POST[""]);
+			$datos = array("PosicionID" => $_POST["idposicion"],
+							"NombrePosicion" => $_POST["actualizarNombrePosicionposicion"],
+				           "DescripcionPosicion" => $_POST["actualizarDescripcionPosicion"],
+						   "TarifaPago" => $_POST["actualizarTarifaPagoposicion"]);
 
 			$respuesta = ModeloPosicion::mdlActualizarPosicion($tabla, $datos);
 

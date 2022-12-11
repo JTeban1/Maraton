@@ -11,12 +11,12 @@ class ControladorKitCompetencia{
 
 	static public function ctrRegistroKitCompe(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroOpcionKit"])){
 
 			$tabla = "TBL_KitCompeticion";
 
-			$datos = array("OpcionKit " => $_POST[""],
-				           "ValorKit" => $_POST[""]);
+			$datos = array("opcionkit" => $_POST["registroOpcionKit"],
+				           "valorkit" => $_POST["registroValorKit"]);
 
 			$respuesta = ModelosKitCompeticion::mdlKitcompeticion($tabla, $datos);
 
@@ -46,22 +46,13 @@ class ControladorKitCompetencia{
 	=============================================*/
 	static public function ctrActualizarRegistroKitCompe(){
 
-		if(isset($_POST[""])){
-
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
+		if(isset($_POST["actualizarOpcionKit"])){
 
 			$tabla = "TBL_KitCompeticion";
 
-			$datos = array("KitID" => $_POST[""],
-							"OpcionKit" => $_POST[""],
-				           "ValorKit" => $_POST[""]);
+			$datos = array("kitID" => $_POST["idkit"],
+							"opcionkit" => $_POST["actualizarOpcionKit"],
+				           "valorkit" => $_POST["actualizarValorKit"]);
 
 			$respuesta = ModelosKitCompeticion::mdlActualizarKitcompeticion($tabla, $datos);
 

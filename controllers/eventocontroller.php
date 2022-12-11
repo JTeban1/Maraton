@@ -10,16 +10,16 @@ class ControladorEvento{
 
 	static public function ctrRegistroEvento(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["registroNombreEvento"])){
 
 			$tabla = "TBL_Evento";
 
-			$datos = array("NombreEvento" => $_POST[""],
-							"FechaInicio" => $_POST[""],
-							"Valor" => $_POST[""],
-							"ParticipantesMax" => $_POST[""],
-							"FK_MaratonID" => $_POST[""],
-							"FK_TipoEventoID" => $_POST[""]);
+			$datos = array("NombreEvento" => $_POST["registroNombreEvento"],
+							"FechaInicio" => $_POST["registroFechaInicio"],
+							"Valor" => $_POST["registroValor"],
+							"ParticipantesMax" => $_POST["RegistroParticipantesMax"],
+							"fk_MaratonID" => $_POST["RegistroFK_MaratonID"],
+							"fk_TipoEventoID" => $_POST["RegistroFK_TipoEventoID"]);
 
 			$respuesta = ModeloEvento::mdlEvento($tabla, $datos);
 
@@ -49,26 +49,18 @@ class ControladorEvento{
 	=============================================*/
 	static public function ctrActualizarRegistroEvento(){
 
-		if(isset($_POST[""])){
+		if(isset($_POST["actualizarNombreEvento"])){
 
-			if($_POST[""] != ""){			
-
-				$password = $_POST[""];
-
-			}else{
-
-				$password = $_POST[""];
-			}
-
+			
 			$tabla = "TBL_Evento";
 
-			$datos = array("EventoID" => $_POST[""],
-							"NombreEvento" => $_POST[""],
-				           "FechaInicio" => $_POST[""],
-				           "Valor" => $_POST[""],
-						   "ParticipantesMax" => $_POST[""],
-						   "FK_MaratonID" => $_POST[""],
-						   "FK_TipoEventoID" => $_POST[""]);
+			$datos = array("EventoID" => $_POST["idevento"],
+							"NombreEvento" => $_POST["actualizarNombreEvento"],
+				           "FechaInicio" => $_POST["actualizarFechaInicio"],
+				           "Valor" => $_POST["actualizarValor"],
+						   "ParticipantesMax" => $_POST["actualizarParticipantesMax"],
+						   "fk_MaratonID" => $_POST["actualizarFK_MaratonID"],
+						   "fk_TipoEventoID" => $_POST["actualizarFK_TipoEventoID"]);
 
 			$respuesta = ModeloEvento::mdlActualizarEvento($tabla, $datos);
 

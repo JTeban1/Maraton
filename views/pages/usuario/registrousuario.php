@@ -1,3 +1,18 @@
+<?php
+
+     $item = null;
+     $valor = null;
+
+     $rol = ControladorRol::ctrSeleccionarRegistroRol($item, $valor);
+     
+
+
+
+?>
+
+
+
+
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
@@ -9,7 +24,7 @@
           <form class="p-5 bg-light" method="post" enctype= multipart/form-data>
                <h1>Registro Usuario</h1>
           <div class="form-group">
-          <label for="Emailusuario">Email</label>
+          <label for="registroEmailusuario">Email</label>
           
                <div class="input-group">
           
@@ -19,11 +34,11 @@
                          </span>
                     </div>
                            
-               <input id="Emailusuario" class="form-control" type="email" name="registroEmailusuario">
+               <input id="registroEmailusuario" class="form-control" type="email" name="registroEmailusuario">
           </div>
 
           <div class="form-group">
-          <label for="Contrasenausuario">Contrasenas</label>
+          <label for="registroContrasenausuario">Contrasenas</label>
           
                <div class="input-group">
           
@@ -33,11 +48,11 @@
                          </span>
                     </div>
                            
-               <input id="Contrasenausuario" class="form-control" type="password" name="registroContrasenausuario">
+               <input id="registroContrasenausuario" class="form-control" type="password" name="registroContrasenausuario">
           </div>
 
           <div class="form-group">
-          <label for="Nombreusuario">Nombres</label>
+          <label for="registroNombreusuario">Nombres</label>
           
                <div class="input-group">
           
@@ -47,11 +62,11 @@
                          </span>
                     </div>
                            
-               <input id="Nombreusuario" class="form-control" type="Select" name="registroNombreusuario">
+               <input id="registroNombreusuario" class="form-control" type="text" name="registroNombreusuario">
           </div>
 
           <div class="form-group">
-          <label for="Apellidousuario">Apellido</label>
+          <label for="registroApellidousuario">Apellido</label>
           
                <div class="input-group">
           
@@ -61,23 +76,34 @@
                          </span>
                     </div>
                            
-               <input id="Apellidousuario" class="form-control" type="text" name="registroApellidousuario">
+               <input id="registroApellidousuario" class="form-control" type="text" name="registroApellidousuario">
           </div>
+
+
+
+
+
 
           <div class="form-group">
-          <label for="FK_RolIDusuario">FK_RolID</label>
-          
-               <div class="input-group">
-          
-                    <div class="input-group-prepend">
-                         <span class="input-group-text">
-                              <i class="fas fa-evelope"></i>
-                         </span>
-                    </div>
-                           
-               <input id="FK_RolIDusuario" class="form-control" type="Select" name="registroFK_RolIDusuario">
+                    <label for="text">Rol</label>
+                    <div class="input-group">
+               <select class="form-select" aria-label="Disabled select example"  name="registroFK_RolIDusuario">
+               
+                    <?php
+                     foreach ($rol  as $roles) {
+                        ?>
+                    
+                    
+
+                     <option value='<?php echo $roles["rolID"];?>'><?php echo $roles["rol"];?></option>
+                    <?php
+
+                     }
+                    ?>
+               </select>
           </div>
 
+          
 
 
 
