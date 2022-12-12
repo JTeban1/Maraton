@@ -55,7 +55,7 @@ class ModeloRegistroEvento {
 
 	  }else{
 
-		  $stmt = Conexion::conectar()->prepare("SELECT RegistroID , NumDorsal , TiempoCarrera , NombreEvento,FechaRegistro FROM tbl_registroevento tbl_evento,tbl_registro WHERE $item = :$item AND tbl_registroevento.fk_RegistroID = tbl_registro.RegistroID AND tbl_registroevento.fk_EventoID = tbl_evento.EventoID");
+		  $stmt = Conexion::conectar()->prepare("SELECT RegistroID , NumDorsal , TiempoCarrera,FechaRegistro , NombreEvento FROM tbl_registroevento tbl_evento,tbl_registro WHERE $item = :$item AND tbl_registroevento.fk_RegistroID = tbl_registro.RegistroID AND tbl_registroevento.fk_EventoID = tbl_evento.EventoID");
 
 		  $stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
 
