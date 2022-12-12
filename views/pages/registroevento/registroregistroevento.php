@@ -48,7 +48,7 @@
                          </span>
                     </div>
                            
-               <input id="registroTiempoCarreraevento" class="form-control" type="time" name="registroTiempoCarreraevento">
+               <input id="registroTiempoCarreraevento" class="form-control" type="number" name="registroTiempoCarreraevento">
           </div>
 
 

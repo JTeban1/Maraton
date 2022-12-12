@@ -15,7 +15,7 @@ class ModeloRegistroEvento {
     static public function mdlRegistroEvento($tabla, $datos){
 
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(NumDorsal, TiempoCarrera, fk_RegistroID, fk_EventoID) 
-        VALUES (:NumDorsal, :TiempoCarrera,:fk_RegistroID,:fk_PersonalID)");
+        VALUES (:NumDorsal, :TiempoCarrera,:fK_RegistroID,:fK_EventoID)");
 
         $stmt->bindParam(":NumDorsal", $datos["NumDorsal"], PDO::PARAM_STR);
         $stmt->bindParam(":TiempoCarrera", $datos["TiempoCarrera"], PDO::PARAM_STR);
@@ -44,7 +44,10 @@ class ModeloRegistroEvento {
 
 		if($item == null && $valor == null){
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+		  $stmt = Conexion::conectar()->prepare("SELECT RegistroID,NumDorsal ,TiempoCarrera ,FechaRegistro,NombreEvento 
+          FROM tbl_registroevento,tbl_evento,tbl_registro 
+          WHERE $tabla.fk_RegistroID = tbl_registro.RegistroID 
+          AND $tabla.fk_EventoID = tbl_evento.EventoID;");
         //SELECT RegistroID, Costo, ObjetivoPatrocinio As Patrocinio, estadoRegistro, NombreCaridad, Nombre FROM $tabla, tbl_corredor, tbl_estadoregistro, tbl_caridad,tbl_usuario WHERE tbl_registro.fk_CaridadID = tbl_caridad.CaridadID AND tbl_registro.fk_CorredorID = tbl_estadoregistro.estadoID AND tbl_usuario.UsuarioID = tbl_corredor.fk_UsuarioID
 		  $stmt->execute();
 
@@ -52,7 +55,7 @@ class ModeloRegistroEvento {
 
 	  }else{
 
-		  $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+		  $stmt = Conexion::conectar()->prepare("SELECT RegistroID , NumDorsal , TiempoCarrera , NombreEvento,FechaRegistro FROM tbl_registroevento tbl_evento,tbl_registro WHERE $item = :$item AND tbl_registroevento.fk_RegistroID = tbl_registro.RegistroID AND tbl_registroevento.fk_EventoID = tbl_evento.EventoID");
 
 		  $stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
 

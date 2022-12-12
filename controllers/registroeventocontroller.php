@@ -13,7 +13,7 @@ class ControladorRegistroEvento{
 
 		if(isset($_POST["registroNumDorsalevento"])){
 
-			$tabla = "TBL_RegistroEvento";
+			$tabla = "TBL_registroevento";
 
 			$datos = array("NumDorsal" => $_POST["registroNumDorsalevento"],
 							"TiempoCarrera" => $_POST["registroTiempoCarreraevento"],
