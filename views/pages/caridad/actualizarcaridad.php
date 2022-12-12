@@ -28,7 +28,6 @@ if(isset($_GET["CaridadID"])){
                <h1>Actualizar Caridad</h1>
           <div class="form-group">
           <label for="actualizarNombreCaridad">Nombre Caridad</label>
-HOLA
           
                <div class="input-group">
           
