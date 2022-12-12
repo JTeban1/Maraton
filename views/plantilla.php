@@ -75,18 +75,7 @@
 
                          <!--FIN INGRESO-->
 
-                         <?php if($_GET["pages"] == "registro"):?>
-                              <li class="nav-item">
-                                   <a class="nav-link active" href="index.php?pages=registro">Registro</a>
-                              </li>
-                         <?php else: ?>
-                              <li class="nav-item">
-                                   <a class="nav-link" href="index.php?pages=registro">Registro</a>
-                              </li>
-
-                         <?php endif ?>
-
-                         <!--FIN REGISTRO-->
+                         
 
 
                     <!-- 1 TABLA -->
@@ -1254,19 +1243,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="index.php?pages=ingreso">Ingreso</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="index.php?pages=">Registro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php?pages=/caridad/registrocaridad">Registro Caridad</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.php?pages=/caridad/vistacaridad">Vista Caridad</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.php?pages=">Registro Area</a>
-                  </li>
+                
                <li class="nav-item">
                     <a class="nav-link" href="index.php?pages=">Salir</a>
                </li>
